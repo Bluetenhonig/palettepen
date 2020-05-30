@@ -1,0 +1,41 @@
+input_file: ColorThesaurus.csv 
+
+1. remove all languages except English
+2. new column: VIAN color category
+3. hand-categorize into VIAN color categories: except for 'blue' example 'blue green' multi-label categories
+if the color blue is at the end, however, such as 'pink blue' it is categrized as 'blue' 
+4. save as xlsx 
+5. new columns: srgb and lab 
+
+output_file: ColorThesaurus.xlsx 
+
+vian_hues = [
+        'blue'
+        , 'cyan'
+        , 'green'
+        , 'magenta'
+        , 'orange'
+        , 'pink'
+        , 'red'
+        , 'yellow'
+        , 'beige'
+        , 'black'
+        , 'brown'
+        , 'copper'
+        , 'cream'
+        , 'gold'
+        , 'grey'
+        , 'purple'
+        , 'rust'
+        , 'silver'
+        , 'white'
+        , 'amber'
+        , 'lavender'
+        , 'sepia'
+        , 'apricot'
+        , 'bronze'
+        , 'coral'
+        , 'peach'
+        , 'ultramarine'
+        , 'mustard'
+        ]

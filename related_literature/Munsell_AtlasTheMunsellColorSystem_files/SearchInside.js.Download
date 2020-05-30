@@ -1,0 +1,114 @@
+/**
+ * SearchInsideAccess allow one to search inside a borrowable book
+ */
+function SearchInsideAccess(br, bookId, postInitCB) {
+  this.maxAge = 180000;
+  this.postInitCB = null;
+  this.requestCount = 0;
+  this.br = br;
+  this.bookId = bookId || '';
+  this.postInitCB = postInitCB;
+  this.token = null;
+
+  if (archive_analytics) {
+    window.archive_analytics.send_event('BRSearchInsideToken', 'initiating');
+  }
+};
+
+/**
+ * Initiates access to search inside a borrowable book
+ */
+SearchInsideAccess.prototype.init = function() {
+  this.initiateRequest();
+}
+
+/**
+ * Handles successful response from token fetch
+ *
+ * @param {object} response
+ */
+SearchInsideAccess.prototype.grantAccess = function () {
+  this.startTimer();
+  var hasInitialized = this.requestCount === 1 && this.postInitCB;
+  if (hasInitialized) {
+    this.postInitCB(this.token);
+  }
+}
+
+/**
+ * Handles bad token requests
+ *
+ * @param { jqXHR } error
+ */
+SearchInsideAccess.prototype.requestError = function (error) {
+  if (archive_analytics) {
+    var actionOrigin = error.responseJSON ? (error.responseJSON.error).replace(/\s/g, '_') : 'genericError';
+    var actionString = 'ReqErr' + error.status + 'From' + (actionOrigin);
+    window.archive_analytics.send_event('BRSearchInsideToken', actionString);
+  }
+  this.clearTimer();
+  this.initiateRequest();
+}
+
+/**
+ * Tracks number of times the token has been requested for
+ */
+SearchInsideAccess.prototype.initiateRequest = function () {
+  this.requestCount = this.requestCount + 1;
+  this.requestAccess();
+}
+
+/**
+ * Initiates token request
+ */
+SearchInsideAccess.prototype.requestAccess = function () {
+  if (this.hasValidLoanToken()) {
+    this.grantAccess();
+    return;
+  }
+
+  $.ajax({
+    url: "/services/loans/beta/loan/searchInside.php",
+    type: 'POST',
+    dataType: "json",
+    contentType: "application/json; charset=utf-8",
+    data: {
+      action: 'grant_access',
+      identifier: this.bookId
+    }
+  }).then(
+    function (response) {
+      this.token = response.value;
+      this.grantAccess();
+    }.bind(this),
+    function (error) {
+      this.requestError(error);
+    }.bind(this)
+  );
+}
+
+/**
+ * Stops countdown to next token fetch
+ */
+SearchInsideAccess.prototype.clearTimer = function () {
+  clearInterval(this.poller);
+  this.poller = null;
+}
+
+/**
+ * Starts countdown to next token fetch
+ */
+SearchInsideAccess.prototype.startTimer = function () {
+  this.clearTimer();
+  this.poller = setInterval(this.initiateRequest.bind(this), this.maxAge);
+}
+
+/**
+ * Confirms whether or not there is a loan token for this book
+ *
+ * @returns bool
+ */
+SearchInsideAccess.prototype.hasValidLoanToken = function () {
+  var loanTokenName = 'loan-' + this.bookId;
+  return (document.cookie).indexOf(loanTokenName) > -1;
+}

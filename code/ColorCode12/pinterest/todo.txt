@@ -1,0 +1,5 @@
+for every pin images on pinterest, display
+1. image
+2. dominant color (pinterest) 
+3. color palette (colorbar=10) 
+4. cp12 classification result 

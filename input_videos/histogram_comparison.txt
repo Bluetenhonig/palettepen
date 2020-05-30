@@ -1,0 +1,7 @@
+comparing two histograms
+- compare shapes, centers, spreads and outliers
+shapes: unimodal, bimodal etc., how close to bell curve? 
+c
+centers: take mean or median and compute the difference
+spread: take ranges and comput the difference 
+outlier: skip

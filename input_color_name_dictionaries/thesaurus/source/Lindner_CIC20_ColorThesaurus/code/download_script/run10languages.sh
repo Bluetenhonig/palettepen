@@ -1,0 +1,10 @@
+./google_download.pl ./files/ lang_en > commands_en.txt
+./google_download.pl ./files/ lang_de > commands_de.txt
+./google_download.pl ./files/ lang_fr > commands_fr.txt
+./google_download.pl ./files/ lang_pt > commands_pt.txt
+./google_download.pl ./files/ lang_zh-CN > commands_cn.txt
+./google_download.pl ./files/ lang_ko > commands_ko.txt
+./google_download.pl ./files/ lang_es > commands_es.txt
+./google_download.pl ./files/ lang_it > commands_it.txt
+./google_download.pl ./files/ lang_ru > commands_ru.txt
+./google_download.pl ./files/ lang_jp > commands_jp.txt

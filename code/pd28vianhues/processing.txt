@@ -1,0 +1,5 @@
+
++ last-word classification = cat1 nulls 
+'SRGBLABhsvhslLCHHEX_Eng_VIANHuesColorThesaurus.xlsx'
++ manual classification = cat1 not null 
+'SRGBLABhsvhslLCHHEX_EngALL_VIANHuesColorThesaurus.xlsx'

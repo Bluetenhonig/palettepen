@@ -1,0 +1,3 @@
+define 5-12 basic color categories for a given color space
+perceptually uniform: how big are the steps between white and blue or rainbow colors, then 
+create color scheme from that 

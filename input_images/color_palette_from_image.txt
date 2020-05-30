@@ -1,0 +1,6 @@
+principles: based on what rules do I generate color schemes? 
+
+practice: 
+extract color palette from image 
+theory: 
+generate color palette by picking colors (add new colors by color harmony) 

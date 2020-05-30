@@ -1,0 +1,938 @@
+row number	chinese	english	french	german	italian	japanese	korean	portuguese	russian	spanish
+1	酸性绿	acid green	vert acide	Säure grün	verde acido	アシッドグリーン	산성 녹색	verde ácido	Кисло зелёный	verde ácido
+2	土砖色	adobe	adobe	Adobe	Mattone rosso	日干しれんが	어도비 벽돌 색	adobe	камелопардовый	adobe
+3	藻类色 	algae	algues	Algen	alghe	藻類	조류 색	algas	водорослевый	algas
+4	海藻绿	algae green	algues vertes	Algengrün	Verde alga	海藻の緑	조류 녹색	verde algas 	Цвет зелёных водорослей	verde alga
+5	近黑色	almost black	presque noir	fast schwarz	quasi nero	ほとんど黒	거의 블랙	quase preto	почти черный	casi negro
+6	琥珀色	amber	ambre	Bernstein	ambra	黄色	호박	âmbar	янтарный	ámbar
+7	紫晶色	amethyst	améthyste	Amethyst	ametista	アメジスト	자수정	Ametista	аметистовый	amatista
+8	苹果色	apple	pomme	Apfel	mela	リンゴ	사과 색	maçã	яблочный	manzana
+9	苹果绿	apple green	vert pomme	apfelgrün	verde mela	アップルグリーン	사과 녹색	verde maçã	Цвет зеленого яблока	verde manzana
+10	杏黄色	apricot	abricot	Aprikose	albicocca	アプリコット	살구	damasco	абрикосовый	albaricoque
+11	蓝绿色	aqua	aqua	Wasser	acqua	水色	아쿠아	água	цвет морской волны	aguamarina
+12	水蓝色	aqua blue	Aqua bleue	Aqua Blau	Blu acqua	アクアブルー	아쿠아 블루	Azul água	Синий цвет морской волны	azul aguamarina 
+13	蓝绿色	aqua green	Aqua vert	aqua green	verde acqua	アクアグリーン	아쿠아 그린	verde água 	Зелёный цвет морской волны	aguamarina verde
+14	碧海蓝天	aqua marine	Aigue marine	Aqua Marine	Acquamarina	アクアマリン	아쿠아 마린	Aqua Marine	аквамариновый	aguamarina
+15	海蓝宝石色	aquamarine	Aigue marine	Aquamarin	acquamarina	明るい青緑色	남옥	Água marinho	Аквамариновый	aguamarina
+16	军绿色	army green	vert armée	Armee grün	verde militare	アーミーグリーン	군대 녹색	exército verde	армейский зелёный	verde militar
+17	芦笋色	asparagus	asperges	Spargel	asparagi	アスパラガス	아스파라거스 색	espargos	спаржевый	espárragos
+18	茄子色	aubergine	aubergine	Aubergine	melanzana	茄子	가지색	beringela	баклажановый	berenjena
+19	赤褐色	auburn	châtain	rost braun	Castano ramato	赤褐色	적갈색의	ruivo	каштановый	castaño rojizo
+20	鳄梨色	avocado	avocat	Avocado	avocado	アボカド	아보카도	abacate	авокадный	aguacate
+21	鳄梨绿	avocado green	vert avocat	Avocado-Grün	Verde avocado	アボカドグリーン	아보카도 그린	verde abacate 	Авокадо зелёный	verde aguacate
+22	海蓝色	azul	azul	azul	azul	アズール	스페인 파란색	azul	Королевско синий	azul
+23	天蓝	azure	azur	azurblau	azzurro	紺碧	하늘빛	azure	лазурный	azur
+24	淡蓝色	baby blue	bébé bleu	Baby Blau	Blu bebè	淡い青色	베이비 블루	azul bebê	Бэйби голубой	bebé azul
+25	婴儿绿	baby green	vert de bébé	Baby-Grün	Verde bebè	ベビーグリーン	아기같은 녹색	verde bebê	бэйби зелёный	verde bebé
+26	浅粉红色	baby pink	bébé rose	rosa	rosa bebè	明るいピンク	베이비 핑크	rosa bebê	Бэйби розовый	rosa bebé 
+27	婴儿大便色	baby poo	bébé caca	Baby Scheisse	Cacca di bebè	赤ちゃんうんち	아기 똥 색	poo de bebê	Бэйби какашковый	bebé caca
+28	婴儿便色	baby poop	merde bébé	Baby Scheisse	Cacca bambino	赤ちゃんのうんち	아기 똥	cocô de bebê	Бэйби какашковый	caca bebé
+29	婴儿便绿色	baby poop green	Vert de merde bébé	Kinder Scheisse grün	Verde cacca di bebé	赤ちゃんのうんち緑	아기 똥 녹색	verde cocô de bebê	бэйби какашково зелёный	verde caca de bebé
+30	婴儿呕吐绿	baby puke green	Vert de vomi de bébé	Baby kotzgrün	Verde vomito di bebè	赤ちゃん緑色の液を吐く	아기 토 녹색	Verde de vomitado de bébé	Бэйби рвотно зелёный	verde vomito de bebe
+31	婴儿紫	baby purple	bébé violet	Baby lila	Viola bebè	赤ちゃん紫	아기 자주색	roxo bebê	бэйби фиолетовый	púrpura del bebé
+32	婴屎棕色	baby shit brown	merde brun de bébé	Baby Scheiße braun	Marrone merda di bebè	赤ちゃんくそブラウン	아기 똥 갈색	Catenho merda de bébé	какашки коричневые ребёнока 	marrón caca de bebe
+33	婴儿屎绿	baby shit green	vert merde bébé	Baby Scheiße grün	Verde merda di bebè	赤ん坊のたわごと緑	아기 똥 녹색	verde merda de bebê	зелёный бэйби какашковый	verde caca de bebé
+34	香蕉色	banana	banane	Banane	banana	バナナ	바나나	Banana	банановый	plátano
+35	香蕉黄	banana yellow	banane jaune	Bananengelb	giallo banana	バナナイエロー	바나나 노란색	amarelo banana	Жёлто банановый	plátano amarillo
+36	芭比粉红	barbie pink	Rose barbie	Barbie rosa	Rosa Barbie	バービーピンク	바비 핑크	rosa barbie	Барби розовый	rosa barbie
+37	呕吐绿	barf green	 Vert vomi	Kotzgrün	Verde vomito	嘔吐緑	토같은 녹색	Verde vomitado	Рвото зелёный	verde vomito
+38	巴尼色	barney	Très violet	dunkel violett	Barney	バーニー	바니	Muito violeta	Фиолетово баклажанный	violeta barney
+39	巴尼紫色	barney purple	violet pourpre	dunkel lila	Viola Barney	バーニー紫	바니 자주색	Roxo muito violeta	Пурпорно фиолетовый	violeta purpura
+40	战舰灰	battleship grey	cuirassé gris	Schlachtschiff grau	Grigio corazzato	戦艦グレー	전함 회색	cinza encouraçado	Коженно серый	gris metálico
+41	米色	beige	beige	beige	beige	ベージュ	베이지 색의	bege	бежевый	beige
+42	浆果色	berry	baie	Beere	bacca	ベリー	딸기류 열매 색	baga	Ягодный	baya
+43	胆汁色	bile	bile	Galle	bile	胆汁	담즙색	bílis	Цвет жёлчи	bilis
+44	黑色	black	noir	schwarz	nero	黒	검정	preto	черный	negro
+45	土色	bland	fade	fade	insipido	当たり障りのない	밋밋한 색	brando	блёклый	suave
+46	血色	blood	sang	Blut	sangue	血	피	sangue	кровавый	sangre
+47	血橙色	blood orange	orange sanguine	Blutorange	Arancia sanguigna	ブラッドオレンジ	빨간 오렌지	laranja sangue 	Красно апельсиновый	naranja sanguina
+48	血红色	blood red	Rouge sanguine	Blutrot	rosso sangue	血赤	피같은 빨강	vermelho sangue 	кроваво красный	rojo sanguina
+49	蓝色	blue	bleu	blau	blu	青	푸른, 파랑, 파란색	azul	синий	azul
+50	正蓝色	blue blue	bleu profond	blau blau	blu blu	青	파랗고 파란색	azul azul	Глубоко синий	azul azul
+51	蓝绿色	blue green	bleu vert	blau grün	blu verde	青緑	파랑 녹색	azul verde	зелёно синий	azul verde
+52	蓝灰色	blue grey	bleu gris	blau grau	blu grigio	ブルーグレー	블루 회색	azul cinza	серо синий	azul / gris
+53	蓝紫色	blue purple	bleu violet	blau lila	blu viola	青紫	보라색 ​​청색	azul roxa	фиолетово синий	azul morado
+54	蓝紫色	blue violet	Bleu violet	blauviolett	Viola blu	青紫色	블루 바이올렛	azul violeta	фиолетово синий	azul violeta
+55	掺紫色的蓝色	blue with a hint of purple	bleu avec un soupçon de violet	Blau mit einem Hauch von Purpur	blu con un pizzico di viola	紫色のヒントと青	보라색 ​​약간 가미된 파란색	azul com uma pitada de roxo	синий с оттенком фиолетового	azul con un toque de púrpura
+56	蓝莓色	blueberry	myrtille	Heidelbeere	mirtillo	ブルーベリー	블루베리	mirtilo	черничный	arándano
+57	蓝绿	bluegreen	Bleu vert	blaugrün	Verde blu	ブルーグリーン	파란 그린	Azul esverdeado	Зелёно синий	azul verde
+58	蓝灰色	bluegrey	Bleu gris	blaugrau	Grigio blu	ブルーグレー	파란 회색	Azul cinzento	серо синий	azul gris
+59	发蓝绿色	bluey green	Vert verdâtre	bläulich grün	Verde bluastro	青みがかった緑	파란듣한 녹색	Verde azulado	Зелёновато зелёный	verde azulado
+60	发蓝灰色	bluey grey	gris bleuâtre	bläulich grau	Grigio bluastro	青みがかった灰色の	파란듯한 회색	Cinzento azulado	Синевато серый	gris azulado
+61	发蓝紫色	bluey purple	violet bleuâtre	bläulich violett	Viola bluastro	青みがかった紫色の	파란듣한 자주색	Roxo azulado	Синевато фиолетовый	violeta azulado
+62	浅蓝色	bluish	bleuâtre	bläulich	azzurrognolo	青みがかった	푸르스름한	azulado	голубоватый	azulado
+63	蓝绿色	bluish green	vert bleuâtre	blaugrün	verde bluastro	青緑色	푸른빛이 도는 녹색	verde azulado	синевато зелёный	verde azulado
+64	蓝灰色	bluish grey	gris bleuté	blaugrau	Grigio azzurognolo	青みがかった灰色の	푸른빛이 도는 회색	cinza azulado	синевато серый	gris azulado
+65	蓝紫色	bluish purple	violet bleuâtre	blauviolett	viola bluastro	青紫色	푸른빛이 도는 자주색	roxo azulado	голубовато фиолетовый	púrpura azulado 
+66	蓝紫色	blurple	indigo	blauviolett	Blu viola	青紫	블루퍼플	Azul violeta	индиго	indigo
+67	害羞色	blush	rougi	erröten	arrossire	顔を赤らめる	붉어진 얼굴색	corar	румяный	colorete
+68	害羞粉红色	blush pink	Rose rougé	Hautfarbe rosa	Rosa arrossito	ピンクの顔を赤らめる	볼 분장 분홍색	rosa blush 	Румяно розовый	rubor rosa 
+69	鼻屎黄	booger	crottes de nez	Popel	caccola	鼻くそ	코딱지 색	moco	сопливый	moco
+70	鼻屎绿	booger green	Crottes de nez vert	Popel grün	Verde caccola	鼻くそ緑	코딱지 녹색	Verde moco	сопливо зелёный	verde moco
+71	波尔多	bordeaux	Bordeaux	Bordeaux	Bordeaux	ボルドー	보르도	bordeaux	Бордовый	granate
+72	枯燥的绿色	boring green	vert ennuyeux	langweilig grün	verde noioso	退屈な緑	지루한 녹색	verde chato	Скучно зелёный	verde aburrido
+73	深绿色	bottle green	vert bouteille	flaschengrün	verde bottiglia	暗緑色	병의 초록색	verde garrafa	бутылочно зелёный	verde botella
+74	砖色	brick	brique	Backstein	mattone	煉瓦	벽돌	tijolo	кирпичный	ladrillo
+75	砖橙色	brick orange	brique orange	Ziegel Orange	Arancione mattone	レンガオレンジ	벽돌 오렌지	laranja tijolo 	Кирпично оранжевый	naranja ladrillo
+76	砖红色	brick red	en brique rouge	ziegelrot	rosso mattone	赤れんが色	벽돌 레드	vermelho tijolo 	кирпично красный	ladrillo rojo
+77	艳淡蓝绿色	bright aqua	Aqua lumineux	hell aqua	Acqua brillante	明るい水色	밝은 아쿠아	água brilhante	Светящийся цвет морской волны	aguamarina brillante
+78	鲜蓝色	bright blue	Bleu lumineux	hellblau	Blu brillante	明るい青	밝은 파란색	azul brilhante	светящийся синий	azul brillante 
+79	鲜青色	bright cyan	cyan brillant	helles Cyan	Ciano brillante	明るいシアン	밝은 청록색	ciano brilhante 	Светящийся циановый	cian brillante
+80	鲜绿色	bright green	vert clair	hellgrün	verde brillante	明るい緑色	밝은 녹색	verde brilhante	светло зелёный	verde brillante
+81	鲜薰衣草色	bright lavender	lavande lumineux	helles Lavendel	lavanda brillante	明るいラベンダー	밝은 라벤더	lavanda brilhante	Светящийся лавандовый	lavanda brillante 
+82	鲜浅蓝色	bright light blue	bleu clair lumineux	leicht hellblau	Blu chiaro brillante	明るい青	밝은 라이트 블루	azul claro brilhante	Светящийся голубой	azul claro brillante 
+83	亮浅绿色	bright light green	vert clair lumineux	leicht hellgrün	verde chiaro brillante	明るい緑	밝은 녹색	verde brilhante claro	светящийся светло зелёный 	verde claro brillante 
+84	鲜淡紫色	bright lilac	lilas lumineux	hell lila	lilla brillante	明るいライラック	밝은 라일락 색	lilás brilhante	Светящийся сиреневый	lila brillante
+85	鲜石灰色	bright lime	vive la chaux	helle Limonette	Lime brillante	明るいライム	밝은 라임	lima brilhante	Светящийся лаймовый	lima brillante
+86	鲜石灰绿	bright lime green	Citron vert lumineux	helles Limonettengrün	Verde lime brillante	明るいライムグリーン	밝은 라임 그린	verde brilhante limão	Лаймовый светящийся	verde limon brillante
+87	鲜洋红	bright magenta	magenta vif	helles Magenta	magenta brillante	明るいマゼンタ	밝은 자홍색	magenta brilhante	Ярко маджентовый	magenta brillante
+88	鲜橄榄色	bright olive	d'olive brillant	lebhaft olivgrün	oliva brillante	明るいオリーブ	밝은 올리브	azeitona brilhante	Блестяще оливковый	oliva brillante
+89	鲜橙色	bright orange	orange lumineux	leuchtend orange	Arancione brillante	明るいオレンジ色	밝은 오렌지색	laranja brilhante	светящийся оранжевый	naranja brillante 
+90	鲜粉红	bright pink	rose vif	leuchtend rosa	rosa brillante	明るいピンク色	밝은 핑크	rosa brilhante	ярко розовый	rosa brillante
+91	鲜紫色	bright purple	Violet lumineux	helles Purpur	viola brillante	明るい紫色	밝은 자주색	roxo brilhante	светящийся фиолетовый	púrpura brillante 
+92	鲜红色	bright red	rouge lumineux	leuchtend rot	rosso brillante	真っ赤	밝은 적색	vermelho brilhante	светящийся красный	rojo brillante 
+93	鲜海绿色	bright sea green	vert de mer lumineux	hell Seegrün	Verde marino brillante	明るい海緑色	밝은 바다 녹색	verde mar brilhante 	светящийся зелёно морской 	verde claro de mar
+94	艳天空蓝	bright sky blue	Bleu ciel lumineux	helles Himmelblau	Blu cielo brillante	明るいスカイブルー	밝은 하늘색	azul brilhante céu 	Светящийся голубой	azul cielo brillante 
+95	艳水鸭色	bright teal	Turquoise lumineux	helles Blaugrün	Foglia di tè brillante	明るいティール	밝은 상오리	turquesa brilhante	светящийса бирюзовый	turquesa brillante
+96	艳绿蓝色	bright turquoise	turquoise lumineux	helles Türkis	turchese brillante	明るいターコイズ	밝은 청록색	turquesa brilhante	светящийся бирюзовый	turquesa brillante
+97	鲜紫色	bright violet	violet lumineux	helles Violett	viola brillante	明るい紫	밝은 보라색	violeta brilhante	Светящийся фиолетовый	violeta brillante
+98	鲜黄色	bright yellow	jaune lumineux	hellgelb	giallo brillante	黄色の鮮やかな	노란색 밝은	amarelo brilhante	светящийся жёлтый	amarillo brillante 
+99	鲜黄绿色	bright yellow green	Vert jaune lumineux	leuchtend gelb grün	verde giallo brillante	明るい黄緑色	밝은 노란 녹색	verde amarelo brilhante	светящийся жёлто зелёный	verde amarillo claro
+100	英国赛车绿	british racing green	Vert de course anglais	sehr dunkelgrün	British racing green	ブリティッシュ·レーシング·グリーン	영국 레이싱 그린	Verde de corrida britânico	британский гоночно зелёный	verde de carrera inglesa
+101	青铜色	bronze	bronze	Bronze	bronzo	青銅	청동색	bronze	бронзовый	bronce
+102	棕色	brown	brun	braun	marrone	茶色	갈색	castanho	коричневый	marrón
+103	棕绿色	brown green	brun vert	braun grün	Verde marrone	ブラウングリーン	갈색 녹색	castanho verde	зеленовато коричневый	marrón verde
+104	棕灰色	brown grey	brun gris	braungrau	grigio marrone	ブラウングレー	갈색 회색	cinza castanho 	серо коричневый	marrón gris
+105	棕色橙色	brown orange	brun orangé	braun orange	Arancione marrone	ブラウンオレンジ	갈색 오렌지	castanho laranja	Оранжевато коричневый 	marron anaranjado
+106	棕红色	brown red	Rouge brun	braun rot	Rosso marrone	ブラウンレッド	브라운 레드	Castanho vermelho	Коричнево красный	rojo marron
+107	棕黄色	brown yellow	Brun jaune	braungelb	marrone giallo	茶色黄色	갈색 황색	Amarelo castanho	Жёлто коричневый 	marrón amarillo
+108	棕色	brownish	brunâtre	bräunlich	brunastro	茶色がかった	갈색	acastanhado	коричневатый	pardusco
+109	棕绿色	brownish green	vert brunâtre	bräunlich grün	Verde brunastro	茶色がかった緑	갈색적인 녹색	Verde acastanhado	коричневато зелёный	verde pardusco
+110	棕灰色	brownish grey	gris brunâtre	bräunlich grau	grigio bruno	茶色がかった灰色	갈색 회색	Cinza acastanhado	коричневато серый	gris pardusco
+111	褐橙色	brownish orange	orange brunâtre	bräunlichorange	Arancione bruno	茶色がかったオレンジ色	갈색 오렌지	laranja acastanhado	Коричневато оранжевый	naranja pardusco
+112	棕粉色	brownish pink	Rose brunâtre	bräunlich rosa	rosa brunastro	茶色がかったピンク	갈색 핑크	Rosa acastanhado	Коричневато розовый	rosa pardusco
+113	棕紫	brownish purple	violet brunâtre	bräunlich violett	Viola brunastro	茶色がかった紫	갈색 보라색	Roxo acastanhado	Коричневато фиолетовый	púrpura pardusco 
+114	棕红色	brownish red	rouge brunâtre	braunrot	rosso bruno	茶色がかった赤	갈색 빨강	vermelho acastanhado	коричневато красный	rojo pardusco
+115	棕黄色	brownish yellow	jaune brunâtre	braungelb	Giallo brunastro	黄褐色	갈색 황색	amarelo acastanhado	коричневато жёлтый	amarillo pardusco
+116	棕绿色	browny green	vert brunâtre	bräunlich grün	verde marrone	茶色がかった緑	황색적인 녹색	verde acastanhado	Коричновато Зелёный	verde marrón
+117	棕橙色	browny orange	Orange brun	Browny Orange	Arancione marrone	茶色がかったオレンジ色	황색 오렌지	laranja acastanhado	Коричнево оранжевый	pardo anaranjado
+118	扭伤色	bruise	contusion	Prellung	livido	あざ	타박상 색	contusão	Цвет синяка	moretón
+119	泡泡糖粉色	bubble gum pink	Chewing gum rose	Kaugummi-Rosa	Rosa gomma da masticare	バブルガムピンク	버블 껌 핑크	Rosa chiclete	Жевательно резинково розовый	chicle rosa
+120	泡泡糖色	bubblegum	Chewing gomme	Kaugummi	Gomma da masticare	風船ガム	버블검 색	Pastilha elástica	Цвет жевательной резинки	chicle
+121	泡泡糖粉色	bubblegum pink	rose bonbon	Kaugummipink	Rosa gomma da masticare	バブルガムピンク	버블검 핑크	rosa chiclete	Конфетно розовый	rosa caramelo
+122	浅黄色	buff	chamois	blasses hellbraun	camoscio	バフ	버프 색	Tapa	Цвет верблюжий	gamuzado
+123	红色 	burgundy	bordeaux	Burgund	Bordeaux	バーガンデイ色	부르고뉴	Borgonha	Бордовый	granate
+124	焦橙色	burnt orange	orange brûlé	bräunlich Orange	Arancione bruciato	濃いオレンジ色	탄 오렌지	laranja queimado	Горело оранжевый	naranja quemado
+125	烧焦的红色	burnt red	Rouge brûlé	verbranntes Rot	Rosso bruciato	焦げた赤	탄 붉은 색	vermelho queimado	сожженно красный	rojo quemado
+126	过火赭色	burnt siena	terre de sienne brûlée	Gebrannter Siena	Terra di Siena bruciata	焼け赤褐色	탄 시에나 색	siena queimada	Цвет выгоревший меди	siena quemada
+127	焦赭	burnt sienna	terre de Sienne brûlée	gebrannte Siena	terra di siena bruciata	濃い黄褐色	황갈색	Sienna queimado	Цвет выгоревший меди	siena quemado
+128	焦赭	burnt umber	terre d'ombre brûlée	gebrannte Umbra	terra d'ombra bruciato	赤褐色	탄 암갈색	Sombra queimada	жженый тёмно коричневый	tierra de sombra quemada
+129	烧焦的黄色	burnt yellow	Jaune brûlé	verbrannt gelb	Giallo bruciato	黄色の焼け	탄 노란색	amarelo queimado	Горело жёлтый	amarillo quemado 
+130	紫蓝色	burple	Bleu violet	indigo	Blu viola	紫	파란 보라색	Azul violeta	Сине фиолетовый 	burple
+131	黄油色	butter	beurre	Butter	burro	バター	버터 색	manteiga	цвет масла	mantequilla
+132	奶油黄	butter yellow	jaune beurre	Buttergelb	Giallo burro	バターイエロー	버터 황색	amarelo manteiga	Цвет масла	amarillo mantequilla
+133	奶油色	butterscotch	caramel au beurre	Karamellbonbon	Caramella a base di zucchero e burro	バタースコッチ	버터볼 색	doce de manteiga	карамельный	butterscotch
+134	藏青	cadet blue	Bleu cadet	Kadettenblau	Blu cadetto	士官候補生青	생도 블루	azul cadete 	Кадетно синий	azul cadete
+135	骆驼色	camel	chameau	Kamel	cammello	ラクダ	낙타	camelo	Шамуа	camello
+136	春黄菊色	camo	Vert kaki	camo	Verde militare	迷彩	초록 카키 색	Verde feio	Хаки зелёный	camo
+137	迷彩绿	camo green	Vert camo	nebliges olivgrün	Verde mimetico	迷彩グリーン	카모 그린	verde camo 	Цвет зелёного камуфляжа	verde camuflaje
+138	伪装绿	camouflage green	camouflage vert	Tarngrün	Verde mimetico	緑の迷彩	위장 녹색	Verde camufado	Камуфляжно зелёный	camuflaje verde 
+139	金丝雀鲜黄色	canary	canari	Kanarienvogel	canarino	カナリア	카나리아 색	canário	канареечный	canario
+140	淡黄色	canary yellow	jaune canari	Kanariengelb	giallo canarino	カナリア色	카나리아 빛	amarelo canário	канареечно жёлтый	amarillo canario
+141	糖果粉色	candy pink	rose bonbon	Candy Pink	Rosa caramella	キャンディピンク	캔디 핑크	Rosa doce	конфетно розовый	rosa caramelo
+142	焦糖色	caramel	caramel	Karamell	caramello	キャラメル	캐러멜	Caramelo	карамельный	caramelo
+143	胭脂红	carmine	carmin	karminrot	carminio	深紅色	카민색	carmim	карминный	carmín
+144	肉色	carnation	incarnat	Nelke	garofano	カーネーション	카네이션 색	cravo	Цвет гвоздики	carnacion
+145	粉肉色	carnation pink	rose incarnat	Nelke rosa	rosa garofano 	カーネーションのピンク	카네이션의 핑크	rosa cravo	Цвет розовой гвоздики	rosa carnacion
+146	卡蓝	carolina blue	Bleu caroline	Carolina blau	Blu carolina	カロライナブルー	캐롤리나 블루	azul carolina	небесный	azul carolina
+147	灰绿色	celadon	céladon	Seladon	Verde ceramica pallido	青磁	청자	celadon	Селадоновый	celadón
+148	芹菜色	celery	céleri	Sellerie	sedano	セロリ	셀러리	aipo	сельдерейный	apio
+149	水泥色	cement	ciment	zement	cemento	セメント	시멘트 색	cimento	цементный	cemento
+150	樱桃色	cerise	Cerise rouge	Kirsche	Rosso ciliegia	サクランボ色	선홍색의	cereja	Красно вишнёвый	rojo cereza
+151	蔚蓝的	cerulean	azuré	himmelblau	Blu cerule	紺碧	하늘색의	cerúleo	лазурный	cerúleo
+152	天蓝色	cerulean blue	bleu céruléen	Himmelblau	blu ceruleo	セルリアンブルー	하늘색의 파란	azul cerúleo 	Небесно голубой	azul cerúleo
+153	木炭色	charcoal	charbon de bois	Holzkohle	Grigio antracite	木炭	숯	carvão vegetal	Цвет уголя	carbón vegetal 
+154	木炭灰色	charcoal grey	gris anthracite	anthrazit	grigio carbone	チャコールグレー	숯불 회색	cinzento de carvão vegetal	антрацитно серый	gris oscuro
+155	黄绿色	chartreuse	chartreuse	Kartause	Verde pallido	シャルトリューズ	연두빛	cor verde-amarelada	салатовый	chartreuse
+156	樱桃色	cherry	cerise	Kirsche	ciliegia	チェリー	체리 색	cereja	вишнёвый	cereza
+157	樱桃红	cherry red	rouge cerise	kirschrot	rosso ciliegia	チェリーレッド	체리 레드	vermelho cereja	вишнево красный	rojo cereza
+158	板栗色	chestnut	châtaigne	Kastanie	castagna	栗	밤나무	Castanha	каштановый	castaño
+159	巧克力	chocolate	chocolat	Schokolade	cioccolato	チョコレート	초콜릿	chocolate	шоколадный	chocolate
+160	巧克力棕色	chocolate brown	brun chocolat	Schokoladenbraun	marrone cioccolato	チョコレート色	초콜릿 갈색	castanho chocolate	шоколадно коричневый	marrón chocolate
+161	肉桂色	cinnamon	cannelle	Zimt	cannella	シナモン	계피	canela	Цвет корицы	canela
+162	紫红色	claret	bordeaux	dunkles Weinrot	Bordeaux 	クラレット	클라레 색	Roxo escuro	бордовый	burdeos
+163	粘土色	clay	argile	Ton	argilla	粘土	점토	argila	глинянный	arcilla
+164	粘土褐色	clay brown	argile brune	Ton braun	Marrone argilla	粘土茶色	흙 갈색	Castanho argila	Глинено коричневый	marrón arcilla
+165	碧蓝色	clear blue	bleu limpide	klaren, blauen	Blu trasparente	クリアブルー	맑은 푸른색	azul claro	Прозрачно голубой	azul claro
+166	多云蓝	cloudy blue	bleu nuageux	neblig blau	blu nuvoloso	濁った青	흐린 청색	azul nublado 	Облачно синий	azul nublado
+167	银白色	cobalt	cobalt	Kobalt	cobalto	コバルト	코발트	cobalto	кобальтовый	cobalto
+168	钴蓝	cobalt blue	bleu de cobalt	kobaltblau	blu cobalto	コバルトブルー	코발트 블루	azul cobalto	Кобальто синий	azul de cobalto
+169	可可色	cocoa	cacao	Kakao	cacao	ココア	코코아 색	Cacau	Цвет какао	cacao
+170	咖啡色	coffee	café	Kaffee	caffè	コー​​ヒー	커피	café	кофейный	café
+171	酷蓝	cool blue	Bleu cool	kühles Blau	Blu freddo	クールブルー	쿨 블루	azul cool	Холодно синий	azul cool
+172	新潮绿	cool green	vert frais	kühles Grün	verde fresco	涼しい緑	시원한 녹색	verde fresco	Свежо зелёный	verde fresco
+173	冷灰色	cool grey	gris	kuehles Grau	Grigio freddo	洗練された灰色	쿨 그레이	cinza cool	серый	gris fresco
+174	铜色	copper	cuivre	Kupfer	rame	銅	구리	cobre	медный	cobre
+175	珊瑚色	coral	corail	Koralle	corallo	サンゴ	산호	coral	коралловый	coral
+176	珊瑚粉色	coral pink	rose corail	korallenrosa	Rosa corallo	コー​​ラルピンク	코럴 핑크	Rosa coral	Кораллово розовый 	rosa coral
+177	深艳蓝色	cornflower	bleuet	Kornblume	fiordaliso	ヤグルマギク	수레 국화	mirtilo	васильковый	aciano
+178	深艳蓝色	cornflower blue	bleu bleuet	Kornblumenblau	Blu fiordaliso	コー​​ンフラワーブルー	수레 국화 블루	 Azul mirtilo	Васильково синий	celeste
+179	酸果色	cranberry	canneberge	Preiselbeere	mirtillo rosso	クランベリー	덩굴월귤	oxicoco	клюквенный	arándano
+180	奶油色	cream	crème	Sahne	crema	クリーム	크림	creme	кремовый	crema
+181	乳白色	creme	crème	creme	creme	クレーム	크림 색	creme	кремовый	crema
+182	猩红	crimson	pourpre	karminrot	cremisi	深紅色	진홍	carmesim	пурпурный	carmesí 
+183	蛋黄色	custard	crème	Vanillesoße	crema	カスタード	커스터드 색	creme	кремовый	crema
+184	青色	cyan	cyan	Cyan	ciano	シアン	청록색	ciano	циановый	cian
+185	蒲公英色	dandelion	pissenlit	Löwenzahn	dente di leone	タンポポ	민들레 색	dandelion	одуванчиковый	diente de león
+186	黑色	dark	sombre	dunkel	buio	暗い	어두운	escuro	темный	oscuro
+187	深蓝绿色	dark aqua	Aqua foncé	dunkles aqua	Acqua scuro	ダークアクア	다크 아쿠아	água escura	тёмный цвет морской волны	aguamarina oscuro
+188	暗蓝宝石色	dark aquamarine	Aigue marine foncé	dunkles Aquamarin	acquamarina scuro	ダークアクアマリン	어두운 아쿠아마린	aquamarine escuro	Тёмно аквамариновый	aguamarina oscuro
+189	深米色	dark beige	beige foncé	dunkelbeige	beige scuro	ダークベージュ	어두운 베이지색	bege escuro	тёмно бежевый	beige oscuro
+190	深蓝色	dark blue	bleu foncé	dunkelblau	blu scuro	ダークブルー	진한 파란색	azul escuro	тёмно синий	azul oscuro
+191	深蓝绿色	dark blue green	bleu foncé vert	dunkelblau grün	Verde blu scuro	濃い青緑	진한 파란색 녹색	azul escuro verde	зелёно тёмно синий 	azul verde oscuro
+192	深蓝灰色	dark blue grey	bleu foncé gris	dunkelblau grau	Grigio blu scuro	ダークブルーグレー	진한 파란색 회색	cinza azul escuro 	тёмно сине серый	gris oscuro
+193	深棕色	dark brown	brun foncé	dunkelbraun	marrone scuro	ダークブラウン	진한 갈색	castanho escuro	тёмно коричневый	marrón oscuro
+194	深珊瑚色	dark coral	corail foncé	dunkle Korallen	corallo scuro	ダークサンゴ	어두운 산호색	coral escuro	Тёмно коралловый	coral oscuro
+195	深乳白色	dark cream	crème foncé	dunkle Creme	crema scura	濃いクリーム	진한 크림	creme escuro	Тёмно кремовый	crema oscuro
+196	深青色	dark cyan	cyan foncé	dunkel Cyan	ciano scuro	暗いシアン	어두운 청록색	ciano escuro	Тёмно циановый	cian oscuro 
+197	深森林绿	dark forest green	forêt verte foncé	dunkles Waldgrün	Verde foresta scuro	ダークフォレストグリーン	어두운 숲의 녹색	verde escuro floresta	Цвет тёмно зелёного леса	bosque verde oscuro
+198	暗紫红色	dark fuchsia	fuchsia foncé	dunkel fuchsia	fucsia scuro	暗いフクシア	진한 자홍색	fúcsia escuro	Цвет тёмной Фуксии	fucsia oscuro
+199	深金色	dark gold	or foncé	dunkles Gold	oro scuro	ダークゴールド	다크 골드	ouro escuro	Тёмно золотой	oro oscuro
+200	深草绿色	dark grass green	herbe verte foncée	dunkel grasgrün	erba verde scuro	濃い草の緑	진한 잔디 녹색	verde escuro relva	травяной тёмно зелёный 	verde hierba oscuro
+201	深绿色	dark green	vert foncé	dunkelgrün	verde scuro	すみれ色	암록색	verde escuro	тёмно зелёный	verde oscuro
+202	深绿蓝	dark green blue	vert bleu foncé	dunkel grünblau	Blu verde scuro	濃い緑、青	짙은 청 파랑	verde escuro azul	тёмно зелёно синий	verde azul oscuro
+203	深灰色	dark grey	gris foncé	dunkelgrau	grigio scuro	暗い灰色	어두운 회색	cinza escuro	тёмно серый	gris oscuro
+204	深灰蓝色	dark grey blue	gris foncé bleu	dunkelgrau blau	Blu grigio scuro	濃いグレーブルー	어두운 회색 파랑	azul cinza escuro 	тёмно сине серый	gris azul oscuro
+205	深火红色	dark hot pink	rose foncé à chaud	dunkel rotrosa	rosa scuro scottante	暗いホットピンク	진한 핫 핑크	rosa escuro quente	Тёмно горячо розовый	rosa oscuro
+206	深靛蓝	dark indigo	indigo foncé	dunkel Indigo	indaco scuro	ダークインディゴ	다크 인디고	índigo escuro	Тёмно индиго	añil oscuro
+207	深卡其色	dark khaki	kaki foncé	dunkel khaki	kaki scuro	カーキ色の濃い	어두운 카키	caqui escuro	Тёмно хаки	caqui oscuro
+208	深薰衣草色	dark lavender	lavande foncé	dunkel Lavendel	lavanda scuro	濃いラベンダー	어두운 라벤더	lavanda escuro	Тёмно лавандовый	lavanda oscuro
+209	深紫丁香色	dark lilac	Lilas foncé	dunkellila	lilla scuro	ダークライラック	진한 라일락	lilás escuro	Тёмно сереневый	lila oscuro
+210	深石灰	dark lime	Citron vert foncé	dunkel limonettengrün	Lime scuro	暗い石灰	어두운 석회	lima escuro	Тёмно лаймовый	limon verde oscuro
+211	深灰绿色	dark lime green	Citron vert foncé	dunkles Limonettengrün	Verde lime scuro	ダークライムグリーン	어두운 라임 그린	verde escuro limão	Тёмно лаймовый	limon verde oscuro
+212	深紫红	dark magenta	magenta foncé	dunkel Magenta	magenta scuro	ダークマゼンタ	진한 자홍색	magenta escuro	Тёмно маджентовый	magenta oscuro
+213	深栗色	dark maroon	marron foncé	dunkel rotbraun	bordeaux scuro	濃い栗色	어두운 적갈색	castanho escuro	тёмно каштановый	marrón oscuro
+214	深紫色	dark mauve	mauve 	dunkel lila	malva scuro	暗いふじ色	암자색	malva escuro	тёмно лиловый	malva oscuro
+215	深薄荷色	dark mint	menthe foncé	dunkles Pefferminzgrün	menta scuro	ダークミント	어두운 박하	hortelã escuro	Тёмно мятный	menta oscura
+216	深薄荷绿	dark mint green	Menthe vert foncé	dunkles Pefferminzgrün	verde menta scuro	ダークミントグリーン	진한 박하 녹색	verde menta escuro	Тёмно зелёно мятный	menta verde oscuro
+217	深芥末色	dark mustard	moutarde foncé	dunkler Senf	senape scuro	ダークマスタード	진한 겨자	mostarda escura	тёмно горчичный	mostaza oscuro
+218	深海军蓝	dark navy	marine foncé	dunkel marine	Scuro marino	濃紺	다크 네이비	Azul escuro	Тёмно морской	marino oscuro
+219	深藏青色	dark navy blue	bleu marine foncé	dunkles Marineblau	blu marino scuro	ダークネイビーブルー	진한 네이비 블루	azul escuro marinho	Тёмно сине морской	azul marino oscuro
+220	深橄榄色	dark olive	olive foncé	dunkel olive	oliva scuro	ダークオリーブ	어두운 올리브	azeitona escuro	тёмно оливковый	oliva oscuro
+221	深橄榄绿	dark olive green	olive vert foncé	dunkel olivgrün	verde oliva scuro	ダークオリーブグリーン	어두운 올리브 녹색	verde escuro azeitona	тёмно зелёно оливковый 	oliva verde oscuro
+222	深橙色	dark orange	orange foncé	dunkel orange	Arancione scuro	ダークオレンジ	어두운 오렌지	laranja escuro	тёмно оранжевый	naranja oscuro
+223	深柔和绿色	dark pastel green	vert sombre pastel	dunkel lindgrün	verde pastello scuro	ダークパステルグリーン	어두운 파스텔 그린	verde escuro pastel	Пастельный тёмно зелёный 	verde pastel oscuro
+224	深桃色	dark peach	pêche foncé	dunkel Pfirsich	pesca scuro	濃い桃	어두운 복숭아	pêssego escuro	Тёмно персиковый	melocotón oscuro
+225	深长春花色	dark periwinkle	Pervenche foncé	dunklen Immergrün	pervinca scuro	暗い赤味がかつた青色	어두운 대수리	mirta escuro	Тёмно барвинковый	malva oscuro
+226	深粉色	dark pink	rose foncé	dunkelrosa	rosa scuro	濃いピンク	어두운 핑크색	rosa escuro	тёмно розовый	rosa oscuro
+227	乌梅色	dark plum	prune foncé	dunkle Pflaume	prugna scuro	暗いプラム	어두운 자두	ameixa preta	Тёмно сливовый	ciruela oscura
+228	深紫色	dark purple	violet foncé	dunkelviolett	viola scuro	濃い紫色	어두운 보라색	roxo escuro	тёмно фиолетовый	púrpura oscuro 
+229	深红色	dark red	rouge foncé	dunkelrot	rosso scuro	暗赤色	진한 빨간색	vermelho escuro	тёмно красный	rojo oscuro
+230	深玫瑰色	dark rose	rose foncé	dunkelrosa	rosa scuro	ダークローズ	진한 장미	rosa escuro	тёмно розовый	rosa oscuro
+231	深皇家蓝	dark royal blue	bleu royal foncé	dunkel Königsblau	blu scuro reale	濃いロイヤルブルー	진한 로얄 블루	azul escuro royal	Тёмно синий королевский	azul real oscuro
+232	深灰绿	dark sage	Sauge foncée	dunkle Salbei	Salvia scuro	ダークセージ	어두운 세이지 색	sábio escuro	тёмно шалфейный	salvia oscura
+233	深鲑鱼色	dark salmon	saumon foncé	dunkel Lachs	salmone scuro	ダークサーモン	어두운 연어	salmão escuro	Тёмно лососевый	salmón oscuro
+234	深沙色	dark sand	sable noir	dunkler Sand	sabbia scura	暗い砂	어두운 모래색	areia escura	черно песчанный	arena oscura
+235	深海绿色	dark sea green	mer verte 	dunkles Meergrün	Verde mare scuro	ダークシーグリーン	어두운 바다 녹색	verde escuro mar	Зелёно морской	mar verde oscuro
+236	深海泡沫色	dark seafoam	écume de mer foncé	dunkler Meeresschaum	Schiuma di mare scura	ダークシーフォーム	어두운 바다거품	Espuma do mar escuro	Цвет тёмно морской пены	espuma de mar oscura
+237	深绿海泡沫色	dark seafoam green	Vert d'écumes de merde sfoncé	dunkle Meerschaum grün	verde schiuma di mare scuro	ダークシーフォームグリーン	짙은 바다거품 녹색	verde escuro espuma do mar	Тёмно зелёный морской пены	verde espuma de mar oscuro
+238	深天蓝	dark sky blue	ciel bleu foncé	dunkles Himmelblau	Blu cielo scuro	ダークスカイブルー	짙은 하늘색	azul escuro céu 	Тёмно голубой	cielo azul oscuro
+239	暗灰蓝色	dark slate blue	bleu d'ardoise foncé	dunklem Schiefer blau	Blu ardesia scuro	ダークスレートブルー	다크 슬레이트 블루	azul escuro ardósia 	тёмно шиферно синий	azul pizarra oscuro
+240	深棕色	dark tan	bronzé foncé	dunkle Bräune	Abbronzato scuro	日焼け	어두운 황갈색	bronzeado escuro	Тёмно загарный	habano oscuro
+241	深灰褐色	dark taupe	Taupe foncé	dunkel taupe	Grigio talpa scuro	ダークトープ	어둡고 짙은 회갈색	taupe escuro	Тёмно кротовый	marrón oscuro
+242	深水鸭色	dark teal	foncé bleu sarcelle	dunkles Blaugrün	Foglia di tè scuro	暗緑色がかつた青色	어두운 상오리	azulado escuro	тёмно серо зелёный	verde azulado oscuro 
+243	深绿松石色	dark turquoise	turquoise foncé	dunkel türkis	turchese scuro	ダークターコイズ	어두운 청록색	turquesa escuro	Тёмно бирюзовый	turquesa oscuro
+244	深紫色	dark violet	violet foncé	dunkelviolett	viola scuro	暗紫色	어두운 보라색	violeta escuro	тёмно фиолетовый	violeta oscuro
+245	深黄色	dark yellow	jaune foncé	dunkelgelb	giallo scuro	濃い黄色	짙은 노란색	amarelo escuro	тёмно жёлтый	amarillo oscuro
+246	深黄绿色	dark yellow green	vert foncé jaune	dunkel gelb grün	verde giallo scuro	濃い黄緑	진한 노란색 녹색	verde amarelo escuro	Жёлто тёмно зелёный 	verde amarillo oscuro
+247	深蓝	darkblue	Bleu foncé	dunkelblau	blu scuro	紺色	짙은 파랑	Azul escuro	тёмно синий	azul marino
+248	深绿色	darkgreen	vert foncé	dunkelgrün	verde scuro	暗緑色	까맣듯 진한 녹색	Verde escuro	тёмно зелёный	verde oscuro
+249	深蓝色	darkish blue	noirâtre bleu	dunkles Blau	blu scuro	薄暗い青	거무스름한 블루	Azul escuro	Черновато синий	azul negruzco
+250	深绿色	darkish green	Vert noirâtre	dunkles Grün	verde scurastro	薄暗い緑	거무스름한 녹색	Verde escuro	Черновато зелёный	verde negruzco
+251	深粉红	darkish pink	rose noirâtre	dunkles rosa	Rosa scurastro	薄暗いピンク	거무스름한 핑크	Rosa escuro	Черновато розовый	rosa oscuro
+252	深紫色	darkish purple	violet noirâtre	dunkles Purpur	Viola scurastro	薄暗い紫	거무스름한 자주색	Roxo escuro	Черновато фиолетовый	púrpura bastante oscuro
+253	深红色	darkish red	noirâtre rouge	dunkelrot	Rosso scurastro	薄暗い赤	거무스름한 빨간색	Vermelho escuro	черновато красный	rojo bastante oscuro 
+254	深水蓝色	deep aqua	aqua profond	satt aqua	Acqua profonda	深いアクア	깊은 바다색	água profunda	Глубокий цвет морской волны	aguamarina profundo
+255	深蓝色	deep blue	bleu profond	tiefblau	Blu profondo	濃いブルー	깊고 푸른	azul profundo	Глубокий синий	azul intenso
+256	深褐色	deep brown	brun profond	satt braun	marrone scuro	黒茶	깊은 갈색	castenho profundo	глубоко коричневый	marrón profundo
+257	深绿色	deep green	vert foncé	tiefgrün	verde profondo	濃緑色	깊은 초록	verde profundo	тёмно зелёный	verde intenso
+258	深薰衣草色	deep lavender	lavande profonde	sattes Lavendel	lavanda profonda	深いラベンダー	짙은 라벤더	lavanda profundo	Глубоко лавандовый	lavanda profunda
+259	深紫丁香	deep lilac	lilas profond	satt sila	Lilla profondo	深いライラック	깊은 라일락 색	lilás profundo 	Глубоко сиреневый	lila profundo
+260	深紫红色	deep magenta	magenta foncé	satt magenta	magenta profondo	ディープマゼンタ	깊은 자홍색	magenta profundo	глубоко маджентовый	magenta intenso
+261	深橙色	deep orange	orange foncé	sattes orange	arancione scuro	濃いオレンジ色	깊은 오렌지	laranja escuro	тёмно оранжевый	naranja oscuro
+262	深粉红色	deep pink	rose foncé	dunkelrosa	rosa profondo	濃いピンク	깊은 핑크	rosa escuro	Тёмно розовый	rosa oscuro 
+263	深紫色	deep purple	violet profond	sattes violett	Viola profondo	ディープ·パープル	깊은 보라색	Roxo profundo	Глубоко фиолетовый	morado intenso
+264	深红色	deep red	rouge profond	sattes Rot	Rosso profondo	深い赤	깊은 레드	vermelho escuro	глубоко красный	rojo profundo
+265	深玫瑰色 	deep rose	rose foncé	sattes Rosarot	rosa profondo	深いバラ	깊은 장미	rosa profundo	Тёмно розовый	rosa oscuro
+266	深海蓝	deep sea blue	Bleu d’océan foncé	Deep Blue Sea	Blu marino profondo	深海ブルー	깊은 바다의 블루	azul mar profundo 	Тёмно океанский синий	azul océano profundo
+267	深天蓝	deep sky blue	ciel bleu profond	Deep-Sky-Blau	blu cielo profondo	深いスカイブルー	깊은 하늘색	azul profundo céu 	лазурный	cielo azul intenso
+268	深水鸭色	deep teal	Turquoise profond	sattes Blaugrün	Foglia di tè profondo	ディープティール	깊은 상오리	azulado profundo	Глубоко бирюзовый	turquesa profundo
+269	深绿松石色	deep turquoise	turquoise profond	 satt türkis	Turchese profondo	深いターコイズ	깊은 옥색	turquesa profundo	Глубоко бирюзовый	turquesa profundo
+270	深紫罗兰色	deep violet	violet foncé	satt violett	violetto scuro	深いバイオレット	깊은 보라색	violeta profundo	Тёмно фиолетовый	violeta oscuro
+271	牛仔布	denim	denim	Jeans	Denim	デニム	청	brim	Джинсовый	denim
+272	牛仔蓝	denim blue	Bleu de denim	Jeans blau	blu denim	デニムブルー	데님 블루	azul denim	Джинсовый синий	azul denim
+273	沙漠色	desert	désert	Wüste	deserto	砂漠	사막색	deserto	пустынный	desierto
+274	痢疾色	diarrhea	diarrhée	Durchfall	diarrea	下痢	설사색	diarréia	поносный	diarrea
+275	土色	dirt	saleté	Schmutz	Sporco	土	진흙	sujedade	грязный	suciedad
+276	土棕色	dirt brown	Brun de saleté	Schmutz braun	Marrone sporco 	汚れブラウン	흙 갈색	Castanho sujeira 	Грязно коричневый	marrón sucio
+277	灰蓝色	dirty blue	bleu sale	schmutzig blau	Blu sporco	汚れた青い	더러운 블루	azul sujo 	Грязно синий	azul sucio
+278	土绿色	dirty green	vert sale	schmutzig grün	verde marcio	汚い緑	더러운 녹색	verde sujo 	Грязно зелёный	verde sucio
+279	脏桔色	dirty orange	Orange sale	schmutzig Orange	Arancione sporco	汚いオレンジ	더러운 오렌지	laranja sujo 	Грязно оранжевый	naranja sucio
+280	土粉红色	dirty pink	rose sale	schmutzig rosa	Rosa sporco	汚れたピンク	더러운 핑크	rosa sujo	Грязно розовой	rosa sucio
+281	脏紫色	dirty purple	violet sale	schmutzig violett	Viola sporco	汚れた紫	더러운 자주색	roxo sujo	Грязно фиолетовый	morada sucia
+282	土黄色	dirty yellow	jaune sale	schmutzig gelb	giallo sporco	濁った黄色	더러운 노란색	amarelo sujo	грязно жёлтый	amarillo sucio
+283	宝蓝	dodger blue	Bleu de dodger	Dodger blau	Blue imbroglione	ドジャーブルー	다저 블루	azul dodger	Защитно синий	dodger blue 
+284	暗浅棕色	drab	fade	düster	smorto	単調な	단조로운 색	monótono	блёклый	apagado
+285	浅棕绿色	drab green	vert fade	eintönig grün	Verde smorto	単調な緑	칙칙한 녹색	verde monótono	блёкло зелёный	verde gris apagado
+286	干血色	dried blood	sang séché	getrocknetes Blut	sangue secco	乾血	말은 피색	sangue seco	Цвет засохшей крови	sangre seca
+287	鸭蛋蓝	duck egg blue	Oeuf de canard bleu	Enteneiblau	Blu uovo d'anatra	アヒルの卵、青	오리 계란 파랑	azul ovo de pato 	синий цвет яйца утки	huevo de pato azul
+288	暗蓝色	dull blue	bleu terne	mattblaue	blu opaco	鈍い青	무딘 블루	azul maçante	Тускло синий	azul apagado
+289	暗棕色	dull brown	brun terne	mattbraun	marrone opaco	鈍い茶色	둔한 갈색	castanho maçante	Тускло коричневый	marrón apagado
+290	暗绿色	dull green	vert terne	stumpf grün	verde opaco	鈍い緑色	단조로운 녹색	verde maçante	тускло зелёный	verde apagado
+291	暗橙色	dull orange	orange terne	matt orange	Arancione opaco	鈍いオレンジ	썩은 오렌지	laranja maçante	Тускло оранжевый	naranja apagado
+292	暗粉红	dull pink	Rose terne	matt rosa	rosa opaco	鈍いピンク	무딘 핑크	rosa sem brilho	Тускло розовый	rosa apagado
+293	暗紫色	dull purple	violet terne	matt lila	viola opaco	鈍い紫色	무딘 자주색	roxo maçante	Тускло фиолетовый	morado apagado
+294	暗红色	dull red	rouge terne	mattrot	Rosso opaco	暗赤色	무딘 빨간색	Rubro 	Тускло красный	rojo apagado
+295	暗水鸭色	dull teal	Turquoise ennuyeuse	mattes aquamarin	Foglia di tè opaco	鈍いティール	무딘 상오리	Maçante cerceta	Грусно бирюзовый	verde azulado opaco 
+296	暗黄色	dull yellow	jaune terne	mattgelb	Giallo opaco	鈍い黄色	무딘 노란색	amarelo pálido	Тускло жёлтый	amarillo apagado
+297	尘土色	dusk	crépuscule	Abenddämmerung graublau	crepuscolo	夕暮れ	황혼	crepúsculo	сумеречный	crepúsculo
+298	暗蓝	dusk blue	bleu crépuscule	Abenddämmerung blau	Blu crepuscolo	青い夕暮れ	황혼의 블루	azul crepúsculo	Сумеречно синий	azul nocturno
+299	暗蓝	dusky blue	Bleu crépuscule	düsteres blau	Blu tetro	薄暗い青	어스레한 파랑	Azul escuro	Сумеречно синий	azul oscuro
+300	暗粉红色	dusky pink	rose crépuscule	altrosa	rosa tetro	薄暗いピンク	어스레한 핑크	rosa escuro	Сумеречно розовый	rosa oscuro
+301	暗紫	dusky purple	violet crépuscule	dunkles lila	viola tetro	薄暗い紫	어스레한 자주색	roxo escuro	Сумеречно фиолетовый	purpura oscuro
+302	暗玫瑰色	dusky rose	Rose crépuscule	dämmriges Rosa	Rosa tetro	薄暗いバラ	어스레한 장미	Rosa crepúsculo	Сумеречно розовый	rosa oscuro
+303	灰尘色	dust	poussière	Staub	polvere	ほこり	먼지색	poeira	пыльный	polvo
+304	尘土蓝	dusty blue	bleu poussiéreux	Taubenblau	Blu polveroso	ほこりっぽい​​青	먼지 묻은 듣한 파란	azul empoeirado 	Пыльно синий	azul polvo
+305	暗绿	dusty green	vert poussiéreux	staubiges Grün	verde polveroso	ほこりの多い緑	먼지가 녹색	verde empoeirado	Пыльно зелёный	verde polvo
+306	暗薰衣草色	dusty lavender	lavande poussiéreuse	staubig Lavendel	lavanda polverosa	ほこりっぽい​​ラベンダー	먼지낀 라벤더 색	lavanda empoeirado	Пыльно лавандовый	lavanda polvoso
+307	暗橙色 	dusty orange	poussiéreuse d'orange	staubige Orange	Arancione polveroso	ほこりっぽい​​オレンジ	먼지묻은 오렌지	laranja empoeirado	Пыльно оранжевый	naranja polvo
+308	暗粉红色	dusty pink	vieux rose	Altrosa	rosa polveroso	ほこりっぽい​​ピンク	먼지 핑크색	rosa empoeirado	Старо розовый	rosa viejo
+309	灰紫色	dusty purple	violet poussiéreux	staubiges Lila	viola polveroso	ほこりっぽい​​紫	먼지 자주색	roxo empoeirado	Пыльно фиолетовый	púrpura polvo
+310	暗红	dusty red	rouge poussiéreux	staubiges Rot	rosso polveroso	ほこりっぽい​​赤	먼지붇은 빨간색	vermelho empoeirado	Пыльно красный	rojo polvo 
+311	暗玫瑰色	dusty rose	Rose poussiéreux	verblasstes dunkelrosa	Rosa polveroso	ほこりだらけのバラ	먼지쌓인 장미	rosa empoeirado 	Пыльно розовый	rosa polvo
+312	水鸭扬起的尘土色	dusty teal	turquoise poussiéreux	neblig smaragdgrün	Foglia di tè polveroso	ほこりティール	먼지묻은 상오리	turquesa empoeirado	Пыльнo бирюзовый	verde azulado polvo
+313	土色	earth	terre	Erde	terra	地球	대지 색	Terra	земляной	tierra
+314	复活节绿色	easter green	Vert Pâques	Osterngrün	Verde pasqua	イースター緑	부활절 녹색	Verde páscoa	Пасхально зелёный	verde de pascua
+315	复活节紫色	easter purple	Violet de Pâques	Osterlila	viola pasqua	イースター紫	부활절 자주색	roxo páscoa 	Пасхально фиолетовый	violeta de pascua
+316	麻本色	ecru	écru	naturfarben	Écru	淡褐色	베이지색	ecru	экрю	crudo
+317	蛋壳色	egg shell	coquille d'œuf	Eierschale	guscio d'uovo	卵殻	난각 색	casca de ovo	скорлупно яичный	cáscara de huevo
+318	茄子色	eggplant	aubergine	Aubergine	melanzana	茄子	가지	berinjela	баклажановый	berenjena
+319	茄子紫	eggplant purple	violet d'aubergine	Auberginen violett	Viola melanzana	ナスの紫色	가지의 보라색	roxo berinjela	Баклажано фиолетовый	purpura berenjena
+320	蛋壳色	eggshell	coquille d'œuf	Eierschale	guscio d'uovo	卵殻	달걀 껍질	casca de ovo	Цвет яичной скорлупы	cáscara de huevo
+321	蛋壳蓝	eggshell blue	coquille bleue	Eierschalenblau	blu  guscio d'uovo 	卵殻青	달걀 껍질 파랑	azul casca de ovo 	Сине скорлупный	cascara azul
+322	电蓝色	electric blue	bleu fluo	grelles Blau	blu elettrico	エレクトリックブルー	전기적인 청색	azul elétrico	Синий электрический	azul fluor
+323	电绿色	electric green	vert fluo	Elektro-grün	verde elettrico	電気緑	전기 녹색	verde elétrico	Зелёный электрический	verde fluor
+324	电石灰色	electric lime	citron vert fluo	grell Limonengrün	elettrica lime	電気石灰	전기적 청색 레몬	Limão verde eletrico	Лаймовый электрический	lima eléctrico
+325	电粉红	electric pink	Rose fluo	grell rosa	Rosa elettrico	電気ピンク	전기 핑크	cor de rosa elétrico	Розовый электрический	rosa fluor
+326	电紫色	electric purple	Violet fluo	Electric Purple	Viola elettrico	電気紫色	전기 보라색	roxo elétrico 	Фиолетовый электрический	violeta fluor
+327	绿宝石	emerald	émeraude	Smaragd	smeraldo	エメラルド	에메랄드	esmeralda	изумрудный	esmeralda
+328	翡翠绿	emerald green	vert émeraude	smaragdgrün	verde smeraldo	エメラルドグリーン	에메랄드 그린	verde esmeralda	изумрудно зелёный	verde esmeralda
+329	常绿	evergreen	à feuillage persistant	immergrün	sempreverde	常緑	상록수	Sempre viva	вечнозелёный	hoja perenne
+330	旧蓝色	faded blue	bleu passé	verblichenes Blau	Blu sbiadito	青色あせた	퇴색한 파란색	azul desbotado	Синий выцветший	azul apagado
+331	旧绿色	faded green	vert passé	verblichenes Grün	verde sbiadito	色あせた緑	어두운 녹색	verde desbotado	Зелёный выцветший	verde apagado
+332	褪色橙	faded orange	Orange passé	Orange verblasst	arancione sbiadito	色あせたオレンジ色	어두운 오렌지	laranja desbotado	Оранжевый выцветший	naranja apagado
+333	褪色的粉红色	faded pink	Rose fané	Blaßrosa	rosa sbiadito	色あせたピンク	퇴색한 분홍색	rosa desbotado 	Вяло розовой	rosa apagado
+334	旧紫色	faded purple	violet passé	verblichenes Lila	Viola sbiadito	紫の色あせた	퇴색한 보라색​	roxo desbotado 	Фиолетовый выцветший	púrpura apagado
+335	旧红色	faded red	rouge fané	verblichenes Rot	rosso sbiadito	赤の色あせ	퇴색한 붉은	vermelha desbotado	Вяло красный	rojo apagado
+336	褪黄色	faded yellow	Jaune fané	vergilbt	giallo sbiadito	色あせた黄色	퇴색된 노란색	amarelo desbotado 	Вяло жёлтый	amarillo apagado
+337	浅黄棕 色	fawn	faon	Rehkitz	cerbiatto	子鹿	엷은 황갈색	Gamo	Цвет оленёнка	faon
+338	蕨色	fern	fougère	Farn	felce	シダ	양치류 색	Feto	Цвет папоротника	helecho
+339	蕨绿色	fern green	vert fougère	farngrün	verde felce	シダ緑	고사리 녹색	verde samambaia	Папоротниково зелёный	helecho verde
+340	消防车红	fire engine red	Rouge d'incendie	feuerwehrrot	Rosso autopompa	消防車赤	소방차의 빨간색	vermelho incêndio de motor 	Цвет красный пожарной машины	rojo incendio
+341	平蓝	flat blue	Bleu plat	flach blau	Blu piatto	フラットブルー	플랫 블루	azul liso	Плоско синий	azul liso
+342	普通绿	flat green	Vert plat	fahles grün	Verde piatto	フラット　グリーン	밋밋한 녹색	verde liso	Плоско зелёный	verde plana
+343	荧光绿色	fluorescent green	Vert fluorescent	grün fluoreszierend	verde fluorescente	蛍光グリーン	형광 그린	verde fluorescente	Зелёный флуоресцирующий	verde fluor
+344	淡黄绿色	fluro green	Vert fluo	fluro grün	Verde fluro	緑のほたる石	형광 녹색	verde fluorescente	Зелёный флуоресцирующий	verde fluor
+345	泡沫绿	foam green	mousse verte	Schaum grün	Verde schiuma	泡グリーン	거품 녹색	espuma verde	Цвет зелёного моха	verde espuma
+346	森林色	forest	forêt	Wald	foresta	森	숲	floresta	лесной	bosque
+347	森林绿	forest green	vert forêt	Waldgrün	Verde foresta	フォレストグリーン	숲의 녹색	verde floresta 	лесо зелёный	verde bosque
+348	森林绿	forrest green	Vert forêt	Waldgrün	Verde foresta	フォレストグリーン	포레스트 그린	Verde floresta	Цвет зелёного леса	verde bosque
+349	法国蓝	french blue	bleu français	Französisch blau	Blu francese	フレンチブルー	프랑스 블루	azul francês	Французско синий	azul frances
+350	嫩绿	fresh green	vert frais	frisch Grün	verde fresco	新緑	신록	verde fresco	Свежо зелёный	verde fresco
+351	青蛙绿	frog green	grenouille verte	Frosch grün	Verde rana	カエル緑	개구리 녹색	verde sapo 	Цвет зелёной лягушки	rana verde
+352	紫红色	fuchsia	fuchsia	purpurviolett	fucsia	フクシア	푹샤	fúcsia	Цвет фуксии	fucsia
+353	金色 	gold	or	Gold	oro	ゴールド	금	ouro	золотой	oro
+354	金色 	golden	or	golden	d'oro	金色の	황금	dourado	золотой	oro
+355	金黄色	golden brown	brun doré	goldbraun	marrone dorato	キツネ色	황금빛 갈색	dourado	золотисто коричневый	marron dorado
+356	黄金杆色	golden rod	or	Goldrute	bacchetta d'oro	ゴールデンロッド	황금 막대	Dourado ocre	золотой	vara de oro
+357	金黄色	golden yellow	jaune d'or	Goldgelb	giallo dorato	明るい黄色	황금색	amarelo dourado	золотисто жёлтый	amarillo dorado
+358	黄花	goldenrod	la verge d'or	Goldrute	Color oro	アキノキリンソウ	골든로드	Pênis d’oro	Золотисто берёзовый	vara de oro
+359	葡萄色	grape	raisin	Traube	uva	ブドウ	포도	uva	виноградный	uva
+360	葡萄紫	grape purple	Violet raisin	Traubenlila	viola uva	紫色のブドウ	포도 자주색	roxo uva	Виноградно фиолетовый	violeta uva
+361	柚子色	grapefruit	pamplemousse	Grapefruit	pompelmo	グレープフルーツ	자몽	toranja	грейпфрутовый	pomelo
+362	草色	grass	herbe	Gras	erba	草	잔디	relva	Цвет травы	hierba
+363	草绿色	grass green	herbe verte	Gras grün	Verde prato	若草色	잔디 녹색	Verde relva	Цвет зелёной травы	hierba verde
+364	草地绿	grassy green	Vert herbeux	Grasgrün	Verde erboso	草の緑	잔디 녹색	verde gramado 	Травянисто зелёный	verde hierba
+365	绿色	green	vert	grün	verde	緑	녹색	verde	зелёный	verde
+366	青苹果色	green apple	pomme verte	grüner Apfel	Verde mela	緑のリンゴ	녹색 사과	verde maçã 	Зелёно яблочный	manzana verde
+367	绿蓝色	green blue	vert bleu	grün blau	verde blu	緑青	녹색 청색	verde azul	Зелёно синий	verde / azul
+368	绿色褐色	green brown	Brun vert	grün braun	Marrone verde	緑褐色	녹색 갈색	verde castanho	Зелёно коричневый	marron verde
+369	青灰色	green grey	vert gris	grün grau	Grigio verde	グリーングレー	녹색 회색	Verde cinzento	Серо зелёный 	verde gris
+370	水鸭绿	green teal	turquoise vert	grünlich Aquamarin	Verde Foglia di tè	グリーンティール	녹색 상오리	verde turquesa	Зелёнo бирюзовый	verde azulado
+371	绿黄色	green yellow	vert jaune	grün gelb	verde giallo	緑黄	황색 녹색	verde amarelo	Жёлто Зелёный	verde/amarillo
+372	绿蓝	greenblue	Bleu vert	grünblau	Blu verde	グリーンブルー	초록 파랑	Verde azul	Сине зелёный	azul verdoso
+373	绿	greenish	verdâtre	grünlich	verdastro	緑がかった	초록빛이 도는	esverdeado	зеленоватый	verdoso
+374	绿米色	greenish beige	beige verdâtre	grünlich beige	Beige verdastro	ベージュ緑がかった	녹색 베이지	bege esverdeado	Зелёновато бежевый	beige verdoso
+375	蓝绿色	greenish blue	bleu verdâtre	grünlich-blau	blu verdastro	緑がかった青	녹색 청색	azul esverdeado	зеленовато синий	azul verdoso
+376	绿褐色	greenish brown	brun verdâtre	grünlich braun	marrone verdastro	ウグイス色	녹색적인 갈색	castanho esverdeado	зелёновато коричневый	marrón verdoso 
+377	绿色青色	greenish cyan	verdâtre cyan	grünliches Cyan	Ciano verdognolo	緑がかったシアン	녹색 청록색	ciano esverdeado	Зеленовато циановый	cian verdoso
+378	灰绿色	greenish grey	gris verdâtre	grünlich-grau	grigio verdastro	緑がかった灰色	녹색 회색	cinza esverdeado	зеленовато серый	gris verdoso
+379	绿褐色	greenish tan	Bronzage verdâtre	grünlich hellbraun	abbronzatura verdastra	緑がかった黄褐色	녹색 황갈색	bronzeado esverdeado	Цвет зелёноватого загара	bronceado verdoso
+380	绿水鸭色	greenish teal	Turquoise verdâtre	grünlicher Smaragd	Foglia di tè verdastro	緑がかったティール	녹색적인 상오리	Turquesa esverdeado	Зелёновато бирюзовый	turquesa verdoso
+381	浅绿松石色 	greenish turquoise	turquoise verdâtre	grünlich türkis	turchese verdognolo	緑がかったターコイズ	녹색 터키석	turquesa esverdeada	Зелёновато бирюзовый	turquesa verdoso
+382	苍黄	greenish yellow	jaune verdâtre	grünlich-gelb	Giallo verdastro	緑黄色	녹색적인 노랑	amarelo esverdeado	зеленовато жёлтый	amarillo verdoso
+383	呈绿色蓝色	greeny blue	verdâtre bleu	grünlich blau	blu verdastro	緑がかった青	녹색을 띤 청색	azul esverdeado 	Зеленовато синий	azul verdoso
+384	绿褐色	greeny brown	verdâtre brun	grünlich braun	marrone verdastro	緑がかった茶色	녹색을 띤 갈색	Castanho esverdeado	Зелёновато коричневый	marrón verdoso
+385	呈绿灰色	greeny grey	 Gris verdâtre	grünlich grau	grigio verdastro	緑がかった灰色	녹색을 띤 회색	Cinzento esverdeado	Зелёновато серый	verde gris 
+386	呈绿黄色	greeny yellow	Jaune verdâtre	grünlich gelb	giallo verdognolo	緑がかった黄色	녹색을 띤 노란색	amarelo esverdeado 	Зеленовато жёлтый	amarillo verdoso
+387	灰色	grey	gris	grau	grigio	灰色	회색	cinza	серый	gris
+388	灰蓝色	grey blue	gris bleu	grau blau	grigio blu	グレーブルー	회색 파랑	cinza azul	сине серый	gris azul
+389	灰褐色	grey brown	Brun gris	grau braun	Marrone grigio	グレーブラウン	회색 갈색	castanho cinzento	Серо коричневый	marron gris
+390	灰绿色	grey green	gris vert	grau grün	grigio verde	グレーグリーン	회색 녹색	cinza verde	Зелёно серый	gris / verde
+391	灰色粉红色	grey pink	gris rose	grau rosa	Rosa grigio	グレーピンク	회색 핑크색	Rosa cinza	Розово серый	gris rosa
+392	灰紫色	grey purple	gris violet	grau lila	Viola grigio	グレーパープル	회색 자주색	cinza roxo	Фиолетово серый	gris morado
+393	灰水鸭色	grey teal	turquoise gris	grau smaragdgrün	Foglia di tè grigio	グレーティール	회색빛이 도는 상오리	turquesa cinza	Серo бирюзовый	gris azulado
+394	灰蓝色	greyblue	Bleu gris	graublau	grigioblu	灰色がかつた青	회색적인 블루	Cinzento verde	Серо синий	azul gris
+395	浅灰色	greyish	grisâtre	gräulich	grigiastro	灰色の	회색이 또는	Acinzentado	сероватый	grisáceo
+396	灰蓝色	greyish blue	Gris bleu	graublau	Blu grigiastro	灰青色	회색빛 블루	azul acinzentado 	Серовато синий	azul grisáceo
+397	灰褐色	greyish brown	brun grisâtre	graubraun	marrone grigiastro	グレーがかった茶色	회색빛 갈색	Castanho acinzentado	Серовато коричневый	marrón grisáceo
+398	灰绿色	greyish green	vert grisâtre	graugrün	Verde grigiastro	灰色がかった緑	회색빛 녹색	verde acinzentado 	серовато зелёный	verde grisáceo
+399	灰粉色	greyish pink	rose grisâtre	graurosa	Rosa grigiastro	灰色がかったピンク	회색빛 분홍색	rosa acinzentado 	Серовато розовый	rosa grisaceo
+400	灰紫色	greyish purple	violet grisâtre	grau lila	Viola grigiastro	灰色がかった紫	회색빛이 나는 자주색	roxo acinzentado 	Серовато фиолетовый	morado grisaceo
+401	灰水鸭色	greyish teal	grisâtre turquoise	gräulich Aquamarin	Foglia di tè grigiastro	灰色のコガモ	회색빛 상오리	acinzentado cerceta	Серовато бирюзовый	gris azulado
+402	粗绿色	gross green	Vert dégueulasse	gelblich-hellgrün	Verde rozzo	総緑	총 녹색	verde bruto	Зелёный противный	verde asqueroso 
+403	青铜色	gunmetal	Gris acier	Rotguss	Grigio scuro canna di fucile	砲金	건메탈	Metal de pistola	стальной серый	gris acero
+404	榛子色	hazel	noisette	Hasel	nocciola	赤褐色	개암 나무 색	aveleira	ореховый	avellano
+405	紫色	heather	bruyère	Heidekraut	erica	ヒース	히스 색	urze	вересковый	brezo
+406	浅紫色	heliotrope	héliotrope	Heliotrop	eliotropio	ヘリオトロープ	헬리오트로프	heliotrópio	гелиотроповый	heliotropo
+407	萤光绿	highlighter green	vert surligneur	Textmarker grün	Verde evidenziatore	蛍光グリーン	형광펜 녹색	verde highlighter	маркерно зелёный	resaltador verde
+408	医院绿色	hospital green	Vert d’hôpital	Krankenhaus Grün	Verde ospedale	病院緑	병원 푸른	Verde hospital	Больнично зелёный	verde hospital
+409	热（艳）绿色	hot green	Vert chaud	scharfes grün	Verde caldo	ホットグリーン	핫 녹색	verde quente	горячий зелёный	verde calido
+410	热洋红	hot magenta	magenta chaude	grelles Magenta	Magenta scottante	ホットマゼンタ	핫 자홍색	magenta quente	тёпло маджентовый	magenta calido
+411	热粉红	hot pink	rose chaud	starkes pink	Rosa scottante	ショッキングピンク	핫 핑크	rosa quente	тёпло розовый	fucsia
+412	热紫色	hot purple	chaude violet	starkes lila	Viola scottante	ホットパープル	뜨거운 자주색	roxo quente	Горяче фиолетовый	púrpura calido 
+413	猎人绿	hunter green	vert de chasseur	Jägergrün	Verde cacciatore	ハンターグリーン	사냥꾼 녹색	caçador verde	Цвет зелёного охотника	verde cazador
+414	冰色	ice	glace	Eis	ghiaccio	氷	얼음	Gelo	ледовый	hielo
+415	冰蓝色	ice blue	glace bleue	Eisblau	Blu ghiaccio	アイスブルー	아이스 블루	azul gelo 	Цвет голубого льда	hielo azul
+416	腻烦绿	icky green	Vert dégueulasse	kitschig grün	Verde giù di corda	不快な緑	보물을 지키기위한 녹색	Verde muito feio	Зелёный противный	verde repulsivo
+417	印度红	indian red	Rouge indien	Indianer rot	Rosso indiano	インドの赤	인도 빨강	vermelho índio	Индийско красный	rojo de india
+418	靛青	indigo	indigo	Indigo	indaco	藍色	남빛	índigo	индиго	índigo
+419	靛蓝	indigo blue	bleu indigo	Indigoblau	blu indaco	藍色	인디고	Azul indigo	индиго синий	azul índigo
+420	鸢尾花	iris	iris	Iris	iride	アイリス	조리개 색	íris	Цвет ириса	iris
+421	爱尔兰绿	irish green	Vert irlandais	Irisches Grün	Verde irlandese	アイリツシュグリーン	아일랜드 녹색	verde irlandês 	Цвет ирландско зелёный	verde irlandés
+422	象牙色	ivory	ivoire	Elfenbein	avorio	アイボリー	상아	marfim	Цвет слоновой кости	marfil
+423	玉石色	jade	jade	Jade	giada	ヒスイ	옥	jade	Нефритовый	jade
+424	翡翠绿	jade green	vert jade	Jadegrün	verde giada	ヒスイ色	비취 녹색	verde jade	Нефритово зелёный	verde jade
+425	丛林绿	jungle green	jungle verte	Dschungelgrün	Verde giungla	ジャングルグリーン	정글 그린	verde selva 	Цвет зелёных джунглей	selva verde
+426	凯利绿色	kelley green	vert de kelley	Kelley grün	Verde di Kelley	ケリーグリーン	켈리 그린	verde kelley	Келли зелёный	verde kelley
+427	凯利绿	kelly green	Vert de kelly	leicht bläuliches mittelgrün	Verde kelly	ケリーグリーン	켈리 그린	Verde de kelly	Тёмно пастельно зелёный	verde kelly
+428	透明绿色	kermit green	Vert de pré	Kermit grün	Verde kermit	カーミットグリーン	커미트 녹색	Verde prado	Цвет зелёного луга	verde kermit
+429	黄石灰	key lime	limettier	verblasstes Limonettengrün	Lime Citrus aurantifolia	キーライム	라임	Lima claro	Настоящий лаймовый	lima verde
+430	卡其色	khaki	kaki	khaki	Kaki	カーキ	카키색의	caqui	хаки	caqui
+431	卡其绿	khaki green	vert kaki	khaki grün	verde kaki	カーキグリーン	카키 그린	verde caqui	Хаки зелёный 	verde caqui
+432	猕猴桃色	kiwi	kiwi	Kiwi	kiwi	キウイ	키위	kiwi	Цвет киви	kiwi
+433	猕猴桃绿色	kiwi green	vert kiwi	Kiwi grün	Verde kiwi	キウイの緑	키위 녹색	verde kiwi	киви зелёный	verde kiwi
+434	薰衣草色	lavender	lavande	Lavendel	lavanda	ラベンダー	라벤더	lavanda	лавандовый	lavanda
+435	薰衣草蓝	lavender blue	bleu de lavande	Lavendel blau	blu lavanda	ラベンダーブルー	라벤더 블루	azul lavanda	Лавандо синий	azul lavanda
+436	薰衣草粉红色	lavender pink	rose lavande	Lavendel rosa	rosa lavanda	ラベンダーピンク	라벤더 핑크	rosa lavanda	Лавандо розовый	rosa lavanda
+437	草坪绿	lawn green	pelouse verte	Rasen grün	Verde prato	芝生の緑	잔디 녹색	verde gramado	газоно зёленый	verde césped 
+438	叶子色	leaf	feuille	Blatt	foglia	葉	잎 색	folha	Цвет листьев	hoja
+439	叶子绿	leaf green	feuille verte	Blattgrün	Verde foglia	リーフグリーン	나뭇잎 그린	verde folha 	Цвет зелёный листвы	hoja verde
+440	绿叶色	leafy green	Feuilles vertes	Blattgrün	Verde a foglia	緑豊かな緑	잎같은 초록	verde folha	Цвет зелёных листьев	verde hoja
+441	皮革色	leather	cuir	Leder	Pelle	革	가죽색	couro	кожаный	cuero
+442	柠檬	lemon	citron	Zitrone	limone	レモン	레몬	limão	лимоновый	limón
+443	柠檬绿	lemon green	citron vert	Lemon Green	Verde limone	レモングリーン	레몬 그린	verde limão 	Лимоно зелёный	limón verde
+444	柠檬石灰	lemon lime	citron vert	Zitrone Limette	lime limone	レモンライム	레몬 라임	lima limão	лаймовый	limón verde
+445	柠檬黄	lemon yellow	jaune citron	Zitronengelb	giallo limone	レモンイエロー	담황색	amarelo limão	лимоно жёлтый	amarillo limón
+446	青苔色	lichen	lichen	Flechte	lichene	苔癬	이끼 색	líquen	лишайниковый	liquen
+447	浅蓝绿色	light aqua	Aqua clair	leicht aqua	Acqua chiaro	ライトアクア	살짝 아쿠아	 Aqua claro	Светлый цвет морской волны	aguamarina claro
+448	浅海蓝宝石	light aquamarine	Aigue marine de lumière	leicht Aquamarin	acquamarina chiaro	ライトアクアマリン	가벼운 아쿠아마린	aquamarine claro	Светло аквамариновый	aguamarina claro
+449	浅米色	light beige	beige clair	hellbeige	beige chiaro	ライトベージュ	라이트 베이지	bege claro	светло бежевый	beige claro
+450	浅蓝色	light blue	Bleu clair	hellblau	Blu chiaro	ライトブルー	연한 파랑	 Azul claro	голубой	azul claro
+451	浅蓝绿	light blue green	bleu vert clair	hellblau grün	Verde azzurro	ライトブルーグリーン	밝은 청색 녹색	Verde claro azul 	Светло зелёно синий	azul verde claro
+452	浅蓝灰色	light blue grey	gris bleu clair	hellblau grau	Grigio azzurro	ライトブルーグレー	하늘색 회색	Cinzento claro azul	Голубо серый	gris azul claro
+453	浅蓝绿色	light bluish green	Vert bleuâtre clair	leicht bläulich grün	verde bluastro chiaro	光青みがかった緑色	밝은 푸른빛이 도는 녹색	verde claro azulado	Светло голубовато зелёный 	verde azulado claro
+454	浅鲜绿色	light bright green	Vert lumineux clair	leicht hellgrün	verde chiaro brillante	ライト明るい緑色	옅고 밝은 녹색	verde claro brilhante	Светло светящийся зелёный 	verde brillante claro
+455	浅棕色	light brown	brun clair	hellbraun	Marrone chiaro	明るい茶色	밝은 갈색	castanho claro	светло коричневый	marrón claro
+456	浅红色	light burgundy	Bordeaux clair	leicht Burgund	Bordeaux chiaro	光ブルゴーニュ	살짝 부르고뉴 색	Borgonha claro	светло бордовый	granate claro
+457	浅青色	light cyan	cyan clair	Leicht Cyan	ciano chiaro	ライトシアン	밝은 청록색	ciano claro	светло циановый	cian claro
+458	浅紫色	light eggplant	aubergines légères	leicht Aubergine	Melanzana chiara	光茄子	사뿐한 가지색	berinjela claro	Светло баклажановый	berenjena claro
+459	浅森林绿	light forest green	vert forêt clair	leicht Waldgrün	Verde foresta chiaro	ライトフォレストグリーン	밝은 숲속 녹색	verde claro da floresta	Цвет светло зелёного леса	verde bosque claro
+460	浅金色	light gold	or clair	leicht goldig	oro chiaro	ライトゴールド	라이트 골드	ouro claro	Светло золотой	dorado claro
+461	浅草绿色	light grass green	Herbe verte claire	leicht Grasgrün	verde erba chiaro	光草の緑	밝은 잔디 녹색	Verde claro erva	Цвет светло зелёной травы	hierba verde claro
+462	浅绿色	light green	Vert clair	hellgrün	Verde chiaro	薄緑	연두빛, 초록색	Verde calro	светло зелёный	verde claro
+463	浅绿蓝	light green blue	Bleu vert clair	leicht grün blau	Blu verde chiaro	ライトグリーンブルー	밝은 녹색 파랑	azul claro verde 	светло зелёно синий	azul verdoso claro
+464	浅绿蓝色	light greenish blue	Bleu verdâtre clair	leicht grünlich-blau	azzurro verdastro	光緑がかった青	밝은 녹색 파랑	azul claro esverdeado	Светло зелёновато синий	azul verdoso claro
+465	浅灰色	light grey	gris clair	lichtgrau	grigio chiaro	ライトグレー	밝은 회색	cinza claro	светло серый	gris claro
+466	浅灰蓝色	light grey blue	bleu gris clair	hellgraublau	Blu grigio chiaro	ライトグレーブルー	밝은 회색 파랑	azul claro cinza	светло серо голубой	azul gris claro
+467	浅灰绿色	light grey green	 vert gris clair	leicht grau grün	Verde grigio chiaro	ライトグレーグリーン	밝은 회색 녹색	verde cinza claro	светло серo зелёный	gris verde claro
+468	浅靛蓝	light indigo	Indigo clair	leicht Indigo	Indaco chiaro	明るい藍	밝은 인디고	Indigo claro	светлое индиго	indigo claro
+469	浅卡其色	light khaki	kaki clair	leicht khaki	Kaki chiaro	カーキ色の光	카키 빛	Cáqui claro	Светло хаки	caqui claro
+470	浅薰衣草色	light lavendar	Lavande clair	leicht Lavendel	Lavanda chiara	ライトラベンダー	가벼운 라벤더	Lavanda claro	Светло лавандовый	lavanda claro
+471	浅薰衣草色	light lavender	lavande pâle	leicht Lavendel	lavanda chiaro	ライトラベンダー	라이트 라벤더	lavanda claro	Светло лавандовый	lavanda claro
+472	浅浅蓝	light light blue	Bleu très très clair	leicht hellblau	Blu chiaro chiaro	ライトライトブルー	밝은 하늘색	Azul claro claro	Очень светло голубой	azul muy claro
+473	浅浅绿色	light light green	vert légère	leicht hellgrün	Verde chiaro chiaro	光ライトグリーン	밝은 라이트 그린	verde claro claro	лёгко зелёный	verde muy claro
+474	浅紫丁香色	light lilac	lilas clair	flieder	lilla chiaro	光ライラック	밝은 라일락	Lilás claro	светло сиреневый	lila claro
+475	浅石灰色	light lime	Citron clair	leicht Kalk	Lime chiaro	光石灰	라이트 라임	Lima claro	Светло лимоновый	limon claro
+476	浅灰绿	light lime green	Citron vert clair	leicht Limettengrün	Verde lime chiaro	ライトライムグリーン	밝은 라임 그린	verde claro limão	Светло лаймовый	limon verde claro
+477	浅洋红色	light magenta	magenta clair	Hell-Magenta	magenta chiaro	ライトマゼンタ	밝은 자홍색	magenta claro	светло маджентовый	magenta claro
+478	浅栗色	light maroon	marron clair	leicht rotbraun	Bordeaux chiaro	ライトマルーン	밝은 적갈색	marrom claro	Светло каштановый	marrón claro
+479	浅紫色	light mauve	mauve clair	hell malvenfarbig	Malva chiaro	藤色の光	자주빛 빛	lilás claro	Светло лиловый 	malva claro
+480	浅薄荷色	light mint	Menthe claire	leicht Minze	menta chiaro	ライトミント	라이트 민트	hortelã claro	Светло мятный	menta claro
+481	浅薄荷绿	light mint green	Menthe verte clair	leicht mintgrün	verde menta chiaro	ライトミントグリーン	밝은 민트 그린	verde claro menta	Цвет светло зелёной мяты	menta claro
+482	浅苔绿色	light moss green	vert mousse clair	Leichtes moosgrün	verde muschio chiaro	ライトモスグリーン	밝은 녹색 이끼	verde claro musgo	Цвет светло зелёного моха	verde musgo claro
+483	浅芥末色	light mustard	moutarde légère	leicht Senffarbig	Senape chiaro	ライトマスタード	밝은 겨자 색	mostarda claro	Светло горчичный	mostaza ligera
+484	浅海军蓝	light navy	Marine clair	leicht marine	Marino chiaro	光海軍	밝은 바다 블루 색	Marinha claro	Светло морской	marino claro
+485	浅深蓝色	light navy blue	Bleu marine clair	leicht marine blau	Blu marino chiaro	光ネイビーブルー	밝은 네이비 블루	azul claro marinho	Светло морской синий	azul marino claro
+486	浅霓虹绿	light neon green	Vert fluo clair	hell neongrün	Verde neon chiaro	ライトネオングリーン	밝은 네온 녹색	verde claro neon	Светло зелёный неоновый	verde de neón claro
+487	浅橄榄色	light olive	Olive clair	leicht Olive	oliva chiaro	ライトオリーブ	밝은 올리브	azeitona claro	Светло оливковый	oliva claro
+488	浅橄榄绿	light olive green	vert d'olive clair	leicht olivgrün	verde oliva chiaro	ライトオリーブグリーン	옅은 올리브 그린	verde claro azeitona	светло оливково зелёный	verde oliva claro
+489	浅橙色	light orange	lumière orange	hellorange	Arancione chiaro	ライトオレンジ	밝은 오렌지	 Laranja claro	светло оранжевый	naranja claro
+490	浅柔和绿色	light pastel green	vert de pastel léger	Leicht lindgrün	verde pastello chiaro	ライトパステルグリーン	밝은 파스텔 그린	verde pastel claro	Светло пастельно зелёный	verde pastel claro
+491	浅豆绿色	light pea green	Vert de pois clair	leicht erbsengrün	verde pisello chiaro	光エンドウ豆の緑	밝은 녹색 완두콩	Verde claro ervilha	светло горохо зелёный 	verde guisante claro
+492	浅桃色	light peach	pêche clair	leicht Pfirsich	pesca chiaro	ライトピーチ	빛 복숭아	pêssego claro	Светло персиковый	melocotón claro
+493	浅长春花色	light periwinkle	Pervenche clair	leicht Immergrün	Pervinca chiaro	光ツルニチニチソウ	살짝 대수리 색	Mirta claro	Светло барвинковый	lavanda azulado claro
+494	浅粉色	light pink	rose clair	hellrosa	rosa chiaro	淡いピンク	라이트 핑크	rosa claro	светло розовый	rosa claro
+495	浅梅色	light plum	Prune clair	leicht Pflaume	Prugna chiaro	光梅	밝은 매화	Ameixa claro	Светло сливовый	ciruela clara
+496	浅紫色	light purple	violet clair	hellviolett	Viola chiaro	藤色	밝은 자주색	roxo claro	светло фиолетовый	púrpura claro
+497	浅红色	light red	feu rouge	hellrot	Rosso chairo	明るい赤	밝은 적색	Vermelho claro	светло красный	rojo claro
+498	浅玫瑰色	light rose	rose clair	hellrosa	rosa chiaro	光がバラ	빛이 장미	rosa claro	светло розовый	rosa claro
+499	浅皇家蓝	light royal blue	bleu royal clair	leicht königsblau	Blu reale chiaro	ライトロイヤルブルー	밝은 로얄 블루	azul claro royal	Светло королевский синий	azul real claro
+500	浅灰绿色	light sage	Sauge clair	leicht Salbei	Salvia chiaro	光セージ	가벼운 세이지	Sábio claro	Светло шалфейный	salvia clara
+501	浅鲑鱼色	light salmon	saumon clair	leicht Lachs	salmone chiaro	ライトサーモン	빛 연어	salmão claro	Светло лососевый	salmón claro
+502	浅海绿色	light sea green	Vert de mer clair	leichtes Meergrün	Verde mare chiaro	光海緑色	밝은 바다 녹색	verde claro mar	Светло зелёно морской	verde mar claro
+503	浅海泡沫色	light seafoam	Bleu d'écumes de mer clair	hell seafoam	Schiuma di mare chiaro	ライトシーフォーム	밝은 바다거품	Espuma do mar claro	Светло синей морской пены	espuma de mar claro
+504	浅海泡沫绿	light seafoam green	vert d'écume de mer clair	Leicht seegrasgrün	Verde chiaro schiuma di mare	ライトシーフォームグリーン	밝은 바다거품 녹색	verde claro espuma de mar	Светло зелёный морской пены	verde claro espuma de mar
+505	浅天蓝色	light sky blue	Bleu ciel clair	leicht Himmel blau	Blu cielo chiaro	明るい空色	밝은 하늘색	azul claro céu 	Светло голубой	azul cielo claro
+506	浅驼色	light tan	brun clair	hellbraun	Abbronzato chiaro	淡褐色	밝은 황갈색	Bronzeado claro	светло коричневый	marrón claro 
+507	浅水鸭色	light teal	la lumière bleu sarcelle	leicht aquamarin	Foglia di tè chiaro	ライトティール	밝은 상오리	teal luz	Светло серо зелёный	verde azulado claro
+508	浅绿松石	light turquoise	turquoise clair	helltürkis	Turchese chiaro	ライトターコイズ	밝은 청록색	Turquesa claro	светло бирюзовый 	turquesa claro
+509	浅紫色	light urple	Rose violet clair	leicht grell violett	Viola chiaro	光ウルプル	가벼운 보라색 비슷한 색	 Rosa violeta claro	Светло фиолетово розовый	rosa violeta claro
+510	浅紫色	light violet	violet clair	hellviolett	viola chiaro	ライトバイオレット	밝은 보라색	Violeta claro	светло фиолетовый 	violeta claro
+511	浅黄色	light yellow	Jaune clair	hellgelb	giallo chiaro	淡黄色	밝은 노란색	Amarelo claro	светло жёлтый	amarillo claro
+512	浅黄绿色	light yellow green	Jaune vert clair	leicht gelb grün	Verde giallo chiaro	光黄緑	밝은 노란색 녹색	verde claro amarelo	светло зелёно жёлтый	verde claro
+513	浅黄绿色	light yellowish green	vert jaunâtre clair	leicht gelblich-grün	verde giallastro chiaro	光黄緑	밝은 황록색	verde claro amarelado	Свело жёлтовато зелёный	verde amarillento claro
+514	浅蓝色	lightblue	Bleu clair	hellblau	Blu chiaro	水色	옅은 블루	Azul claro	голубой	azul claro
+515	亮绿色	lighter green	vert plus clair	helles Grün	verde più chiaro	軽い緑	밝은 녹색	verde claro	Более светло зелёный	verde más claro
+516	亮紫色	lighter purple	Violet plus clair	helleres lila	Viola chiaro	軽量紫	밝은 자주색	roxo isqueiro	Более светло фиолетовый	violeta mas claro
+517	浅绿色	lightgreen	Vert clair	hellgrün	verde chiaro	明るい緑	밝은 그린	Verde claro	Светло зелёный	verde claro
+518	淡蓝色	lightish blue	Bleu très très clair	leicht blau	Blu luminoso	やや明るい青	밝은 파란색	Azul muito claro	Очень очень светло голубой	azul muy muy claro ou clarisimo
+519	淡绿色	lightish green	Vert très clair	leicht grün	Verde tendente al chiaro	やや明るい緑	밝은듯한 녹색	Verde muito pálido	Очень светло зелёный	verde muy claro
+520	淡紫色	lightish purple	violet de façon clair	leicht hell lila	Viola un po' chiaro	やや明るい紫	밝은 자주색	Púrpro de noite	Светло фиолетовый	púrpura claro
+521	淡红色	lightish red	Rouge claireux	leicht hellrot	Rosso un po' chiaro	やや明るい赤色	밝은듯한 적색	Vermelho de noite	светло красный	rojo claro
+522	紫丁香	lilac	lilas	Flieder	lilla	ライラック	라일락 꽃	lilás	сиреневый	lila
+523	丁香紫	liliac	lilas	liliac	lilla	ライラツク	릴리색	Lilas	лиловый	lila
+524	石灰色	lime	Citron vert	Kalk	Lime	ライム	석회	lima	лаймовый	limon verde
+525	石灰绿	lime green	Citron vert	Limettengrün	verde lime	ライムグリーン	라임 그린	Verde limão	Лаймово зелёный	verde lima 
+526	石灰黄	lime yellow	jaune citron	Kalk gelb	giallo lime	ライムイエロー	라임 옐로우	amarelo limão	Лимоно жёлтый	amarillo limón
+527	唇膏色 	lipstick	rouge à lèvres	Lippenstift	rossetto	口紅	립스틱색	batom	Цвет губной помады	lápiz labial
+528	唇膏红	lipstick red	Rouge rouge à lèvres	Lippenstiftrot	Rosso rossetto	赤い口紅	립스틱 레드	vermelho batom 	Красный красно помадный	lápiz de labios rojo
+529	奶黄色	macaroni and cheese	macaroni au fromage	Makkaroni und Käse	maccheroni e formaggio	マカロニアンドチーズ	마카로니와 치즈색	macarrão com queijo	макароны с сыром	macarrones con queso
+530	品红	magenta	magenta	Magenta	magenta	マゼンタ	마젠타	magenta	маджентовый	magenta
+531	桃花木色	mahogany	acajou	Mahagoni	mogano	マホガニー	마호가니	mogno	Цвета акажу	caoba
+532	玉米色	maize	maïs	Mais	mais	メイズ	옥수수	milho	кукурузный	maíz
+533	芒果色	mango	mangue	Mango	mango	マンゴー	망고	manga	манговый	mango
+534	卡其色	manilla	manille	Manilla	Manilla	マニラ	마닐라 색	manilla	Маниловый	manilla
+535	万寿菊	marigold	souci	Ringelblume	calendula	マリーゴールド	금잔화	malmequer	янтарный	caléndula 
+536	海洋色	marine	marin	Marine	marino	海洋の	마린	marinha	морской	marino
+537	海蓝色	marine blue	bleu marine	marineblau	Blu marino	マリンブルー	해양 파란	azul marinho	Сине морской 	azul marino
+538	栗色	maroon	bordeaux	kastanienbraun	Rosso bordeaux	栗色	적갈색	castanho	бордовый	granate 
+539	紫红色	mauve	mauve	malvenfarbig	malva	ふじ色	연보랏 빛의	cor de malva	лиловый	malva
+540	中蓝色	medium blue	bleu moyen	mittelblau	blu medio	ミディアムブルー	미디엄 블루	azul médio	Средне синий	azul medio
+541	中棕色	medium brown	brun moyen	mittelbraun	marrone medio	ミディアムブラウン	중간 갈색	castanho médio	Средне коричневый	marrón medio
+542	中绿色	medium green	vert moyen	mittelgrün	verde medio	培地緑	중간 녹색	verde médio	Средне зелёный	verde medio
+543	中灰色	medium grey	gris moyen	mittelgrau	grigio medio	ミディアムグレー	중간 회색	cinza médio	Средне серый	gris medio
+544	中粉红色	medium pink	rose moyen	mittelrosa	rosa medio	ミディアムピンク	매체 핑크	rosa médio	Средне розовый	rosa medio
+545	中紫色	medium purple	violet moyen	mittel lila	Viola medio	ミディアムパープル	중간 보라색	roxo médio	Средне фиолетовый	púrpura medio
+546	甜瓜色	melon	melon	Melone	melone	メロン	멜론	melão	Цвет дыни	melón
+547	黑葡萄色	merlot	merlot	merlot	merlot	メルロー	메를로 색	merlot	Цвет мерло	merlot
+548	金属蓝	metallic blue	bleu métallique	Metallblau	blu metallizzato	メタリックブルー	메탈릭 블루	azul metálico	Металлическо синий 	azul metálico
+549	中蓝色	mid blue	mi bleu	Mittelblau	Blu mezzo	ミッドブルー	중기 블루	Azul meia noite	Полу синий	azul medio
+550	中绿色	mid green	vert moyen	Mittel grün	Green metà	ミッドグリーン	중간 녹색	verde meado	середне зелёный	verde medio
+551	午夜黑色	midnight	minuit	Mitternacht	mezzanotte	真夜中	자정의 색	meianoite	Цвет полночи	medianoche
+552	午夜蓝	midnight blue	bleu nuit	Nachtblau	blu notte	ミッドナイトブルー	자정 블루	azul meia noite 	синий ночной	azul noche
+553	午夜紫	midnight purple	Violet minuit	Mitternachts lila	viola  mezzanotte	ミッドナイトパープル	자정 자주색	Roxo meia noite	Фиолетовый полночный	purpura medianoche
+554	军绿色	military green	vert militaire	Militär-Grün	verde militare	ミリタリーグリーン	군사 녹색	verde militar	военный зеленый	verde militar 
+555	牛奶巧克力色	milk chocolate	chocolat au lait	Vollmilchschokolade	cioccolato al latte	ミルクチョコレート	밀크 초콜릿	chocolate com leite	Молочно шоколадный цвет	chocolate con leche
+556	薄荷色	mint	menthe	Pfefferminz 	menta	ミント	박하	hortelã	мятный	menta
+557	薄荷绿	mint green	vert menthe	Pfefferminzgrün	verde menta	ミントグリーン	민트 그린	verde menta 	Мятно зелёный	verde menta
+558	薄荷绿	minty green	menthe verte	Pfefferminzgrün	Verde menta	ミントグリーン	민트향의 녹색	verde menta 	зелёно мятный	menta verde
+559	深棕色	mocha	mocca	Mokka	moca	褐色がかつたチヨコレート色	모카	ágata	Цвет кофе мокко	moca
+560	苔色	moss	mousse	Moos	muschio	コケ	이끼	musgo	Цвет моха	musgo
+561	苔绿色	moss green	vert mousse	moosgrün	verde muschio	モスグリーン	이끼 녹색	verde musgo	Цвет зелёного моха	verde musgo
+562	苔藓绿	mossy green	vert mousse	Moosgrün	verde muschio	苔緑	이끼 낀 녹색	verde musgo 	Цвет зелёного моха	verde musgo 
+563	泥土色	mud	boue	Schlamm	fango	泥	진흙	lama	Цвет грязи	barro
+564	泥褐色	mud brown	boue brune	schlammbraun	Marrone fango	泥茶色	진흙 갈색	Castanho lama 	Грязно коричневый	barro marrón
+565	泥绿色 	mud green	vert de boue	Schlamm grün	Verde fango	泥緑	진흙 녹색	verde lama	Грязно зелёный	verde barro
+566	泥棕色	muddy brown	brun boueux	schlammig braun	marrone fangoso	濁った茶色	진흙 갈색	Castanho lamacento 	Мутно коричневый	marrón sucio
+567	泥泞的绿色	muddy green	Vert boueux	schlammiges Grün	Verde fangoso	泥だらけの緑	진흙 녹색	verde lamacento 	Мутно зелёный	verde sucio
+568	泥黄色	muddy yellow	Jaune boueuse	schlammig gelb	Giallo fangoso	濁った黄色	흐린 노랑	amarelo barrento	Грязновато жёлтый	amarillo barro
+569	桑树	mulberry	mûre	Maulbeere	moro	桑の実	짙은 적자색	amoreira	Ежевичный	mora
+570	暗绿色	murky green	vert glauque	trübes Grün	verde tetro	濁った緑色	어두운 녹색	verde escuro	Серо зелёный	verde sucio
+571	蘑菇色	mushroom	champignon	Pilz	fungo	キノコ	버섯 색	cogumelo	грибной	hongo
+572	芥末色	mustard	moutarde	Senf	senape	マスタード	겨자	mostarda	горчичный	mostaza
+573	芥末褐色	mustard brown	moutarde brune	Senf braun	Marrone senape	マスタードブラウン	겨자 갈색	Castanho mostarda	Горчично коричневый	marrón mostaza
+574	芥末绿	mustard green	moutarde verte	Senf grün	Verde senape	マスタードグリーン	겨자 그린	verde mostarda	Зелёно горчичный	mostaza verde
+575	芥末黄	mustard yellow	jaune moutarde	Senfgelb	giallo senape	イエローマスタード	겨자 노랑	Amarelo mostarda	горчично жёлтый	amarillo mostaza
+576	柔和的蓝色	muted blue	bleu coupé	gedämpftes Blau	blue attenuato	ミュート青	음소거된 블루	azul suavizado	приглушенный синий	azul apagado
+577	柔绿色	muted green	vert coupé	gedämpftes Grün	Verde attenuato	ミュート緑	음소거 녹색	verde silenciado	приглушенный зелёный	verde apagado
+578	柔和的粉红色	muted pink	rose adoucie	stummgeschaltet rosa	Rosa attenuato	ミュートピンク	음소거된 핑크	rosa silenciado	Мягко розовый	rosa apagada
+579	柔紫色	muted purple	violet adoucie	gedämpftes lila	viola attenuato	ミュート紫	음소거된 자주색	roxo suave	Мягко фиолетовый	purpura apagado
+580	屎绿色	nasty green	vert vilain	grässlich grün	Verde sporco	意地の悪い緑色の	지저분한 녹색	verde desagradável	Неприятно зелёный	verde desagradable
+581	海军蓝	navy	marine	Marine	marina	ネイビー	해군	marinha	морской	marino
+582	海军蓝	navy blue	bleu marine	marineblau	blu marino	紺	네이비 블루	Azul marinho	Морской синий	azul marino
+583	海军绿	navy green	Vert marine	marinengrün	Green marino	海軍緑	네이비 그린	verde marinho 	Зелёно морской 	verde marino
+584	霓虹蓝色	neon blue	Bleu néon	neon blau	Blu neon	ネオンブルー	네온 블루	azul neon 	Синий неоновый	azul neon
+585	霓虹绿	neon green	vert fluo	Neongrün	Verde neon	ネオングリーン	네온 그린	verde neon 	Зелёный неоновый	verde fluor
+586	霓虹粉红色	neon pink	rose fluo	neon pink	Rosa neon	ネオンピンク	네온 핑크	rosa neon 	Розовый неойновый	rosa fluor
+587	霓虹紫色	neon purple	néon violet	neon lila	Viola neon	ネオンパープル	네온 자주색	púrpura neon 	Неоново фиолетовый	púrpura fluor
+588	霓虹灯红	neon red	néon rouge	Neon-Rot	Rosso neon	ネオン赤	네온 레드	neon vermelho	Неоново красный	rojo neón
+589	霓虹黄	neon yellow	jaune fluo	neongelb	giallo neon	ネオンイエロー	네온 옐로우	amarelo neon 	Жёлтый неоновый	amarillo fluor
+590	漂亮的蓝色	nice blue	Jolie bleu	schön blau	Blu bello	素敵な青	멋진 블루	azul agradável	Красиво синий	azul agradable
+591	夜蓝色 	night blue	bleu nuit	nachtblau	blu notte	夜の青	밤같은 파란	azul noite 	Синий ночной	azul noche
+592	海洋色	ocean	océan	Ozean	oceano	海	대양	oceano	океанский	océano
+593	海洋蓝	ocean blue	bleu océan	Ocean Blue	Blu oceano	オーシャンブルー	대양같은 파랑	azul oceano 	Океанско синий	azul oceano
+594	海洋绿	ocean green	océan vert	Ocean Green	Verde oceano	オーシャングリーン	바다 녹색	verde oceano 	Зелёно океанский	océano verde
+595	赭石	ocher	ocre	Ocker	ocra	黄土色	황토	Ocre	охровый	ocre
+596	赭石	ochre	ocre	Ocker	ocra	黄土色	황토	ocre	охровый	ocre
+597	灰陶土色	ocre	ocre	Ocker hellbraun	Ocra	オークル	오크르	ocre	охровый	ocre
+598	褪蓝色	off blue	Bleu cassé	falsches Blau	Blu spento	ブルーオフ	나간 블루	Quase azul 	матово синий	casi azul
+599	褪绿色	off green	Vert cassé	blass dunkelgrün	Verde spento	緑オフ	나간 녹색	quase verde	Матово зелёный	casi verde
+600	旧白色	off white	blanc cassé	vergilbtes Weiss	Bianco spento	オフホワイト	나간 흰색	quase branco	Матово белый	color hueso
+601	褪黄色 	off yellow	jaune cassé	verblasstes gelb	Giallo spento	黄色オフ	나간 노란색 	quase amarelo	матово жёлтый	casi amarillo
+602	老粉红色	old pink	vieux rose	altrosa	rosa vecchio	古いピンク	옛날 핑크	rosa velho	Старо розовый	rosa viejo
+603	老玫瑰	old rose	vieux rose	altrosa	rosa vecchio	オールドローズ	오래된 장미색	rosa velho	Старо розовый	rosa viejo
+604	橄榄色	olive	olive	Olive	oliva	オリーブ	올리브	oliva	оливковый	oliva
+605	黄褐色	olive brown	brun olive	olivbraun	marrone oliva	オリーブブラウン	올리브 갈색	Castanho azeitona	оливково коричневый	marrón oliva
+606	浅橄榄棕色	olive drab	Olive foncé	olivgrün	Oliva smorto	オリーブドラブ	칙칙한 올리브	Azeitona brando	Тёмно оливковый	oliva oscuro
+607	橄榄绿	olive green	vert olive	olivgrün	verde oliva	オリーブグリーン	올리브 그린	Verde azeitona	оливково зелёный	verde oliva
+608	橄榄黄	olive yellow	jaune olive	olivgelb	giallo oliva	オリーブイエロー	올리브 황색	Amarelo azeitona	жёлто оливковый	amarillo oliva
+609	橙色	orange	orange	orange	arancione	オレンジ	오렌지	laranja	оранжевый	naranja
+610	橙褐色	orange brown	Brun orange	orange-braun	Marrone arancione	オレンジブラウン	오렌지 브라운	laranja castanho	оранжево коричневый	marrón anaranjado 
+611	橘粉色	orange pink	orange rose	orange pink	arancione rosa	オレンジピンク	오렌지 핑크	rosa laranja	Оранжево розовый	rosa anaranjado
+612	橙红色	orange red	Rouge orange	orange rot	Rosso arancione	オレンジ赤	오렌지 레드	vermelho alaranjado	оранжево красный	rojo anaranjado 
+613	橙黄色	orange yellow	jaune orangé	orange-gelb	giallo arancio	オレンジイエロー	오렌지색 노란색	laranja amarelo	Оранжевато жёлтый	amarillo anaranjado
+614	发橙色	orangeish	orangeâtre	orangenrot	arancioso	オレンジがかった	오렌지적인 색	Alaranjado	оранжеватый	anaranjada
+615	橙红	orangered	Orangé	orangerot	Rosso arancio	オレンジレッド	오렌지 빨강	Lanranja vermelho	оранжеватый	anaranjado
+616	橙褐色	orangey brown	brun orangé	orange braun	marrone aranciato	オレンジ色の茶色	오렌지적인 갈색	Castanho alaranjado	оранжевато коричневый	marrón anaranjado
+617	橙红色	orangey red	rouge orangé	Orangerot	rosso aranciastro	オレンジ色の赤	오렌지적인 빨간색	Vermelho alaranjado	Оранжевато красный	rojo anaranjado
+618	橙黄色	orangey yellow	jaune orangé	orangegelb	giallo aranciato	オレンジ色の黄色	오렌지빛 노란색	amarelo alaranjado 	оранжево жёлтый	amarillo anaranjado
+619	浅橙色	orangish	orangé	orangig	aranciastro	オレンジがかった	오렌지적인 색	alaranjado	оранжеватый	anaranjado
+620	橙褐色	orangish brown	Brun orangeâtre	orange braun	Marrone aranciastro	オレンジがかった茶色	오렌지적인 갈색	Castanho alaranjado	Оранжевато коричневый	marrón anaranjado
+621	橙红色	orangish red	Rouge orangé	orange rot	Rosso aranciastro	オレンジがかった赤	오렌지적인 빨간색	vermelho alaranjado	Оранжевато красный	rojo anaranjado
+622	兰花色	orchid	orchidée	Orchidee	orchidea	蘭	난초	orquídea	Цвет орхидеи	orquídea
+623	淡色	pale	pâle	blass	pallido	淡い	창백한	pálido	бледный	pálido
+624	淡蓝绿色	pale aqua	Aqua pâle	blass aqua	Acqua pallido	淡い水色	엷은 아쿠아	agua pálida	Бледный цвет морской волны	aguamarina palido
+625	淡蓝色	pale blue	bleu pâle	blassblau	Blu pallido	淡いブルー	하늘색	azul pálido	Бледно синий	azul pálido
+626	淡棕色	pale brown	brun pâle	hellbraune	marrone pallido	薄茶色	엷은 갈색	castanho claro	бледно коричневый	marrón pálido
+627	淡绿色	pale cyan	pâle cyan	blasses Cyan	ciano pallido	淡い青緑色	연한 청록색	ciano pálido 	Бледно циановый	cian palido
+628	淡金色	pale gold	or pâle	bleich goldig	oro pallido	淡いゴールド	엷은 골드	ouro pálido	Бледно золотой	oro pálido
+629	淡绿色	pale green	vert pâle	blassgrün	verde pallido	淡緑色	엷은 녹색	verde pálido	бледно зелёный	verde pálido
+630	淡灰色	pale grey	gris pâle	hellgrau	grigio pallido	淡いグレー	엷은 회색	cinza pálido	бледно серый	gris claro
+631	淡紫色	pale lavender	lavande pâle	blass Lavendel	lavanda pallido	淡いラベンダー	창백한 라벤더	lavanda pálido	Бледно лавандовый	lavanda claro
+632	淡浅绿色	pale light green	vert pâle	fahles leichtes grün	Verde pallido chiaro	淡いライトグリーン	엷은 라이트 그린	lverde claro pálido	бледно зелёный	verde pálido claro
+633	淡丁香	pale lilac	lilas pâle	blass lila	lilla pallido	淡いライラック	연한 라일락	lilás pálido	бледно лиловый	lila pálido
+634	淡石灰色	pale lime	Citron pâle	blass Kalk	Lime pallido	淡い石灰	창백한 라임	limão pálido	Бледно лимоновый	limón claro
+635	淡石灰绿	pale lime green	pâle vert lime	blass Limettengrün	verde lime pallido	淡いライムグリーン	창백한 라임 그린	verde pálido limão	бледно зелёно лаймовый	verde lima claro
+636	淡洋红色	pale magenta	magenta pâle	blasses Magenta	magenta pallido	淡いマゼンタ	연한 자홍색	magenta palido	Бледно маджентовый 	magenta claro
+637	淡紫色	pale mauve	mauve pâle	blass lila	Malva pallido	藤色、淡い	자주빛 창백	lilás claro	Бледно лиловый	violeta pálido
+638	淡橄榄色	pale olive	olive pâle	hell-olivgrün	oliva pallido	淡いオリーブ	엷은 올리브	azeitona pálido	бледно оливковый	oliva pálido
+639	淡橄榄绿	pale olive green	pâle vert olive	blass olivgrün	verde oliva pallido	淡いオリーブグリーン	연한 올리브 그린	verde pálido azeitona	Бледно оливково зелёный	pálido verde oliva 
+640	淡橙色	pale orange	orange pâle	hellorange	arancione pallido	淡いオレンジ色	연한 오렌지	laranja pálido	бледно оранжевый	naranja oscuro
+641	淡桃色	pale peach	pêche pâle	blasser Pfirsich	pesca pallido	淡い桃	엷은 복숭아	pêssego pálido	Бледно персиковый	melocotón pálido
+642	淡粉色	pale pink	rose pâle	blassrosa	rosa pallido	淡いピンク	연한 핑크색	rosa pálido	бледно розовый	rosa claro
+643	淡紫色	pale purple	violet pâle	blass lila	Viola pallido	薄紫	엷은 자주색	roxo pálido	Бледно фиолетовый	morado claro
+644	淡红色	pale red	rouge pâle	hellrot	rosso pallido	淡赤色	엷은 적색	vermelho pálido	бледно красный	rojo pálido
+645	淡玫瑰	pale rose	rose pâle	blassrosa	rosa pallido	淡いバラ	창백한 장미	rosa pálido	бледно розовый	rosa pálido
+646	淡鲑鱼色	pale salmon	saumon pâle	blass Lachsfarbig	salmone pallido	淡いサーモン	엷은 연어	salmão pálido	Бледно лососевый 	salmón pálido
+647	淡天蓝	pale sky blue	ciel bleu pâle	blasses Himmel blau	Blu cielo pallido	淡い空色	엷은 하늘색	azul pálido céu 	бледно голубой	cielo azul claro
+648	淡水鸭色	pale teal	Turquoise pâle	blass blaugrün	Foglia di tè pallido	淡いティール	엷은 상오리	turquesa pálido	Бледно бирюзовый	turquesa claro
+649	淡绿蓝色	pale turquoise	turquoise pâle	helles Türkis	turchese pallido	淡いターコイズ	연한 청록색	Turquesa pálido	Бледно бирюзовый	turquesa pálido
+650	淡紫色	pale violet	violet pâle	hellviolett	Viola pallido	淡い紫	엷은 보라색	violeta pálido	бледно фиолетовый	violeta claro
+651	淡黄色	pale yellow	jaune pâle	hellgelb	giallo pallido	淡黄色	엷은 노란색	amarelo pálido	Бледно жёлтый	amarillo pálido
+652	羊皮纸色	parchment	parchemin	Pergament	pergamena	羊皮紙	양피지 색	pergaminho	Пергаментный	pergamino
+653	柔蓝色	pastel blue	bleu pastel	pastellblau	Blu pastello	パステルブルー	파스텔 블루	azul pastel	Синий Пастельный	azul pastel
+654	柔绿色	pastel green	vert pastel	lindgrün	verde pastello	パステルグリーン	파스텔 그린	verde pastel 	Пастельно зелёный	verde pastel
+655	柔橙色	pastel orange	orange pastel	pastellorange	arancione pastello	パステルオレンジ	파스텔 오렌지	laranja pastel 	Пастельно оранжевый	naranja pastel
+656	柔和的粉红色	pastel pink	rose pastel	Pastellrosa	rosa pastello	パステルピンク	파스텔 핑크	rosa pastel	Пастельно розовый 	rosa pastel
+657	柔紫色	pastel purple	violet de pastel	Pastellpurpur	Viola pastello	パステルパープル	파스텔 보라색	roxo pastel 	фиолетово пастельный	morado pastel
+658	粉红色 	pastel red	Rouge pastel	Pastellrot	Rosso pastello	パステルカラーの赤	파스텔 레드	vermelho pastel	Пастельно красный	rojo pastel
+659	柔和的黄色	pastel yellow	jaune pastel	pastellgelb	giallo pastello	パステルイエロー	파스텔 옐로우	amarelo pastel	Пастельно жёлтый	amarillo pastel
+660	豌豆色	pea	pois	Erbse	pisello	エンドウ	완두콩	Ervilha	гороховый	guisante
+661	豆绿	pea green	de petits pois	erbsengrün	verde pisello	黄緑	완두콩 녹색	verde ervilha	гороховый	guisante
+662	豌豆汤	pea soup	soupe aux pois	Erbsensuppe	Zuppa di piselli	ピースープ	완두콩 수프	sopa de ervilhas	Цвет горохового супа	sopa de guisantes
+663	豌豆汤绿色	pea soup green	Vert de soupe aux pois	Erbsensuppe grün	Verde zuppa di piselli	エンドウ豆のスープグリーン	완두콩 수프 녹색	verde sopa de ervilha 	Горохово супный зелёный	verde sopa de guisantes
+664	桃色	peach	pêche	Pfirsich	pesca	桃	복숭아	pêssego	персиковый	melocotón
+665	桃红	peachy pink	rose pêche	Pfirsich Pink	Rosa pesca	桃のピンク	피치 핑크	rosa pêssego	Персиково розовый	rosa melocotón
+666	孔雀蓝	peacock blue	bleu paon	pfauenblau	blu pavone	ピーコックブルー	광택이있는 청색	azul brilhante	Павлиново синий	azul pavo real
+667	梨色	pear	poire	Birne	pera	梨	배	pera	грушевый	pera
+668	长春花色	periwinkle	pervenche	Schnecken grün	pervinca	ツルニチニチソウ	대수리	mirta	барвинковый	lavanda azulado
+669	长春花蓝	periwinkle blue	Bleu pervenche	Immergrün blau	Blu pervinca	赤味がかつた青色	대수리 블루	azul pervinca 	барвинковый	azul malva 
+670	长春花色	perrywinkle	violâtre	hell blau lila	pervinca	赤味がかつた青色	보라색적인	mirta	фиолетоватый	violetado
+671	汽油色	petrol	essence	Benzin	benzina	ガソリン	가솔린 색	gasolina	бензиновый	gasolina
+672	猪粉红色	pig pink	cochon rose	Schwein rosa	Rosa maialino	豚ピンク	돼지 핑크	cor de rosa porco	поросяче розовый 	rosa cerdo
+673	松树色	pine	pin	Kiefer	pino	松	소나무	pinheiro	сосновый	pino
+674	松绿色	pine green	Sapin vert	Tannengrün	verde pino	松緑	소나무 녹색	verde pinho	Цвет зелёной ёлки 	pino verde
+675	粉红色	pink	rose	rosa	rosa	桃色	핑크, 분홍색	rosa	розовый	rosa
+676	粉红紫色	pink purple	rose violet	pink lila	rosa viola	紫ピンク	보라색 ​​분홍색	rosa roxo	Фиолетово розовый	rosa púrpura
+677	粉红色	pink red	rose rouge	rosa rot	Rosso rosa	ピンク赤	핑크 레드	rosa vermelho	Красно розовый	rosa rojo
+678	粉红色	pinkish	rosâtre	rötlich	rosato	ピンク色がかった	분홍빛이 도는	rosado	розоватый	rosado
+679	粉红褐色	pinkish brown	brun rosâtre	rosabraun	marrone rosato	ピンクがかった茶色	분홍빛이 도는 갈색	Castanho rosado	Розовато коричневый	marron rosaceo
+680	粉红灰色	pinkish grey	gris rosé	rosagrau	grigio rosato	ピンクがかった灰色	분홍빛이 도는 회색	cinza rosado	Розово серый	gris rosado
+681	粉红色的橙色	pinkish orange	rose orangé	rosa Orange	Arancione rosato	ピンクがかったオレンジ色	분홍빛이 도는 오렌지	laranja rosado	Оранжевато розовый	rosa anaranjado
+682	粉紫色	pinkish purple	violet rosé	rosa lila	viola roseo	ピンクがかった紫	분홍빛이 도는 자주색	roxo rosado	Розовато фиолетовый	violeta rosado
+683	粉红色	pinkish red	rouge rosé	rosarötlich	rosso rosato	ピンクがかった赤	분홍빛이 도는 붉은 색	vermelho rosado	розовато красный	rojo rosado
+684	发粉的褐色	pinkish tan	bronzé rosâtre	pink Ton	Abbronzato rosato	ピンクがかった黄褐色	분홍빛이 도는 황갈색	rosado bronzeado	Загарно розоватый 	marrón rosado
+685	淡粉色	pinky	rosé	roetlich	rosato	小指	분홍색을 띤	rosado	розоватый	meñique 
+686	浅粉紫色	pinky purple	 violet rosâtre	rosarot lila	Viola rosato	小指紫	분홍색 보라색	roxo rosado 	Розовато фиолетовый	morado rosaceo
+687	粉红色	pinky red	Rouge rosâtre	rosa-rot	Rosso rosato	小指赤	핑키 레드	 Vermelho rosado	Розовато красный	rojo rosaceo
+688	小便黄	piss yellow	Jaune pisse	Pisse gelb	Giallo piscio	黄色の小便	오줌같은 노랑	amarelo mijo	Мочево жёлтый	amarillo orina
+689	开心果色	pistachio	pistache	Pistazie	pistacchio	ピスタチオ	피스타치오	pistache	фисташковый	pistacho
+690	梅子色	plum	prune	Pflaume	prugna	梅	자두	ameixa	сливовый	ciruela
+691	梅紫色	plum purple	Violet prune	Pflaumen Violett	Viola prugna	梅紫	매화 자주색	roxo ameixa 	Сливово фиолетовый	ciruela morada
+692	毒绿色	poison green	vert poison	Gift grün	verde veleno	毒緑	독 녹색	verde veneno	Ядовито зелёный	verde veneno
+693	大便色	poo	merde	Scheisse	cacca	うんち	똥	poo	какашковый	caca
+694	屎棕色	poo brown	Merde brun	Kack braun	Marrone cacca	うんち茶色	똥 갈색	Castanho pó	Какашково коричневый	caca marrón
+695	屎色	poop	caca	Kacke	poppa	船尾	똥	tombadilho	какашковый	caca
+696	船尾棕色	poop brown	merde brun	Kacke braun	Marrone cacca	船尾茶色	똥 갈색	Castanho cocô 	Какашково коричневый	caca marrón
+697	大便绿	poop green	Vert caca 	Scheisse grün	Verde cacca	船尾の緑	똥 녹색	verde cocô	Какашковый зелёный	verde caca
+698	粉蓝色	powder blue	bleu poudre	bläuliches Weiss	blu polvere	パウダーブルー	파우더 블루	Azul pó	Порохово голубой	azul polvo
+699	本蓝色	primary blue	bleu primaire	Primär blau	Blu primario	プライマリーブルー	기본 블루	azul primário	синий	azul primario
+700	普鲁士蓝	prussian blue	bleu de Prusse	Preußisch Blau	blu di Prussia	紺青色	프러시아의 청색	azul da Prússia	берлинская лазурь	azul de prusia
+701	深褐色	puce	puce	braunrot	color pulce	暗褐色	이	puce	красновато бурый	puce
+702	呕吐	puke	vomi	Kotze	vomito	吐く	구토	vômito	рвотный	vómito
+703	呕吐棕色	puke brown	vomi brun	Kotzbraun	Marrone vomito	吐くブラウン	토같은 갈색	Castanho vomitado	Рвотоно коричневый	vomito marron
+704	呕吐绿色	puke green	Vomi vert	kotzgrün	Verde vomito	吐く緑	토할 녹색	Verde vomitado	Рвотно зелёный	vomito verde
+705	呕吐黄	puke yellow	vomi jaune	kotzen gelb	Giallo vomito	吐く黄色い	토의 노란색	Amarelo vomitado	Рвотно жёлтый	vomito amarillo
+706	南瓜色	pumpkin	citrouille	Kürbis	zucca	カボチャ	호박	abóbora	тыквеный	calabaza
+707	南瓜橙色	pumpkin orange	orange citrouille	Kürbis Orange	arancione zucca	カボチャオレンジ	호박 오렌지	laranja de abóbora 	Тыквено оранжевый	naranja calabaza
+708	纯蓝色	pure blue	bleu pur	reines Blau	blu puro	純粋な青色	순수한 청색	azul puro	Чисто синий	azul puro
+709	紫色	purple	violet	lila	viola		보라색	roxo	фиолетовый	púrpura 
+710	紫蓝色	purple blue	violet bleu	lila blau	viola blu	青紫	파란색 보라색	roxo azul	Сине Фиолетовый	violeta azul
+711	紫褐色	purple brown	Brun violet	lilabraun	viola marrone	紫褐色	보라색 ​​갈색	Castanho roxo	Фиолетово коричневый	marrón púrpura
+712	紫灰色	purple grey	violet gris	lila grau	Grigio viola	パープルグレー	보라색 ​​회색	roxo cinza	серо фиолетовый	violeta gris
+713	紫色粉红色	purple pink	Rose violet	lila pink	viola rosa	ピンクパープル	분홍색 보라색	roxo rosa	Фиолето розовый 	rosa purpura
+714	紫红色	purple red	rouge violet	lila rot	rosso porpora	紫赤色	보라색 ​​빨간색	roxo vermelho	Фиолетого красный	rojo púrpura
+715	浅紫色	purpleish	pourpreux	lila	purpureo	紫がかつた	보라색적인	violeta	Пурпурноватый	purpureado.
+716	紫蓝色	purpleish blue	Bleu pourpreux	leicht violettlich blau	Blu purpureo	紫がかつた青	보라색적인 블루	Azul púrpro	Пурпурновато синий	azul purpureado
+717	紫粉红	purpleish pink	Rose pourpreux	violettlich rosa	Rosa violastro	紫がかつたピンク	보래색같은 핑크	Rosa púrpro	Пурпурно розовый	rosa purpureado
+718	紫色	purpley	pourpreux	violettlich	violaceo	パープレイ	보라색같은 색	púrpro	пурпурноватый	purpureado
+719	紫蓝色	purpley blue	Bleu pourpreux	violettlich blau	Blu violaceo	青紫	보라색같은 블루	roxo azul	Пурпурновато синий	azul purpura
+720	紫灰色	purpley grey	pourpre gris	violettlich grau	Grigio violaceo	パープレイグレー	보라색이 밑도는 회색	Cinzento púrpro	Серо пурпурный 	gris purpura
+721	紫粉红	purpley pink	Rose pourpreux	violettlich rosa	Rosa violaceo	パープレイピンク	purpley 핑크	Rosa púrpro	Пурпурновато розовый	rosa purpura
+722	紫色	purplish	violacé	violettlich	Purpureo	紫がかった	자줏빛	púrpro	фиолетоватый	violaceo
+723	紫蓝色	purplish blue	bleu violacé	violett	blu purpureo	紫がかった青	보라색적인 ​파란색	azul arroxeado	Фиолетовато синий	azul violaceo
+724	紫褐色	purplish brown	brun violacé	violettbraun	marrone purpureo	紫褐色	보라색 ​​갈색	castanho arroxeado	фиолетово коричневый	marrón púrpura
+725	紫灰色	purplish grey	gris violacé	violett grau	grigio purpureo	紫がかった灰色	보라색 ​​회색	cinza arroxeado	Фиолетово серый	gris violáceo
+726	紫粉红	purplish pink	rose violacé	violett rosa	rosa purpureo	紫がかったピンク	보라색 ​​분홍색	rosa púrpura	Фиолетово розовый	rosa violaceo
+727	紫红色	purplish red	rouge violacé	purpurrot	rosso purpureo	赤紫	자줏빛 적색	vermelho arroxeado	фиолетово красный	rojo violaceo
+728	紫色	purply	pourpre	violettlich	Violaceo	パープリー	보라색적인 색	púrpro	пурпурный	purpura
+729	红蓝色	purply blue	Bleu violâtre	violett blau	Blu violaceo	パープリー青	보라색적으로 블루	Azul roxo	Фиолетовато синий	azul purpura
+730	紫粉红	purply pink	Rose pourpreux	violetten rosa	rosa violaceo	紫がかつたピンク	보라색같은 핑크	Rosa púrpro	Пурпурновато розовый	rosa purpureado
+731	油灰色	putty	mastic	graubraun	stucco	黄灰色	퍼티	massa de vidraceiro	шпаклёвочный	masilla
+732	赛车绿	racing green	Vert de course	racing green	Verde da gara	レーシンググリーン	달려나가는 녹색	Verde de corrida	гоночный зелёный	verde de carrera
+733	放射性绿	radioactive green	Vert radioactive	radioaktives grün	radioattivo verde	放射性緑	방사성 녹색	verde radioativo 	Радиоактивно зелёный	verde radiactivo
+734	覆盆子色	raspberry	framboise	Himbeere	lampone	ラズベリー	나무딸기	framboesa	малиновый	frambuesa
+735	生赭色	raw sienna	terre de Sienne naturel	Raw Sienna	Terra di Siena naturale	生の黄褐色	원시 시에나 색	Sienna natural	Натурально медный	siena natural
+736	生赭色 	raw umber	terre d'ombre naturelle	holzbraun	terra d'ombra naturale	生アンバー	원시 암갈색	Terra de sombra natural	Натурально тёмно коричневый	sombra natural
+737	特浅蓝色	really light blue	bleu très clair	klar hellblau	Azzurro chiaro	実際にライトブルー	진짜 옅은 하늘색	azul muito claro	очень осветло голубой	azul muy claro
+738	红色	red	rouge	rot	rosso	赤	빨강, 빨간색, 홍	vermelho	красный	rojo
+739	红褐色	red brown	Brun rouge	rotbraun	Marrone rosso	赤茶色	붉은 갈색	castanho vermelho	красно коричневый	rojo marrón 
+740	橙红色	red orange	rouge orange	rot orange	Arancione rosso	赤オレンジ	레드 오렌지	vermelho laranja	Оранжево красный	rojo naranja
+741	红粉色	red pink	rose rouge	rot rosa	Rosa rosso	赤、ピンク	빨강 핑크	Vermelho rosa	красно розовый	rosa rojo
+742	红紫色	red purple	rouge violet	rot lila	rosso porpora	赤紫色	붉은 자주색	vermelho roxo	фиолетово красный	rojo violeta
+743	红紫色	red violet	rouge violet	rotviolett	Rosso violetto	赤紫色	붉은 보라색	vermelho violeta	фиолетово красный	rojo violeta 
+744	红葡萄酒色	red wine	vin rouge	Rotwein	vino rosso	赤ワイン	적포도주	vinho tinto	Цвет красного вина	vino tinto
+745	带红色	reddish	rougeâtre	rötlich	rossastro	赤みがかった	불그스름한	avermelhado	красноватый	rojizo
+746	红褐色	reddish brown	brun rougeâtre	rötlichbraun	Marrone rossastro	赤褐色	불그스름한 갈색	castanho avermelhado	красновато коричневый	marrón rojizo
+747	微红的灰色	reddish grey	gris rougeâtre	rötlich grau	grigio rossastro	灰色から赤褐色	불그스름한 회색	Cinza avermelhado	Красновато серый	gris rojizo
+748	橘红色	reddish orange	rouge orangé	rötlichorange	Arancione rossastro	赤みがかったオレンジ色	불그스름한 오렌지	Laranja avermelhado	оранжевато красный	naranja rojizo 
+749	微红的粉红色	reddish pink	rose rougeâtre	rötlich rosa	Rosa rossastro	ピンクの赤みがかった	불​​그스름한 분홍색	rosa avermelhado 	красновато розовый	rosa rojizo
+750	紫红色	reddish purple	violet rougeâtre	rötlichpurpurn	Viola rossastro	紫色の赤みがかった	불그스름한 보라색​	roxo avermelhado 	красновато фиолетовый	púrpura rojizo 
+751	红棕色	reddy brown	rougeâtre brun	rotbraun	Marrone rossastro	レディブラウン	빨간듯한 갈색	Castanho avermelhado	Красновато коричневый	marrón enrojecido 
+752	艳蓝	rich blue	bleu riche	reichen blauen	Blu ricco	豊富な青	리치 블루	azul rico	Сочно синий	azul intenso
+753	艳紫	rich purple	violet riche	reich lila	Viola ricco	豊富な紫色	풍부한 보라색	roxo rico	сочно фиолетовый	púrpura intensa
+754	浅蓝绿色	robin egg blue	Oeuf de robin bleu	Robin Egg Blue	Uovo di pettirosso	ロビンエッグブルー	로빈 에그 블루	azul ovo de robin 	Синий цвет яйца дроздя	huevo de petirrojo azul
+755	绿蓝色	robin's egg	Oeufs de robin	Robins Ei	uovo di Robin	ロビンの卵	로빈의 계란	ovo de robin	Цвет яйца дрозда	huevos de petirrojo 
+756	绿蓝色	robin's egg blue	Oeufs de robin bleu	Enteneiblau	Blu uovo di pettirosso	ロビンの卵青い	로빈의 에그 블루	azul ovo de robin 	синий цвет яйца дрозда 	huevos de petirrojo azul
+757	罗莎	rosa	rosa	Rosarot	rosa	ローザ	분홍색적인	rosa	Розовый	rosa
+758	玫瑰色	rose	rose	Rose	rosa	バラ	장미	rosa	розовый	rosa
+759	玫瑰粉红色	rose pink	rose rose	Rosenrot	Rosa rosa	ローズピンク	장미 핑크	Rosa rosa	Розово розовый	rosa rosa
+760	玫瑰红	rose red	rose rouge	Rose Red	Rosso rosa	バラ赤	장미 빨강	rosa vermelho	красно розовый	rosa rojo
+761	粉玫瑰色	rosy pink	rose rose	rosig	rosa rosa	バラ色のピンク	장미빛 핑크	rosa rosado	Розово розовый	rosado
+762	胭脂红	rouge	rouge	pinkiges purpur	rossetto	ルージュ	연지	vermelho	красный	colorete
+763	皇族色	royal	royal	königlich	reale	ロイヤル	왕의 색	real	королевский	real
+764	皇家蓝	royal blue	bleu royal	königsblau	Blu reale	ロイヤルブルー	로얄 블루	azul royal	Королевско синий	azul real
+765	蓝紫色	royal purple	violet royale	Purpur	Viola reale	青紫色	왕실적의 보라색	púrpura	Королевско фиолетовый	púrpura real 
+766	红宝石	ruby	rubis	Rubin	rubino	ルビー	루비	rubi	рубиновый	rubí
+767	赤褐色	russet	brun roux	rostbraun	Rosso bruno color ruggine	あずき色	적갈색	Castanho avermelhado	Рыжо коричневый	marron rojizo
+768	锈色	rust	rouille	Rost	ruggine	さび	녹	ferrugem	ржавый	rojizo
+769	锈褐色	rust brown	rouille brune	rostbraun	Marrone ruggine	さび茶色の	녹이 슨 갈색	Castanho ferrugem 	Коричнево ржавый 	marrón óxido
+770	锈橙色	rust orange	rouille orangé	Rostorange	Arancione ruggine	さびオレンジ	녹이 슨 오렌지 색	Laranja ferrugem 	оранжево ржавый	rojizo anaranjado
+771	铁锈红	rust red	Rouille rouge	Rostrot	rosso ruggine	さび赤	녹의 빨간색	vermelho ferrugem	Красно ржавый	óxido rojo
+772	生锈的橙色	rusty orange	orange rouillé	rostige Orange	Arancione arrugginito	錆びたオレンジ	녹슨 오렌지	laranja enferrujado 	оранжево ржавый	naranja oxidado
+773	锈红色	rusty red	Rouille rouge	rostrot	rosso ruggine	錆びた赤	녹같은 빨강	Vermelho ferrugem	Красно ржавый	rojo oxido 
+774	藏红花	saffron	safran	Safran	zafferano	サフラン	사프란 색	açafrão	шафрановый	azafrán
+775	浅灰绿色	sage	sauge	Salbei	salvia	セージ	세이지	sábio	шалфейный цвет	salvia
+776	灰绿色	sage green	Sauge verte	Salbeigrün	verde salvia	セージグリーン	세이지 색	verde sábio 	Цвет зелёного шалфея	salvia verde
+777	三文鱼色	salmon	saumon	Lachs	salmone	サーモン	연어	salmão	лососевый	salmón
+778	浅粉色	salmon pink	saumon rose	lachsrosa	rosa salmone	サーモンピンク	연어 핑크	rosa salmão	Розово лососевый	rosa salmón 
+779	沙子色	sand	sable	Sand	sabbia	砂	모래	areia	песчаный	arena
+780	沙褐色	sand brown	sable brun	Sand braun	marrone sabbia	砂茶色	모래 갈색	Castanho areia	коричнево песчаный	marrón arena
+781	沙黄色	sand yellow	sable jaune	Sand gelb	Giallo sabbia	砂の黄色	모래 노란색	amarelo areia 	Песчано жёлтый	amarilla arena
+782	砂岩色	sandstone	Grès blanc rose	Sandstein	arenaria	砂岩	사암	arenito	Цвет песчаника	arenisca 
+783	沙子色	sandy	sablonneux	Sand	sabbioso	砂の	모래의	Arenoso	песчаный	arenoso
+784	沙褐色	sandy brown	Sable brun	Sandy Brown	Marrone sabbioso	砂の茶色	모래 갈색	Castanho areia	Коричнево песчанный	marrón arena
+785	沙黄色	sandy yellow	jaune sable	Sandgelb	giallo sabbia	砂の黄色	모래 노란색	amarelo de areia 	песчано жёлтый	amarillo arena
+786	暗绿色	sap green	sève verte	Flechtengrün	Verde linfa	樹液緑	수액 녹색	verde seiva	Сочно зелёный	verde savia 
+787	蓝宝石	sapphire	saphir	Saphir	zaffiro	サファイア	사파이어	safira	сапфировый	zafiro
+788	猩红色	scarlet	écarlate	Scharlach	scarlatto	緋色	진홍색	escarlate	алый	escarlata 
+789	海色 	sea	mer	Meer	mare	海	바다	Mar	морской	mar
+790	海蓝色	sea blue	mer bleue	Meer blau	Blu mare	海の青	바다의 푸른	azul mar 	Сине морской	mar azul
+791	海绿色	sea green	mer verte	Meergrün	Verde mare	シーグリーン	바다 녹색	verde mar 	Зелёно морской	mar verde
+792	海泡沫色	seafoam	écume de mer	Meeresschaum	Schiuma di mare	シーフォーム	바다거품	Espuma do mar	Цвет морской пены	espuma de mar
+793	海泡沫蓝	seafoam blue	écume de mer bleue	Seafoam Blau	Blu schiuma di mare	シーフォームブルー	바다거품 블루	Azul espuma do mar	Цвет синей морской пены	azul espuma de mar
+794	海泡沫绿	seafoam green	Vert d’écumes de mer	Seafoam Green	Verde schiuma di mare	シーフォーム緑	바다거품 녹색	Verde espuma do mar	Зелёный морской пены	verde espuma del mar
+795	海草色	seaweed	algue	Algen	alga marina	海藻	해초색	alga	Цвет водорослей	alga
+796	海藻绿	seaweed green	algue verte	Algen grün	Verde alga	海藻の緑	해초 녹색	verde de algas	Водоросливо зелёный	alga verde
+797	红棕色	sepia	sépia	Sepia	Seppia	セピア	세피아	sépia	сепия	sepia
+798	酢浆草色	shamrock	trèfle	Kleeblatt	trifoglio	シャムロック	토끼풀 색	trevo	клеверный	trébol
+799	三叶草绿	shamrock green	Trèfle vert	Kleeblattgrün	Verde trifoglio 	シャムロックグリーン	토끼풀 초록	verde trevo	Цвет зелёного клевера	trébol verde
+800	狗屎色	shit	merde	Scheiße	merda	たわごと	똥	merda	какашковый	mierda
+801	狗屎棕色	shit brown	merde brune	Scheiße braun	Marrone merda	くそブラウン	똥 갈색	Castanho merda 	Какашково коричневый	caca marron
+802	狗屎绿	shit green	Vert caca	Scheiße grün	Verde merda	くそ緑	똥 녹색	verde merda	Какашково зелёновый	verde mierda 
+803	艳粉红色	shocking pink	rose choquant	krasses pink	rosa scioccante	ショッキングピンク	충격적인 핑크색	rosa chocante	Резкий розовый	fucsia
+804	病态绿	sick green	vert malade	krankes Grün	verde malato	病気の緑	아픈 녹색	verde doente	Больной зелёный	verde enfermo
+805	病态绿	sickly green	vert maladif	kränklich grün	Verde malaticcio	病弱な緑	병약한 녹색	verde doentio	Болезнено зелёный	verde enfermizo
+806	病态黄	sickly yellow	 jaune	kränklich gelb	Giallo malaticcio	病弱な黄色	노란빛이 도는 아픈듯한 색	amarelo doentio	жёлтый	amarillo enfermizo
+807	赭色	sienna	terre de sienne	Sienaerde	terra di siena	シエナ	시에나색	sienna	Цвет сиены	siena
+808	银色	silver	argent	Silber	argento	銀	은색	prata	серебренный	plata
+809	天空色	sky	ciel	Himmel	cielo	空	하늘	céu	голубой	cielo
+810	天蓝	sky blue	ciel bleu	Himmelblau	Blu cielo	空色	하늘같은 파랑	azul céu 	голубой	cielo azul
+811	石板色	slate	ardoise	Schiefer	ardesia	スレート	슬레이트	ardósia	Шиферный цвет	pizarra
+812	石板蓝	slate blue	bleu ardoise	schieferblau	blu ardesia	スレートブルー	슬레이트 블루	ardósia azul	Шиферно синий	azul pizarra
+813	青绿	slate green	Vert ardoise	Schiefer grün	Verde ardesia	スレートグリーン	슬레이트 녹색	ardósia verde	Шиферно зелёный	verde pizarra
+814	板岩灰色	slate grey	Gris ardoise	schiefergrau	grigio ardesia	スレートグレー	슬레이트 그레이	ardósia cinza	Шиферно серый	gris pizarra
+815	煤泥绿色	slime green	Vert d’algues	Schleim grün	Verde melma	スライムグーリン	점액의 녹색	Verde alga	Цвет зелёной слизи	verde algua
+816	青鼻涕	snot	morve	Rotz	moccio	鼻水	코딱지	ranho	сопливый	moco
+817	鼻涕绿	snot green	morve verte	Rotz grün	Verde moccio	鼻水緑	코딱지 녹색	verde ranho 	Цвет зелёных соплей	moco verde
+818	柔和的蓝色	soft blue	bleu doux	sanftes blau	Blu morbido	ソフトブルー	부드러운 블루	azul suave	нежно голубой	azul suave
+819	柔绿色	soft green	vert tendre	weiches Grün	verde morbido	柔らかい緑の	부드러운 녹색	verde suave	мягко зелёный	verde suave
+820	柔和的粉红色	soft pink	rose tendre	sanftes pink	rosa tenue	ソフトピンク	부드러운 핑크색	rosa suave	нежно розовый	rosa suave
+821	软紫色	soft purple	violet douce	sanftes lila	Viola morbido	ソフトパープル	부드러운 보라색	roxo macio	Мягко фиолетовый	púrpura suave 
+822	薄荷色	spearmint	menthe verte	Grüne Minze	menta	スペアミント	양박하 색	hortelã	зелёно мятный	menta verde
+823	春天绿	spring green	vert printemps	Frühlingsgrün	Verde primavera	新キャベツ	봄 녹색	verde primavera	Весене зелёный	verde primavera
+824	云杉色	spruce	vert d’épicéa	Fichte	Abete	トウヒ	소나무 색	pinheiro	Зелёно пихтовый	ataviar
+825	壁球色	squash	Jaune foncé	Squash	zucca	スカッシュ	스쿼시 색	abóbora	Тёмно жёлтый	calabacín
+826	钢色	steel	acier	Stahl	acciaio	鋼	강철	aço	стальной	acero
+827	钢蓝色	steel blue	bleu acier	Stahlblau	blu acciaio	鋼色	스틸 블루	azul aço	Стальной синий	azul acero
+828	钢灰色	steel grey	gris acier	stahlgrau	grigio acciaio	スチールグレー	스틸 그레이	cinza aço	Стальной серый 	gris acero
+829	石头色	stone	pierre	Stein	pietra	石	돌	Pedra	каменный	piedra
+830	暴风雨蓝色	stormy blue	bleu orageux	stürmisch blau	Blu tempestoso	ストーミーブルー	폭풍우 블루	azul tempestuoso 	Бурно синий	azul tormentoso
+831	稻草色	straw	paille	Stroh	paglia	わら	밀짚 색	palha	соломенный	paja
+832	草莓色	strawberry	fraise	Erdbeere	fragola	イチゴ	딸기	morango	клубничный	fresa
+833	强蓝色	strong blue	bleu intense	stark blau	blu forte	強い青	강한 파란색	azul forte	Чистый синий	azul fuerte
+834	强粉红	strong pink	rose foncé	stark rosa	rosa forte	強いピンク	강한 분홍색	rosa forte	Тёмно розовый	rosa fuerte
+835	太阳黄	sun yellow	jaune soleil	sonnengelb	Giallo sole	日黄色	태양빛 노랑	amarelo sol	Солнечно жёлтый	amarillo de sol
+836	向日葵色 	sunflower	tournesol	Sonnenblume	girasole	ヒマワリ	해바라기색	girassol	подсолнуховый	girasol
+837	向日葵黄	sunflower yellow	jaune tournesol	Sonnenblumengelb	Giallo girasole	ヒマワリの黄色	해바라기 황색	amarelo girassol	Жёлтый подсолнуховый	amarillo girasol
+838	阳光黄	sunny yellow	jaune soleil	sonnengelb	giallo soleggiato	日当たりの良い黄色	맑은 노란색	amarelo ensolarado	Солнечно жёлтый	amarillo soleado
+839	阳光黄	sunshine yellow	jaune soleil	Sonnengelb	giallo sole	サンシャインイエロー	햇빛 노란색	amarelo sol	Солнечно жёлтый	amarillo sol
+840	沼泽色	swamp	Vert de marais	überschwommen	palude	沼地	늪 색	Pântano	Болотно зелёный	pantano
+841	沼泽绿	swamp green	marécage vert	Sumpf grün	Verde palude	沼緑	늪 녹색	pântano verde	Болотно зелёный	pantano verde 
+842	黄褐色	tan	bronzé	Bräune	Abbronzato	黄褐色	황갈색	bronzeado	загарный	habano
+843	棕褐色	tan brown	Bronzé brun	hellbraun	Marrone abbronzato	日焼け褐色	황갈색 갈​​색	Castanho bronzeado	Загарно коричневый	marrón habano 
+844	棕褐色绿	tan green	bronzé vert	tan grüne	Verde abbronzato	日焼け緑	황갈색 녹색	Verde bronzeado	Загарно зелёный	marrón verdoso
+845	橘子	tangerine	mandarine	Mandarine	mandarino	濃いオレンジ色	귤	tangerina	мандариновый	mandarina
+846	灰褐色	taupe	taupe	bräunlich grau	Grigio talpa	モグラ色	짙은 회갈색	taupe	тёмно серый 	marron topo
+847	茶色	tea	thé	Tee	tè	お茶	차 색	chá	Цвет чая	té
+848	绿茶色	tea green	thé vert	Tee grün	tè verde	お茶緑	차같은 녹색	chá verde	Чайный зелёный	té verde
+849	水鸭色	teal	turquoise	aquamarin	Foglia di tè	コガモ	상오리	cerceta	бирюзовый	turquesa
+850	水鸭蓝	teal blue	Turquoise bleu 	Knickentenblau	Blu foglia di tè	ティールブルー	상오리 블루	Turquesa azul	Бирюзово синий	turquesa azul
+851	水鸭绿	teal green	Turquoise vert	Knickentengrün	Verde Foglia di tè	暗緑色	상오리 녹색	turquesa verde	Зелёно бирюзовый	turquesa verde
+852	水鸭色	tealish	turquoiseux	Smaragd grün	Di color foglia di tè	テイリツシユ	상오리적인	turquesa	бирюзоватый	turquesado
+853	水鸭绿	tealish green	Vert turquoisé	aquamarin grün	Verde Foglia di tè	暗緑色がかった緑	상오리색이 나는 녹색	Verde turquesa	бирюзовато зелёный	verde turquesado
+854	红陶色	terra cotta	terre cuite	Terra Cotta	terra cotta	テラコッタ	테라 코타	terracota	терракотный	terracota
+855	兵马俑色	terracota	Terre cuite	terracota	terracotta	褐色がかつた橙色	구워진 흙색	terracota	терракотовый	terracota
+856	红陶色	terracotta	terre cuite	Terrakotta	terracotta	テラコッタ	테라코타	terracota	терракотный	terracota
+857	半透明蓝色	tiffany blue	Bleu de tifanny	Tiffany-Blau	Blu di Tiffany	ティファニーブルー	티파니 블루	azul tiffany	голубой Аквамариновый	azul de tiffany
+858	西红柿色	tomato	tomate	Tomate	pomodoro	トマト	토마토	Tomate	помидорный	tomate
+859	番茄红	tomato red	rouge tomate	Tomatenrot	Rosso pomodoro	トマトの赤	토마토 레드	vermelho tomate 	Помидорно красный	rojo tomate
+860	黄玉色	topaz	topaze	Topas	topazio	トパーズ	황옥	topázio	топазовый	topacio
+861	深米色	toupe	toupe	Toupe	Beige scuro	トウペ	진한 베이지	Beige escuro	Toupe жёлто коричневый	peluca
+862	毒绿色	toxic green	verte toxique	giftig grün	verde tossico	毒性緑	독같은 녹색	verde tóxico	ядовито зелёный	verde tóxico
+863	树绿	tree green	arbre vert	Baum grün	Verde albero	木緑	나무 그린	verde árvore 	Цвет зелёного дерева	árbol verde
+864	真蓝色	true blue	Vrai bleu	echtes Blau	Blu vero	真の青	진정한 블루	Azul verdadeiro	Чисто синий	azul real
+865	真绿色	true green	vrai vert	echt grün	Verde vero	真緑	진정한 녹색	verde verdadeiro	чисто зелёный	verde cierto 
+866	绿松石	turquoise	turquoise	Türkis	turchese	ターコイズ	터키석	turquesa	бирюзовый	turquesa
+867	翠蓝	turquoise blue	bleu turquoise	Türkisblau	blu turchese	ターコイズブルー	터키석 블루	Azul turquesa	Бирюзово синий	azul turquesa
+868	松石绿	turquoise green	vert turquoise	türkisgrün	Verde turchese	ターコイズグリーン	터키석 녹색	verde turquesa 	Бирюзово зелёный	verde turquesa
+869	龟绿	turtle green	tortue verte	Schildkrötengrün	Verde tartaruga	タートルグリーン	거북 녹색	verde tartaruga 	Черепахо зелёный цвет	tortuga verde
+870	曙光色	twilight	crépuscule	Zwielicht	crepuscolo	夕暮れ	어스름 색	crepúsculo	сумеречный	crepúsculo
+871	暮蓝色	twilight blue	bleu crépuscule	Zwielicht blau	Blu crepuscolo	トワイライトブルー	황혼 블루	Azul crepúsculo	Сумеречно синий	azul crepúsculo
+872	丑陋蓝	ugly blue	Bleu laid	hässliches Blau	Blu brutto	醜い青	추악한 파란색	azul feio	Уродно синий	azul feo
+873	丑棕色	ugly brown	brun laid	hässlich braun	Marrone brutto	醜い茶色	추악한 갈색	Castenho feio	Уродно коричневый	marrón feo
+874	丑绿色	ugly green	Vert laid	hässlich grün	Verde brutto	醜い緑	못생긴 녹색	verde feio 	Уродливо зелёный	verde feo
+875	丑粉色	ugly pink	rose	hässlich rosa	Rosa brutto	醜いピンク	추악한 핑크	Rosa feio	розовый	rosa fea
+876	丑紫色	ugly purple	violet laide	hässlich lila	Viola brutto	醜い紫	추악한 자주색	roxo feio 	Уродливо фиолетовый	purpura fea
+877	丑黄色	ugly yellow	laide jaune	hässlich gelb	Giallo brutto	醜い黄色	추한 노란	amarelo feio	Уродливо жёлтый	amarillo feo
+878	深艳蓝色	ultramarine	marine	ultramarin	blu oltremare	群青	울트라 마린	ultramarino	морьской	ultramarino 
+879	纯海蓝色	ultramarine blue	Bleu marine	Ultramarinblau	blu oltremare	群青	울트라 마린 블루	azul ultramarino	Синий ультрамариновый	azul marino
+880	棕土色	umber	Terre d'ombre	Umbra	Terra d'obra	青褐色	암갈색	fusco	тёмно коричневый	tierra de sombra
+881	天鹅绒色	velvet	velours	Samt	velluto	ベルベット	벨벳색	veludo	бархатный	terciopelo
+882	朱红色	vermillion	vermillon	Vermillion	vermiglio	朱色	주홍빛	vermillion	киноварный	bermellón
+883	极黑蓝	very dark blue	bleu très foncé	sehr dunkel blau	blu molto scuro	非常にダークブルー	아주 진한 파란색	azul muito escuro	Синий очень тёмный	azul muy oscuro
+884	极深褐色	very dark brown	brun très foncé	sehr dunkles Braun	marrone molto scuro	非常に濃い茶色	매우 진한 갈색	castanho muito escuro	Коричневый очень тёмный	marrón muy oscuro
+885	极深绿色	very dark green	vert très foncé	sehr dunkel grün	verde molto scuro	非常に濃い緑色	매우 진한 녹색	verde muito escuro	Зелёный очень тёмный	verde muy oscuro
+886	极黑紫色	very dark purple	violet très foncé	sehr dunkel lila	viola molto scuro	非常に濃い紫色	아주 어두운 자주색	púrpura muito escuro	Фиолетовый очень тёмный	púrpura muy oscuro
+887	很浅蓝色	very light blue	bleu très pâle	sehr hellblau	Blu molto chiaro	非常にライトブルー	아주 밝은 파란색	azul muito claro	Очень бледно голубой	azul muy claro 
+888	特浅棕色	very light brown	brun très clair	sehr hellbraun	marrone molto chiaro	非常に明るい茶色	아주 밝은 갈색	castenho muito claro	Очень светло коричневый	marrón muy claro
+889	很浅绿色	very light green	vert très clair	sehr hellgrün	verde molto chiaro	非常にライトグリーン	매우 밝은 녹색	verde muito claro	Очень светло зелёный	verde muy claro
+890	极浅粉色	very light pink	rose très pâle	sehr hellrosa	Rosa molto chiaro	非常に淡いピンク	아주 옅은 핑크	rosa muito leve	Очень светло розовый	rosa muy palido
+891	很浅紫色	very light purple	violet très léger	sehr hell lila	viola molto chiaro	非常に軽い紫色	매우 밝은 보라색	púrpura muito leve	Очень светло фиолетовый	púrpura muy ligero
+892	极淡蓝	very pale blue	bleu très pâle	nur schwach blau	blu molto pallido	非常に淡いブルー	매우 엷은 청색	azul muito pálido	Очень бледно синий	azul muy pálido
+893	极淡绿色	very pale green	vert très pâle	sehr blass grün	verde molto pallido	非常に淡い緑色	아주 연한 녹색	verde muito pálido	Очень бледно зелёный	verde muy pálido
+894	大蓝色	vibrant blue	bleu vibrant	kräftiges Blau	blu intenso	鮮やかな青	선명한 파란색	azul vibrante	Ярко синий	azul vibrante
+895	艳绿色	vibrant green	vert vif	kräftiges Grün	verde intenso	明るい緑	선명한 녹색	verde vibrante	Ярко зелёный	verde vibrante
+896	艳紫色	vibrant purple	violet vif	kräftiges Lila	viola intenso	活気のある紫色	선명한 보라색	roxo vibrante	Ярко фиолетовый	púrpura vibrante
+897	紫色	violet	violet	Violett	viola	バイオレット	보라색	violeta	фиолетовый	violeta
+898	紫蓝色	violet blue	Bleu violet	violettblau	Blu violetto	バイオレットブルー	바이올렛 블루	azul violeta	фиолетово синий	azul violeta 
+899	紫粉色	violet pink	violet rose	violettpink	Rosa violetto	バイオレットピンク	보라색같은 ​분홍색	Rosa violeta	розово Фиолетовый	violeta rosa
+900	紫红色	violet red	Violet rouge	violett rot	Rosso viola	紫赤色	보라색 ​​빨간색	vermelho violeta	красно Фиолетовый	rojo violeta
+901	蓝綠色	viridian	viride	Viridian	Verde veronese	ビリジアン	비리디언색	viridian	Ядовито зелёный	verde viridian
+902	艳蓝色	vivid blue	bleu vif	lebendiges Blau	blu vivido	鮮やかな青	선명한 파란색	azul vívido	Ярко синий	azul vivo
+903	艳绿	vivid green	vert vif	leuchtend grün	verde vivo	鮮やかな緑	선명한 녹색	verde vívido	ярко зелёный	verde vivo
+904	大紫色	vivid purple	violet vif	lebendiges lila	viola vivido	鮮やかな紫色	선명한 보라색	roxo vivo	Ярко фиолетовый	púrpura viva
+905	呕吐	vomit	vomi	erbrechen	Vomito	吐く	구토	vomitado	Рвотный цвет	vomito
+906	呕吐绿色	vomit green	vomi vert	erbrechen grün	Verde vomito	嘔吐緑	구토 녹색	verde vômito 	Рвотно зелёный	vómito verde
+907	呕吐黄	vomit yellow	vomi jaune	Erbrochenes gelb	Giallo vomito	嘔吐黄色	구토 노란색	amarelo vômito 	Рвотно жёлтый	vómito amarillo
+908	温蓝色	warm blue	bleu chaud	warmes Blau	blu caldo	暖かい青	따뜻한 블루	azul quente	Тепло синий	azul cálido
+909	暖褐色	warm brown	brun chaud	warmes Braun	marrone caldo	暖かい茶色	따뜻한 갈색	castanho quente	Тепло коричневый	marrón cálido
+910	暖灰色	warm grey	gris chaud	warmes Grau	Grigio caldo	ウォームグレー	따뜻한 회색	cinza quente	Тёпло серый	gris cálido
+911	温粉红色	warm pink	rose chaud	warmes rosa	rosa caldo	暖かいピンク	따뜻한 핑크	rosa quente	Тепло розовый	rosa caliente
+912	温紫色	warm purple	pourpre chaude	warm lila	viola caldo	暖かい紫色の	따뜻한 자주색	roxo quente	Тёпло пурпурный	púrpura caliente
+913	褪绿色	washed out green	Vert délavé	verwaschenes Grün	Verde sbiadito	緑洗浄	씼겨 나간 녹색 	Verde deslavado	вымытый зелёный	verde deslavado
+914	水蓝色	water blue	Eau bleue	Wasserblau	Blu acqua	水の青	워터 블루	azul água 	цвет синий воды	agua azul
+915	西瓜色	watermelon	pastèque	Wassermelone	anguria	スイカ	수박 색	melancia	арбузный	sandía
+916	怪异的绿色	weird green	verte bizarre	seltsam grün	green strano	奇妙な緑色の	이상한 녹색	verde estranho	Странно зелёный	verde raro
+917	小麦色	wheat	blé	Weizen	grano	小麦	밀	trigo	пшеничный	trigo
+918	白色	white	blanc	weiß	bianco	白	화이트	branco	белый	blanco
+919	微软蓝	windows blue	bleu de windows	Windows blau	Blu Windows	窓青	파란 창문 색	janelas azuis	Виндовз синий	azul de windows
+920	酒色	wine	vin	Wein	vino	ワイン	포도주	vinho	Цвет вина	vino
+921	酒红色	wine red	vin rouge	Weinrot	Rosso vino	ワインレッド	포도주빛	vinho tinto	Цвет красного вина	vino tinto
+922	冬青色	wintergreen	gaulthérie	Wintergrün	sempreverde	ウインターグリーン	겨울의 초로색	Verde inverno	Весенне зелёный	gaulteria
+923	紫藤色 	wisteria	glycine	Glyzinien	glicine	藤	등나무 색	glicina	глициниевый	glicina
+924	黄色	yellow	jaune	gelb	giallo	黄色	황색, 노랑, 노란색	amarelo	жёлтый	amarillo
+925	棕黄色	yellow brown	jaune brun	gelb-braun	Marrone giallo	黄褐色	노란 갈색	amarelo castanho	Коричнево жёлтый	amarillo marrón
+926	黄绿色	yellow green	jaune vert	gelb grün	giallo verde	緑黄	녹색 황색	amarelo verde	зелёно жёлтый	amarillo verde
+927	黄赭色	yellow ochre	ocre jaune	Ockergelb	giallo ocra	黄土色	황토색	amarelo ocre	Жёлто охровый	amarillo ocre
+928	橙黄色	yellow orange	jaune orange	gelb-orange	Arancione giallo	黄色オレンジ	노란색 오렌지	amarelo alaranjado	Оранжево жёлтый	amarillo naranja
+929	黄褐色	yellow tan	jaune ocre	gelb tan	giallo abbronzato	黄褐色	노란 황갈색	Amarelo bronzeado	загарно жёлтый	amarillo marrón
+930	黄绿色 	yellowgreen	Jaune vert	gelbgrün	gialloverde	黄緑色	노란 초록색	Amarelo verde	Зелёно жёлтый	amarillo verde
+931	淡黄色	yellowish	jaunâtre	gelblich	giallastro	黄色がかった	누른 빛을 띤	amarelado	жёлтоватый	amarillento
+932	黄褐色 	yellowish brown	brun jaunâtre	gelblich-braun	Marrono giallastro	黄褐色	황갈색의	castanho amarelado	жёлтовато коричневый	marrón amarillento
+933	黄绿色	yellowish green	vert jaunâtre	gelblich-grün	verde giallastro	黄緑色	황록색	verde amarelado	жёлтовато зелёный	verde amarillento
+934	黄橙色	yellowish orange	Orange jaunâtre	gelblich-orange	Arancione giallastro	黄色がかったオレンジ色	노란 오렌지	laranja amarelado	жёлтовато оранжевый	naranja amarillento
+935	黄褐色	yellowish tan	bronzé jaunâtre	gelblich braun	Giallastro abbronzato	黄色がかった黄褐色	노란 황갈색	Amarelado bronzeado	загарно жёлтоватый	marrón amarillento
+936	黄棕色	yellowy brown	jaune brun	gelbbraun	Marrone giallastro	黄色がかった茶色	누른 빛을 띤 갈색	Castanho amarelado	Коричнево жёлтый	amarillo marrón 
+937	淡黄绿色	yellowy green	jaune vert	gelblich grün	Verde giallo	黄色がかった緑	누른 빛을 띤 녹색	verde amarelado	Жёлто зелёный	verde amarillento

@@ -1,0 +1,18 @@
+color naming experiment: 
+how many colors can you distinguish? 
+
+Color Name Dictionary = CND
+0. raw CND (source) 
++ English lang only
+
+1. original CND (from source) 
++ color conversion
+
+2. processed CND = FFCND
+columns = [id, lang, name, srgb, srgb_r, srgb_g, srgb_b, hsv, hsv_h, hsv_s, hsv_v, lab, lab_l, lab_a, lab_b, hex]
+filename = "FFCND_"+source+".xlsx"
++ basic color system classification 
+
+3. processed FFCND = EFFCND (with 1 system of basic colors)
+columns =  [id, lang, name, srgb, srgb_r, srgb_g, srgb_b, hsv, hsv_h, hsv_s, hsv_v, lab, lab_l, lab_a, lab_b, hex, cat1, cat2]
+filename = "EFFCND_"+source+system+".xlsx" 
