@@ -293,9 +293,9 @@ if __name__ == '__main__':
     import shutil
     
     # to specify 
-    VIDEO_FILE = 'tagesschau'
-    # Image
-    IMAGE_PATH = r'D:\thesis\videos\frames' # load image 
+    VIDEO_FILE = 'Jigokumon'
+    # input: Image
+    IMAGE_PATH = r'D:\thesis\film_colors_project\sample-dataset\screenshots\7' # load image 
     MANYIMAGES = True
     EXTENSION = '.jpg'
     #IMAGE_FILE = "frame125.jpg"
@@ -306,14 +306,14 @@ if __name__ == '__main__':
         for file in f:
             if EXTENSION in file:
                 IMAGE_FILE.append(file)  
-    # Color Palette
-    CP_PATH =  r"D:\thesis\videos\frames" #save image-extracted CP
+    # output: Color Palette
+    CP_PATH =  r"D:\thesis\film_colors_project\sample-dataset\screenshots\7" #save image-extracted CP
     SAVE2FOLDER = False  # saves output to folder for each image 
     CP_FOLDER = f"{IMAGE_FILE[:-4]}_palette"       
     CP_MAX_LENGTH = 1024 # The maximal number of clusters (=non-leaf node = bin in the tree)  to store, cumulative count of bins across all levels representative of the depth 
     CP_WIDTH = 1000  # set palette dimensions
     CP_HEIGHT = 20   # set palette dimensions
-#    DEPTH = 100  # set palette depth [0,100] or 'depth' for all depths [optioinal] where 0 is top image, 100 is lowest level in image, only for 1024 the lowest level will be 100, otherwise it's a random number
+    DEPTH = 100  # set palette depth [0,100] or 'depth' for all depths [optioinal] where 0 is top image, 100 is lowest level in image, only for 1024 the lowest level will be 100, otherwise it's a random number
     
 
     ################## Settings ############################
@@ -333,134 +333,138 @@ if __name__ == '__main__':
         hdf5_file.create_dataset("palettes", shape=(len(images), CP_MAX_LENGTH, 6), dtype=np.float16)
         hdf5_counter = 0 
         # compute palette for (all) image/s   
-        for m, img_bgr in enumerate(images):    
+        for m, img_bgr in enumerate(images):   
+            use_lab=True
             # color space conversion: BGR to LAB and/or RGB 
-            for use_lab in (True, False):
-                # compute palette p
-                p = color_palette(img_bgr, use_lab=use_lab, show_seed=False)            
-                # save palette to hdf5
-                palette = p.to_hdf5()    
-                # only store lab palettes
-                if use_lab:
-                    hdf5_file['palettes'][hdf5_counter] = palette # or m as hdf5_counter
-                    hdf5_counter += 1
-                
-                # initialize palette image and palette colors
-                palette_image = None  
-                palette_bins = []
-                palette_bin_widths = []
-                palette_cum_bin_widths = []
-                palette_ratio_widths = []
-                palette_colors = [] # BGR colors - all colors in palette_image
-                depths = []
-                # palette_image = height x width (=depth x total_pixels) (= rows x bins) (= x nodes)
-                # iterate over all merge depths of the palette
-                for j, DEPTH in enumerate(np.unique(palette[:, p.MERGE_DEPTH])): #len = 20 rows, [1,2,3,4 ..., 90, 100] - rows 11-19 not there because no need to save or visualize the bins, however the bins are calculated                
-                    # set depth: DEPTH = depth, comment out depth iteration
-                    if DEPTH == -1: 
-                        continue 
-                    indices = np.where(palette[:, p.MERGE_DEPTH] == DEPTH)
-                    depths.append(j)
-                    # total_pixels = width of palette image or bins
-                    total_pixels = np.sum(palette[indices, p.COUNT])                    
-                    t = palette[np.where(np.amax(palette[:, p.MERGE_DEPTH]))]
-                    # a palette at a specific merge depth
-                    # initialize row, row_colors and cumul width x 
-                    row = np.zeros(shape=(CP_HEIGHT, CP_WIDTH, 3), dtype=np.uint8)           
-                    bins = []
-                    bin_widths = []
-                    cum_bin_widths = []
-                    ratio_widths = []
-                    row_colors = []
-                    cum_bin_width = 0
-                    # For each color cluster in the specific merge depth, we want to create a patch, with a size which
-                    # corresponds to the number of pixels in the cluster.
-                    for l, i in enumerate(indices[0].tolist()): # list len = 101 bins, [514, 515, ..., 614] from dedicated hpf5 file space, however in the hdf5 file's space is reserved until 1024, but palette is smaller
-                        width = int(np.round(palette[i, p.COUNT] / total_pixels * CP_WIDTH)) # [1000,448, 552, 448, ..., 33,43 ]
-                        width_stat = palette[i, p.COUNT] / total_pixels
-                        row[:, cum_bin_width:cum_bin_width+width] = palette[i, p.B : p.R + 1] # + 1 to also get the R channel
-                        colors = palette[i, p.B : p.R + 1].tolist() # [b,g,r]
-                        bins.append(l)
-                        bin_widths.append(width)
-                        cum_bin_widths.append(cum_bin_width)
-                        ratio_widths.append(np.round(width_stat*100, 2))
-                        if colors != [0.0, 0.0, 0.0]:
-                            row_colors.append(colors)
-                        cum_bin_width += width
-                        #print('bin:',l, ', bin_width:',width,', cum_bin_width:' ,cum_bin_width, ',%width:',round(width/1003*100, 2) , '%', ',bgr-cols:', colors)                                        
-                    # create image of palette 
-                    if palette_image is None:
-                        palette_image = row
-                    else:
-                        palette_image = np.vstack((palette_image, row))                       
-                    if palette_bins is None:
-                        palette_bins = bins
-                    else:
-                        palette_bins.append(bins)
-                    if palette_bin_widths is None:
-                        palette_bin_widths = bin_widths
-                    else:
-                        palette_bin_widths.append(bin_widths)                    
-                    if palette_cum_bin_widths is None:
-                        palette_cum_bin_widths = cum_bin_widths
-                    else:
-                        palette_cum_bin_widths.append(cum_bin_widths)                 
-                    if palette_ratio_widths is None:
-                        palette_ratio_widths = ratio_widths
-                    else:
-                        palette_ratio_widths.append(ratio_widths)              
-                    if palette_colors is None:
-                        palette_colors = row_colors
-                    else:
-                        palette_colors.append(row_colors)
-                
-                #get palette image colors for each depth (=row) start at top 0, end 100
-                foo = []
-                for d in depths: 
-                    string = f'row {d}'
-                    foo.append(string)
-                    
-                palette_info = {}
-                for i, key in enumerate(foo): 
-                    palette_info[key] = {}  
-                    palette_info[key]['bin'] = palette_bins[i]
-                    palette_info[key]['bin_width'] = palette_bin_widths[i] 
-                    palette_info[key]['cum_bin_width'] = palette_cum_bin_widths[i] 
-                    palette_info[key]['ratio_width'] = palette_ratio_widths[i] 
-                    palette_info[key]['bgr_colors'] = palette_colors[i]                         
-                        
-                ################## Save Color Palette ############################                                  
-                # save palette image 
-                # name it
-                img_name = f"{IMAGE_FILE[m][:-4]}_lab_palette.jpg"
-                if not use_lab:
-                    img_name = f"{IMAGE_FILE[m][:-4]}_rgb_palette.jpg"
-                # show it                
-                cv2.imshow(img_name,palette_image) # bgr-image, palette_image.shape=(20,1000,3) 
-                cv2.waitKey(5)
-                # save it
-                #cv2.imwrite(img_name, palette_image)
-                df = pd.DataFrame(data=palette_info)               
-                df.to_csv(f"{IMAGE_FILE[m][:-4]}_bgr_palette.csv", sep=',', index=True)
-                
-                
-                if SAVE2FOLDER: 
-                    # path for saving output of each image into its own folder
-                    os.chdir(CP_PATH)
-                    folder_dir = os.path.join(CP_PATH, CP_FOLDER)
-                    try: # make a folder for saving 
-                        os.mkdir(CP_FOLDER)
-                    except: # if folder already there, overwrite folder
-                        shutil.rmtree(folder_dir)
-                        os.mkdir(CP_FOLDER)        
-                    os.chdir(folder_dir) 
-                    
-                    # write original image into saving folder 
-                    cv2.imwrite(IMAGE_FILE, images[0])
+            print(f"{m}: processed.")
+            #for use_lab in (True, False):
+            # compute palette p
+            p = color_palette(img_bgr, use_lab=use_lab, show_seed=False)            
+            # save palette to hdf5
+            palette = p.to_hdf5()    
+            # only store lab palettes
+            if use_lab:
+                hdf5_file['palettes'][hdf5_counter] = palette # or m as hdf5_counter
+                hdf5_counter += 1
             
-  
-    
-
-
+            # initialize palette image and palette colors
+            palette_image = None  
+            palette_bins = []
+            palette_bin_widths = []
+            palette_cum_bin_widths = []
+            palette_ratio_widths = []
+            palette_colors = [] # BGR colors - all colors in palette_image
+            depths = []
+            # palette_image = height x width (=depth x total_pixels) (= rows x bins) (= x nodes)
+            # iterate over all merge depths of the palette
+            for j, DEPTH in enumerate(np.unique(palette[:, p.MERGE_DEPTH])): #len = 20 rows, [1,2,3,4 ..., 90, 100] - rows 11-19 not there because no need to save or visualize the bins, however the bins are calculated                             
+                if DEPTH == -1: 
+                    continue 
+                # set depth: DEPTH = depth
+                indices = np.where(palette[:, p.MERGE_DEPTH] == 100)
+                depths.append(j)
+                # total_pixels = width of palette image or bins
+                total_pixels = np.sum(palette[indices, p.COUNT])                    
+                t = palette[np.where(np.amax(palette[:, p.MERGE_DEPTH]))]
+                # a palette at a specific merge depth
+                # initialize row, row_colors and cumul width x 
+                row = np.zeros(shape=(CP_HEIGHT, CP_WIDTH, 3), dtype=np.uint8)           
+                bins = []
+                bin_widths = []
+                cum_bin_widths = []
+                ratio_widths = []
+                row_colors = []
+                cum_bin_width = 0
+                # For each color cluster in the specific merge depth, we want to create a patch, with a size which
+                # corresponds to the number of pixels in the cluster.
+                for l, i in enumerate(indices[0].tolist()): # list len = 101 bins, [514, 515, ..., 614] from dedicated hpf5 file space, however in the hdf5 file's space is reserved until 1024, but palette is smaller
+                    width = int(np.round(palette[i, p.COUNT] / total_pixels * CP_WIDTH)) # [1000,448, 552, 448, ..., 33,43 ]
+                    width_stat = palette[i, p.COUNT] / total_pixels
+                    row[:, cum_bin_width:cum_bin_width+width] = palette[i, p.B : p.R + 1] # + 1 to also get the R channel
+                    colors = palette[i, p.B : p.R + 1].tolist() # [b,g,r]
+                    bins.append(l)
+                    bin_widths.append(width)
+                    cum_bin_widths.append(cum_bin_width)
+                    ratio_widths.append(np.round(width_stat*100, 2))
+                    if colors != [0.0, 0.0, 0.0]:
+                        row_colors.append(colors)
+                    cum_bin_width += width
+                    #print('bin:',l, ', bin_width:',width,', cum_bin_width:' ,cum_bin_width, ',%width:',round(width/1003*100, 2) , '%', ',bgr-cols:', colors)                                        
+                # create image of palette 
+                if palette_image is None:
+                    palette_image = row
+                else:
+                    palette_image = np.vstack((palette_image, row))                       
+                if palette_bins is None:
+                    palette_bins = bins
+                else:
+                    palette_bins.append(bins)
+                if palette_bin_widths is None:
+                    palette_bin_widths = bin_widths
+                else:
+                    palette_bin_widths.append(bin_widths)                    
+                if palette_cum_bin_widths is None:
+                    palette_cum_bin_widths = cum_bin_widths
+                else:
+                    palette_cum_bin_widths.append(cum_bin_widths)                 
+                if palette_ratio_widths is None:
+                    palette_ratio_widths = ratio_widths
+                else:
+                    palette_ratio_widths.append(ratio_widths)              
+                if palette_colors is None:
+                    palette_colors = row_colors
+                else:
+                    palette_colors.append(row_colors)
+            
+            #get palette image colors for each depth (=row) start at top 0, end 100
+            foo = []
+            for d in depths: 
+                string = f'row {d}'
+                foo.append(string)
+                
+            palette_info = {}
+            for i, key in enumerate(foo): 
+                palette_info[key] = {}  
+                palette_info[key]['bin'] = palette_bins[i]
+                palette_info[key]['bin_width'] = palette_bin_widths[i] 
+                palette_info[key]['cum_bin_width'] = palette_cum_bin_widths[i] 
+                palette_info[key]['ratio_width'] = palette_ratio_widths[i] 
+                palette_info[key]['bgr_colors'] = palette_colors[i]                         
                     
+            ################## Save Color Palette ############################                                  
+            # save palette image 
+            # set path 
+            os.chdir(CP_PATH)
+            # name it
+            img_name = f"{IMAGE_FILE[m][:-4]}_D100_lab_palette.jpg"
+    #            if not use_lab:
+    #                img_name = f"{IMAGE_FILE[m][:-4]}_D100_rgb_palette.jpg"
+            # show it                
+    #                cv2.imshow(img_name,palette_image) # bgr-image, palette_image.shape=(20,1000,3) 
+    #                cv2.waitKey(5)
+            # save it
+            cv2.imwrite(img_name, palette_image)
+            #df = pd.DataFrame(data=palette_info)               
+            #df.to_csv(f"{IMAGE_FILE[m][:-4]}_bgr_palette.csv", sep=',', index=True)
+            
+            
+            if SAVE2FOLDER: 
+                # path for saving output of each image into its own folder
+                os.chdir(CP_PATH)
+                folder_dir = os.path.join(CP_PATH, CP_FOLDER)
+                try: # make a folder for saving 
+                    os.mkdir(CP_FOLDER)
+                except: # if folder already there, overwrite folder
+                    shutil.rmtree(folder_dir)
+                    os.mkdir(CP_FOLDER)        
+                os.chdir(folder_dir) 
+                
+                # write original image into saving folder 
+                cv2.imwrite(IMAGE_FILE, images[0])
+        
+      
+    
+    
+    
+                        
     
