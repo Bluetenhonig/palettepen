@@ -1,0 +1,25 @@
+Flask vs Django 
+
+both written in Python
+open-source 
+old + stable
+
+maps viz to functions in Python 
+
+flask: minimalistic 
+easier 
+no user admin 
+python beginner 
+no web experience 
+freedom over what you do in your code 
+simple webapps 
+
+django: much more boiler plate code around it 
+complicated
+can do more 
+user admin panels, user permission, authentication
+database connectivity 
+python experience 
+web dev experience 
+
+ 
