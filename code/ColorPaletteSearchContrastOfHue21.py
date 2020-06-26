@@ -1,16 +1,15 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Apr 14 10:40:15 2020
-
-@author: Linda Samsinger
+Created on Thu Jun 25 16:54:26 2020
 
 =====================
-Color Palettes with Same Color 
+Color Palettes with Same Color Contrast  
 =====================
 
-For a given color, find all color palettes with the same color in them. 
-Filter color palettes which contain the same color. 
+For a given color contrast, find all color palettes with the same color color contrast in them. 
+Filter color palettes which contain the same color contrast . 
 """
+
 
 
 ########### ColorPalette Search ###########
@@ -22,18 +21,20 @@ import numpy as np
 import cv2
 import pandas as pd
 
-# to specify: USER SPECIFICATION (VIAN)
+# to specify: USER SPECIFICATION 
 # filters
-SEARCH_VIAN_COLOR = 'lavender' # basic color (desired format: lab)
+# you want all palettes with a certain contrast 
+SEARCH_COLOR_CONTRAST = 'cs' 
 PALETTE_DEPTH = 'row 20' # ['row 1','row 20'] (top-to-bottom hierarchy)
-THRESHOLD_RATIO = 0 # [0,100], %color pixel, a threshold of 5 means that lavender must take up at least 5% of the image for a given depth
 COLORBAR_COUNT = 10
 
+COLOR_CONTRASTS = ['coh', 'ldc', 'cwc', 'cc', 'cc: g-r', 'cc: b-o', 'cc: v-y', 'cs']
+
 #%%
-# load color palettes
+# load color palettes dataframe 
 # palette/s
-PALETTE_PATH = r'D:\thesis\videos\frames'
-EXTENSION = '.csv'
+PALETTE_PATH = r'D:\thesis\film_colors_project\sample-dataset\screenshots\7'
+EXTENSION = 'bgr_palette.csv'
 PALETTE_FILE = 'frame125_bgr_palette.csv'
 #FILES = ['frame250.jpg', 'frame375.jpg']     # for a list of images to process 
 # load files from directory 
@@ -43,13 +44,14 @@ for r, d, f in os.walk(PALETTE_PATH): # r=root, d=directories, f = files
     for file in f:
         if EXTENSION in file:
             FILES.append(file) 
-            
 
 #%%
-# load VIAN colors
+# load color name dictionary 
+from sklearn import preprocessing
+            
 ### Color-Thesaurus EPFL ###
-SEARCH_COLORS_PATH = r'D:\thesis\code\pd28vianhues'
-SEARCH_COLORS_FILE = 'SRGBLABhsvhslLCHHEX_Eng_VIANHuesColorThesaurus.xlsx'
+SEARCH_COLORS_PATH = r'D:\thesis\input_color_name_dictionaries\thesaurus\datasets'
+SEARCH_COLORS_FILE = 'effcnd_thesaurus_itten.xlsx'
 
 # set directory 
 os.chdir(SEARCH_COLORS_PATH)
@@ -59,36 +61,10 @@ data = pd.read_excel(SEARCH_COLORS_FILE, sep=" ", index_col=0)
 data.head()
 data.info()
 
-vian_hues = [
-        'blue'
-        , 'cyan'
-        , 'green'
-        , 'magenta'
-        , 'orange'
-        , 'pink'
-        , 'red'
-        , 'yellow'
-        , 'beige'
-        , 'black'
-        , 'brown'
-        , 'copper'
-        , 'cream'
-        , 'gold'
-        , 'grey'
-        , 'purple'
-        , 'rust'
-        , 'silver'
-        , 'white'
-        , 'amber'
-        , 'lavender'
-        , 'sepia'
-        , 'apricot'
-        , 'bronze'
-        , 'coral'
-        , 'peach'
-        , 'ultramarine'
-        , 'mustard'
-        ]
+lab2pt = data['cat'].tolist() #list(df.index)
+le = preprocessing.LabelEncoder()
+le.fit(lab2pt) # fit all cat1 colors  
+
 
 
 #%%
@@ -100,7 +76,7 @@ names = [
         "Nearest Neighbors"
          , "Linear SVM"
          ]
-ML_MODELS_FILE = f'model_{names[0]}_KNN5_p2_train721_cat28.sav'
+ML_MODELS_FILE = f'model_THESAURUS_ITTEN_K-Nearest Neighbors_KNN21_p2_train721_cat6_testacc0.849.sav'
 
 # load the model from disk
 import os
@@ -110,8 +86,9 @@ clf = pickle.load(open(ML_MODELS_FILE, 'rb'))
 
 # use machine learning classifier for color prediction
 def categorize_color(color_lab, clf): 
-    # lab to VIAN color 
+    # lab to color category
     label = clf.predict([color_lab]) #lab: why? The CIE L*a*b* color space is used for computation, since it fits human perception
+    label = le.inverse_transform(label)
     label = label.tolist()[0]         
     #print('Label: ', label) 
     return label 
@@ -145,6 +122,28 @@ def convert_array(nparray, origin, target='RGB'):
         converted_colors.append(converted_color)
     return converted_colors
 
+#display_color_grid(palette['lab_colors'], 'LAB', COLORBAR_COUNT)
+
+def sort_color_grid(palette): 
+    palette = palette.sort_values(by=['ratio_width'], ascending=False)
+    return palette 
+        # sort by hue, sat, value 
+#        hsvcolors = convert_array(rgbcolors, 'RGB', 'HSV')
+#        hsvs = [list(l) for l in hsvcolors]
+#        # post hsv
+#        palette['hsv'] = hsvs
+#        # extract hue
+#        palette['hue'] = palette.hsv.map(lambda x: int(round(x[0])))
+#        # extract saturation
+#        palette['sat'] = palette.hsv.map(lambda x: int(round(x[1])))
+#        # extract value
+#        palette['val'] = palette.hsv.map(lambda x: int(round(x[2])))
+#        #sort by one column only: hue
+#        #palette = palette.sort_values(by=['hue'])
+#        # sort by multiple columns
+#        palette = palette.sort_values(by=['hue', 'sat', 'val'])  
+#        rgbcolors = convert_array(palette, 'HSV', 'RGB')
+     
 # display color palette as bar 
 def display_color_grid(palette, origin='RGB', colorbar_count=10):
     """helper function: convert_array, convert_color """ 
@@ -155,6 +154,7 @@ def display_color_grid(palette, origin='RGB', colorbar_count=10):
     if origin == 'HSV': 
         rgbcolors = convert_array(palette, 'HSV')
     x= 0
+    
     for r in rgbcolors: 
         if len(rgbcolors[x:x+colorbar_count]) == colorbar_count:
             palette = np.array(rgbcolors[x:x+colorbar_count])[np.newaxis, :, :]
@@ -217,7 +217,8 @@ for FILE in FILES:
 # remove extension in file names 
 palet_names = [f[:-4] for f in FILES]  
 print(f"Searching a total of {len(palet_names)} palettes. ")
-print("Searching your chosen color in palettes: \n", ', '.join(palet_names), '.')
+#Searching a total of 569 palettes.
+print("Searching your chosen color in first five examples of palettes: \n", ', '.join(palet_names[:5]), '.')
 
 
 
@@ -284,37 +285,119 @@ for i, palette in enumerate(cp_pool):
     lab_list = get_palettecolvals(palette, PALETTE_DEPTH, 'lab')
     ratio_list = get_paletteratiovals(palette, PALETTE_DEPTH)
     palettini = add_cs2palett(lab_list, 'lab')
+    hsv_list = get_palettecolvals(cp_pool[0], PALETTE_DEPTH, 'hsv')
+    palettini2 = add_cs2palett(hsv_list, 'hsv')
+    len(palettini)
+    palettini = pd.concat([palettini, palettini2], axis=1)
     try: 
         palettini = add_ratio2palett(palettini, ratio_list)
+        palettini = sort_color_grid(palettini)
     except ValueError:
         print("Oops! Cases reported where the number of ratio_width values are unequal to number of bgr_colors: for these colors no ratio width can be analyzed.")        
     palettinis.append(palettini)
     
 #%%
-# for palette colors predict VIAN colors  
-palette_vian_colors = []
-for palid, palette in enumerate(palettinis): 
-    vian_col_pred = []   
-    for colid, color in enumerate(palette['lab_colors']): 
-        viancolpred = categorize_color(color, clf)
-        vian_col_pred.append(viancolpred)
-    palette_vian_colors.append(vian_col_pred)
-    palette['VIAN_color_prediction'] = vian_col_pred
+# for palette colors predict colors cats 
 
+palette_colors_cats = []
+for palid, palette in enumerate(palettinis): 
+    col_pred = []   
+    for colid, color in enumerate(palette['lab_colors']):         
+        colpred = categorize_color(color, clf)
+        col_pred.append(colpred)
+    palette_colors_cats.append(col_pred)
+    palette['color_cat_prediction'] = col_pred
 
 #%%
     
-# match VIAN colors to palette colors 
+# match color categories to palette colors 
 
-def vian_filter_palette(index, cp, palett_name, searchkey, threshold= None):
-    # filter by threshold floor 
-    if threshold: 
-      try:
-          cp = cp[cp['ratio_width'] >= threshold]
-      except: 
-          pass
-    # filter by search key 
-    if cp['VIAN_color_prediction'][cp['VIAN_color_prediction'].str.match(searchkey)].any():
+def make_contrast_palette(index, cp, palett_name):
+    contrasts = [] 
+    # make lumens
+    palette['lumens'] = None
+    palette['lumens'][palette['l'] > 75] = 'light'
+    palette['lumens'][palette['l'] < 25] = 'dark'
+    lumens = palette[['lumens', 'ratio_width']].groupby('lumens').agg('sum').sort_values(by='ratio_width', ascending=False)
+    # make saturation
+    palette['tone'] = None
+    palette['tone'][palette['s'] > .75] = 'saturated'
+    palette['tone'][palette['s'] < .25] = 'desaturated'
+    tone = palette[['tone', 'ratio_width']].groupby('tone').agg('sum').sort_values(by='ratio_width', ascending=False)
+  # make hue 
+    tafel = palette[['ratio_width', 'color_cat_prediction']].groupby('color_cat_prediction').agg('sum').sort_values(by='ratio_width', ascending=False)
+    try: 
+        tafel = tafel.drop(['nan'])
+    except: 
+        pass
+    # contrast of hue 
+    if len(tafel.index) > 2: 
+#        print('Match')
+        contrasts.append('coh')
+    # light-dark contrast
+    if 'dark' and 'light' in lumens.index: 
+#        print('Match')
+        contrasts.append('ldc')      
+    # cold-warm contrast
+    if ('green' or 'blue' or 'violet') and ('red' or 'orange' or 'yellow') in tafel.index: 
+#        print('Match')
+        contrasts.append('cwc')
+    # complementary contrast
+    if ('green' and 'red') or ('blue' and 'orange') or ('violet' and 'yellow') in tafel.index:
+#        print('Match')
+        contrasts.append('cc')
+        if ('green' and 'red') in tafel.index:
+            contrasts.append('cc: g-r')
+        if ('blue' and 'orange') in tafel.index:
+            contrasts.append('cc: b-o')
+        if ('violet' and 'yellow') in tafel.index:
+            contrasts.append('cc: v-y')        
+    # contrast of saturation 
+    if 'saturated' and 'desaturated' in tone.index: 
+#        print('Match')
+        contrasts.append('cs') 
+    match = (index, cp, palett_name, contrasts, tafel, lumens, tone) 
+    return match
+
+
+#%%
+
+# Classify color palette into contrast categories (Task 3)
+        
+# find same color across color palettes    
+print(f"Number of palettes to search: {len(palettinis)}")
+
+# filtered color palettes 
+ctrstd_palettes = []
+for i, palette in enumerate(palettinis):    
+    ctrstd = make_contrast_palette(i, palette, palet_names[i][:-12])
+    ctrstd_palettes.append(ctrstd)
+
+# sample palettes classified into color contrast categories 
+#for i in range(20):
+#    print(ctrstd_palettes[i][-2])
+#    print(ctrstd_palettes[i][-1])
+
+
+#%%
+# Find a color palette's color contrasts
+
+PALETTE_NUMBER = '45487'
+
+for pltt in ctrstd_palettes: 
+    if PALETTE_NUMBER == pltt[2]:
+        print(f"Color contrasts of palette number '{PALETTE_NUMBER}': \n +++", ', '.join(pltt[3]), '+++')
+        print(pltt[-3])
+        print(pltt[-2])
+        print(pltt[-1])
+
+        
+#%%
+
+# match color contrasts to palettes 
+   
+def filter_palette(index, cp, palett_name, searchkey): 
+    if searchkey in cp[-4]:
 #        print('Match')
         match = (index, cp, palett_name) 
         return match
@@ -323,48 +406,53 @@ def vian_filter_palette(index, cp, palett_name, searchkey, threshold= None):
 #        print('No match')
 
 #%%
+    
+# Search request - Finding the result (not part of Task 3, but still done)
 
-# Search request - Finding result 
-        
 # find same color across color palettes    
 print(f"Number of palettes to search: {len(palettinis)}")
-print(f"VIAN color to search: {SEARCH_VIAN_COLOR}")
-print(f"Threshold floor set to: {THRESHOLD_RATIO}")
+print(f"Color category to search: {SEARCH_COLOR_CONTRAST}")  
 
 # filtered color palettes 
 gold_palettes = []
-for i, palette in enumerate(palettinis): 
-    gold = vian_filter_palette(i, palette, palet_names[i][:-12], SEARCH_VIAN_COLOR, THRESHOLD_RATIO)
+for i, palette in enumerate(ctrstd_palettes): 
+    gold = filter_palette(i, palette, palet_names[i][:-12], SEARCH_COLOR_CONTRAST)
     gold_palettes.append(gold)
-
+    
 gold_palettes = [i for i in gold_palettes if i]
 print(f"Number of palettes found: {len(gold_palettes)}")
 
+    
 #%%
 # golden waterfall 
 # show all found palettes
 print("-------------------------")
 print(f"Number of palettes to search: {len(palettinis)}")
-print(f"VIAN color to search: {SEARCH_VIAN_COLOR}")
-print(f"Threshold floor set to: {THRESHOLD_RATIO}")
+print(f"Color category to search: {SEARCH_COLOR_CONTRAST}")
 print(f"Number of palettes found: {len(gold_palettes)}")
 print("-------------------------")
 # no filtered color palettes    
 if not any(gold_palettes): 
-    print(f"No palettes contain searchkey VIAN color '{SEARCH_VIAN_COLOR}'.")
+    print(f"No palettes contain color contrast '{SEARCH_COLOR_CONTRAST}'.")
 else: 
-    print(f"Following palettes contain color '{SEARCH_VIAN_COLOR}':")
-    for i, palette in enumerate(gold_palettes):
+    print(f"Following palettes contain color contrast '{SEARCH_COLOR_CONTRAST}':")
+    for i, palette in enumerate(gold_palettes[:5]):
         colors_count = len(palette[1])
         # read names of gold color palettes
         print(f"{i+1}. {palet_names[i]}")
 #        print(f"{i+1}. {palet_names[i]} - {COLORBAR_COUNT} out of {colors_count} colors")
         # display gold color palettes where colorbar_count=10
-        display_color_grid(palette[1]['lab_colors'], 'LAB', COLORBAR_COUNT)
-        # read number of gold colors
-        gold_colors = palette[1][palette[1]['VIAN_color_prediction'].str.match(SEARCH_VIAN_COLOR)]
-        gold_colors_count = len(gold_colors)
-#        print(f"Number of gold colors for palette: {gold_colors_count} out of {len(palette[1])}")
-        # display gold colors 
-#        display_color_grid(gold_colors['lab_colors'], 'LAB')
-    
+#        display_color_grid(palette[1][1]['lab_colors'], 'LAB', COLORBAR_COUNT)
+        
+        # read gold statistics 
+        if SEARCH_COLOR_CONTRAST in ['coh', 'cwc', 'cc', 'cc: g-r', 'cc: b-o', 'cc: v-y']: 
+            gold_tafel = palette[1][-3]
+            print(gold_tafel)
+        if SEARCH_COLOR_CONTRAST == 'ldc':  
+            gold_lumens = palette[1][-2]
+            print(gold_lumens)
+        if SEARCH_COLOR_CONTRAST == 'cs': 
+            gold_tone = palette[1][-1]
+            print(gold_tone)
+
+

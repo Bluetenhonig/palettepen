@@ -8,7 +8,7 @@ After the original color name dictionary (CND) is sourced,
 it is saved in a folder with the source name as folder name. 
 
 The CND needs to be extended to a fully-fledged color name dictionary (FFCND)
-and then into an extended FFCND (EFFCND).
+and then into an Extended-FFCND (EFFCND).
 
 The preprocessing phase will extend the CND to a EFFCND dataframe.  
 

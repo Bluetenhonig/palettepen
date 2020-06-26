@@ -12,7 +12,7 @@ Download Images form Google Image Search using an API
 
 # to specify 
 IMAGE = 'ultramarine'
-FOLDER_PATH = r'D:\thesis\images\google\ultramarine'
+FOLDER_PATH = r'D:\thesis\input_images\google\ultramarine'
 
 #%%
 
@@ -151,8 +151,7 @@ for r, d, f in os.walk(FOLDER_PATH):
         if '.jpg' in file:
             files.append(os.path.join(r, file))
 
-for f in files:
-    print(f)
+print("First 5 files: ", files[:5])
     
 #%%
 # find average color of an image
@@ -171,12 +170,20 @@ plt.axis('off')
 plt.show()
 image.shape
 
-# crop image (remove white surroundings)
-crop_img = image[80:100,80:100]
+hsv_image = cv2.cvtColor(image, cv2.COLOR_RGB2HSV) #make a copy in HSV
+lowerb = (0, 40, 80) # all values smaller than hsv
+upperb = (255, 255, 190) # all values bigger, yields only positive difference
+mask = cv2.inRange(hsv_image, lowerb, upperb) # inRange(first input array src, lowerb, upperb, [dst])  
+plt.imshow(mask, cmap="gray")
 
-# calculate average RGB
-average = image.mean(axis=0).mean(axis=0)
-average = crop_img.mean(axis=0).mean(axis=0)
+masked_data = cv2.bitwise_and(image, image, mask=mask) # in RGB 
+plt.imshow(masked_data)
+image = masked_data
+
+# replace zeroes with nan
+image = np.where(image!=0,image,np.nan)
+average = np.nanmean(np.nanmean(image,0),0)  
+
 
 # show average color
 a = np.full((100, 100, 3), average, dtype=np.uint8)
@@ -187,25 +194,36 @@ plt.show()
 
 #%%
 
-# find average color of all images
+# find average color of all images in RGB
 
 avgs = []
 for f in files: 
     image = cv2.imread(f) # BGR with numpy.uint8, 0-255 val 
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-    try: 
-        # crop image 
-        MARGIN = 200
-        image = image[MARGIN:image.shape[0]-MARGIN,MARGIN:image.shape[1]-MARGIN]
-    except: 
-        pass
+    # show image 
+#    plt.imshow(image) #now it is in RGB 
+#    plt.axis('off')
+#    plt.show()
+    # make mask 
+    hsv_image = cv2.cvtColor(image, cv2.COLOR_RGB2HSV) #make a copy in HSV
+    lowerb = (0, 40, 80) # all values smaller than hsv
+    upperb = (255, 255, 190) # all values bigger, yields only positive difference
+    mask = cv2.inRange(hsv_image, lowerb, upperb) # inRange(first input array src, lowerb, upperb, [dst])  
+    plt.imshow(mask, cmap="gray")
+    masked_data = cv2.bitwise_and(image, image, mask=mask) # in RGB 
+    plt.imshow(masked_data)
+    image = masked_data
+    # replace zeroes with nan
+    image = np.where(image!=0,image,np.nan)
+    np.nanmean(np.nanmean(image,0),0)   
     # calculate average RGB
-    average = crop_img.mean(axis=0).mean(axis=0)
+    average = np.nanmean(np.nanmean(image,0),0) #image.mean(axis=0).mean(axis=0) #get mean of only non-zeroes
+    average = [round(a) for a in average]
     avgs.append(list(average))
 
 # average of averages RGB
 avgs = np.array(avgs)
-avgavg = avgs.mean(axis=0)
+avgavg = np.nanmean(avgs, 0) 
 avgcolor = list(avgavg)
 avgcolor = round(avgcolor[0]), round(avgcolor[1]), round(avgcolor[2])
 print(f"Average RGB color across all images: {avgcolor}")
@@ -216,8 +234,9 @@ plt.imshow(a) #now it is in RGB
 plt.axis('off')
 plt.show()
 
+#(48.0, 63.0, 146.0)
 #%%
-# find average color of all images 
+# find average color of all images in LAB 
 
 COMPUTE_LAB = True 
 
@@ -225,24 +244,35 @@ avgs = []
 for f in files: 
     # load image in BGR with numpy.uint8, 0-255 val 
     image = cv2.imread(f)  
-    image = image.astype(np.float32) / 255
+    flt_image = image.astype(np.float32) / 255
     # convert image to LAB 
-    image = cv2.cvtColor(image, cv2.COLOR_BGR2Lab)
-    try: 
-        # crop image if possible 
-        MARGIN = 50
-        image = image[MARGIN:image.shape[0]-MARGIN,MARGIN:image.shape[1]-MARGIN]
-    except: 
-        pass
+    lab_image = cv2.cvtColor(flt_image, cv2.COLOR_BGR2Lab)
+    # convert image to RGB   
+    rgb_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+    # plot image 
+#    plt.imshow(rgb_image)
+#    plt.show()
+    # make mask 
+    hsv_image = cv2.cvtColor(rgb_image, cv2.COLOR_RGB2HSV) #make a copy in HSV
+    lowerb = (0, 40, 80) # all values smaller than hsv
+    upperb = (255, 255, 190) # all values bigger, yields only positive difference
+    mask = cv2.inRange(hsv_image, lowerb, upperb) # inRange(first input array src, lowerb, upperb, [dst])  
+    # show mask 
+    plt.imshow(mask, cmap="gray")
+    masked_data = cv2.bitwise_and(lab_image, lab_image, mask=mask) # in RGB 
+    plt.imshow(masked_data)
+    lab_image = masked_data
+    # replace zeroes with nan
+    lab_image = np.where(lab_image!=0,lab_image,np.nan) 
 #     calculate average LAB
-    average = image.mean(axis=0).mean(axis=0)
+    average = np.nanmean(np.nanmean(lab_image,0),0)  #image.mean(axis=0).mean(axis=0)
 #    if np.isnan(np.array(average[0])) == 0: # if MARGIN too big 
     avgs.append(list(average))
 
 
 # calculate average of averages LAB
 avgs = np.array(avgs)
-avgavg = avgs.mean(axis=0)
+avgavg = np.nanmean(avgs, 0) 
 # transform to RGB for display
 avgavg = convert_color(avgavg, "LAB", "RGB", lab2rgb)
 avgcolor = list(avgavg)
@@ -255,9 +285,10 @@ plt.imshow(a) #now it is in RGB
 plt.axis('off')
 plt.show()
 
+#(63, 61, 143)
 #%%
 
-# make dataframe for new color 
+# make dataframe for newly computed color value
 
 # transform color name to color values in all color spaces 
 
@@ -290,7 +321,7 @@ col_decl = pd.DataFrame({'VIAN_color_category': 'ultramarine',
                          'LCH': [lch],
                          'HEX': hx})
 
-FOLDER_PATH = r'D:\thesis\images\google\ultramarine'
+FOLDER_PATH = r'D:\thesis\input_images\google\ultramarine'
 os.chdir(FOLDER_PATH)
 
 col_decl.to_csv('ultramarine.csv')

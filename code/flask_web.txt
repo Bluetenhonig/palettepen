@@ -1,0 +1,2 @@
+https://www.tutorialspoint.com/flask/flask_environment.htm
+C:\Users\Anonym\Documents\flask\newproj\venv

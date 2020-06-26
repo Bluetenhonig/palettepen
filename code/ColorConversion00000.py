@@ -24,6 +24,11 @@ Color Space Conversion:
 # brain-teaser: sensing.konicaminolta.us/blog/identfiying-color-differences-using-l-a-b-or-l-c-h-coordinates
 # brain-teaser: zschuessler.github.io/DeltaE/learn 
 
+# to import to other scripts as module 
+#import sys 
+#sys.path.append(r'D:\thesis\code')
+#import ColorConversion00000 
+#from ColorConversion00000 import convert_color
 
 # import modules
 import os
@@ -232,6 +237,9 @@ def hsvdeg2hsvcart(hsv, h_as_degree = True):
 #
 #print(convert_color((0.5,0.2,0.3), "RGB", "BGR", rgb2bgr))
 #print(convert_color((0.5,0.2,0.3), "BGR", "RGB", bgr2rgb))
+#print(convert_color((128,51,76), "RGB", "BGR", rgb2bgr))
+#print(convert_color((76,51,128), "BGR", "RGB", bgr2rgb))
+
 #
 #print(convert_color((0.5,0.2,0.3), "RGB", "HEX"))
 #print(convert_color('#32141e', "HEX", "RGB"))
@@ -308,7 +316,7 @@ image = cv2.cvtColor(image, bgr2rgb)
 # print(color)
 #[203 151 103] # correct color
 
-# RGB to HSV 
+# RGB to HSV / BGR to LAB 
 def floatify(img_uint8): 
     img_floats = img_uint8.astype(np.float32) / 255 
     return img_floats

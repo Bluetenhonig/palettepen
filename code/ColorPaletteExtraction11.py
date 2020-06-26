@@ -310,6 +310,7 @@ if __name__ == '__main__':
     CP_PATH =  r"D:\thesis\film_colors_project\sample-dataset\screenshots\7" #save image-extracted CP
     SAVE2FOLDER = False  # saves output to folder for each image 
     CP_FOLDER = f"{IMAGE_FILE[:-4]}_palette"       
+    
     CP_MAX_LENGTH = 1024 # The maximal number of clusters (=non-leaf node = bin in the tree)  to store, cumulative count of bins across all levels representative of the depth 
     CP_WIDTH = 1000  # set palette dimensions
     CP_HEIGHT = 20   # set palette dimensions
@@ -444,8 +445,8 @@ if __name__ == '__main__':
     #                cv2.waitKey(5)
             # save it
             cv2.imwrite(img_name, palette_image)
-            #df = pd.DataFrame(data=palette_info)               
-            #df.to_csv(f"{IMAGE_FILE[m][:-4]}_bgr_palette.csv", sep=',', index=True)
+            df = pd.DataFrame(data=palette_info)               
+            df.to_csv(f"{IMAGE_FILE[m][:-4]}_bgr_palette.csv", sep=',', index=True)
             
             
             if SAVE2FOLDER: 

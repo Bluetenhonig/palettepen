@@ -12,17 +12,13 @@ A comparison of a several classifiers in scikit-learn on colors dataset.
 The point of this is to illustrate the nature of decision boundaries
 of different classifiers.
 
-Kernelt Trick: Particularly in high-dimensional spaces (3D), data can more easily be separated
+Kernel Trick: Particularly in high-dimensional spaces (3D), data can more easily be separated
 linearly and the simplicity of classifiers such as naive Bayes and linear SVMs
 might lead to better generalization than is achieved by other classifiers.
 
 The plots show training points in solid colors and can show testing points
 semi-transparent.
 
-The dataset cannot be split into training and test dataset, because the dataset
-that is trained upon does not have enough datapoints. The classifiers will be 
-applied directly to a test dataset without possibility of validating the 
-accuracy of the prediction, except for a manual inspection. 
 """
 
 #####################################
@@ -56,10 +52,11 @@ from sklearn.model_selection import GridSearchCV
 # original EFFCND - source 
 SOURCE = 'THESAURUS' 
 PATH = r'D:\thesis\input_color_name_dictionaries\thesaurus\datasets'
-FILE = 'effcnd_thesaurus_vian.xlsx'
-OUTPUT_FILE = 'effcnd_thesaurus_vian.xlsx' 
+FILE = 'effcnd_thesaurus_itten.xlsx'
+OUTPUT_FILE = 'effcnd_thesaurus_itten.xlsx' 
 # basic color system 
-SYSTEM = 'VIAN'
+SYSTEM = 'ITTEN'
+#METHOD = 'INTERVAL' 
 
 # to specify EFFCND+
 #if SYSTEM == 'VIAN_+': 
@@ -77,7 +74,7 @@ df.info()
 # preprocessing 
 
 # eda
-LABEL =  'cat1' 
+LABEL =  'cat' 
 print(f"Basic colors' distribution {SYSTEM} in the color name dictionary {SOURCE}: ")
 valcts = df[LABEL].value_counts()
 print(valcts)
@@ -112,12 +109,12 @@ list(le.classes_) # get set of cat1 colors
 lab2dt = le.transform(lab2pt) # transform all to numeric 
 list(le.inverse_transform(lab2dt)) # get back all cat1 as string 
 
-# for multi-label classification
-y = np.array([[1, 0, 0, 1], [0, 0, 1, 1], [0, 0, 0, 0]])
-print(y)
-# multioutput classification
-y = np.array([['apple', 'green'], ['orange', 'orange'], ['pear', 'green']])
-print(y)
+## for multi-label classification
+#y = np.array([[1, 0, 0, 1], [0, 0, 1, 1], [0, 0, 0, 0]])
+#print(y)
+## multioutput classification
+#y = np.array([['apple', 'green'], ['orange', 'orange'], ['pear', 'green']])
+#print(y)
 
 # X and y 
 X = np.array(lab2pts)
@@ -131,6 +128,12 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_
 
 print(f"You have {len(X_train)} training colors and {len(X_test)} test colors.")
 
+# assert
+#X_trainpts, X_testpts, y_traindt, y_testdt = train_test_split(lab2pts, lab2pt, test_size=0.1, random_state=42)
+#pd.Series(y_traindt).value_counts()
+#len(pd.Series(y_traindt).unique())
+#pd.Series(y_testdt).value_counts()
+#len(pd.Series(y_testdt).unique())
 
 #%%
 
@@ -142,13 +145,15 @@ models = [
         "K-Nearest Neighbors"
          , "Linear SVM"]
 
+# to specify
 m= 0 # 0 for KNN, 1 for SVC 
+
 # TODO: exhaust all parameters 
 # pipeline with baseline models 
 pipe = Pipeline(steps=[   # transformer: fit + transform
                     ('scaler', StandardScaler())
-                    ,('knn', KNeighborsClassifier()) # estimator: fit + predict
-                #, ('svc', SVC(random_state=0, probability = True))
+                   ,('knn', KNeighborsClassifier()) # estimator: fit + predict
+              #  , ('svc', SVC(random_state=0, probability = True))
                 ])  # estimator: fit + predict
 
 # model parameters
@@ -158,7 +163,7 @@ param_grid = {
     'knn__n_neighbors': list(range(1,200)),
     'knn__p': [2],   #Power parameter for the Minkowski metric: p=2 is Euclidean, p=1 is Manhattan
     #'svc__kernel': ['linear'],
-    #'svc__C': cs.tolist(), #based on https://scikit-learn.org/stable/modules/svm.html, param C trades off misclassification of training examples against simplicity of the decision surface. A low C makes the decision surface smooth, while a high C aims at classifying all training examples correctly, exponentially spaced to get good values
+    #'svc__C': cs.tolist() #based on https://scikit-learn.org/stable/modules/svm.html, param C trades off misclassification of training examples against simplicity of the decision surface. A low C makes the decision surface smooth, while a high C aims at classifying all training examples correctly, exponentially spaced to get good values
 }
 
 # grid search for hyperparameter tuning 
@@ -180,7 +185,7 @@ print("Best parameter (CV score=%0.3f):" % search.best_score_)
 print("Best parameter :", search.best_params_)
 
 # to specify
-param_varying = 'svc__C'
+param_varying = 'knn__n_neighbors'
 # all results
 params = search.cv_results_['params']
 print("All parameters: ", params)
@@ -236,14 +241,17 @@ for i in params_vary:
 allscores_test_errors = [1-i for i in allscores_test]
 
 # best parameters and score 
-print("Best parameter score: ", round(max(allscores_test),3))
+print("Best parameter score: ", round(max(allscores_test),3)) 
+# 0.878
+#0.876
 n_neighbours = []
 dica_test = list(zip(params_vary, allscores_test))
 dica_test_error = list(zip(params_vary, allscores_test_errors))
 for dic in dica_test: 
     if dic[1] == max(allscores_test):
         n_neighbours.append(dic[0])
-print("Best parameter: ", n_neighbours[0])   
+print("Best parameter: ", n_neighbours[0]) 
+# 1  
 
 # plot accuracy score by parameter (varying)
 plt.plot(params_vary, allscores_test, '--ro')
@@ -329,11 +337,13 @@ os.chdir(MODEL_PATH)
 # KNN
 # save the model to disk
 filename = f'model_{SOURCE}_{SYSTEM}_{models[0]}_KNN{KNN}_p{p}_train{len(X)}_cat{df[LABEL].nunique()}_testacc{test_score}.sav'
+filename = f'model_{SOURCE}_{METHOD}_{models[0]}_KNN{KNN}_p{p}_train{len(X)}_cat{df[LABEL].nunique()}_testacc{test_score}.sav'
 # model name: classifier, classifier parameters, training data, label classes 
 pickle.dump(clf, open(filename, 'wb'))
 #%%
 # SVC 
 filename = f'model_{SOURCE}_{SYSTEM}_{models[1]}_SVC{KERNEL}_C{C}_train{len(X)}_cat{df[LABEL].nunique()}_testacc{test_score}.sav'
+filename = f'model_{SOURCE}_{METHOD}_{models[1]}_SVC{KERNEL}_C{C}_train{len(X)}_cat{df[LABEL].nunique()}_testacc{test_score}.sav'
 # model name: classifier, classifier parameters, training data, label classes 
 pickle.dump(clf, open(filename, 'wb'))
 
@@ -363,7 +373,7 @@ pickle.dump(clf, open(filename, 'wb'))
 
 # get test colors for classification
 
-#Gaudenz: test points should be generated in RGB, 
+#TODO: test points should be generated in RGB, 
 #but the classifier is trained in LAB
 # that's why it can only take test colors in LAB, 
 #should i generate RGB colors and convert them to LAB 
@@ -424,6 +434,20 @@ if ONEPOINT:
         lab = convert_color(rgb, conversion=cv2.COLOR_RGB2Lab)
         test_colors_lab.append(lab.tolist())
 
+#%%
+        
+# load model 
+# to specify
+ML_MODELS_PATH = r'D:\thesis\machine_learning\models'
+ML_MODELS_FILE = f'model_THESAURUS_INTERVAL_K-Nearest Neighbors_KNN1_p2_train4847_cat712_testacc0.878.sav'
+
+# load the model from disk
+import os
+import pickle
+os.chdir(ML_MODELS_PATH)
+clf = pickle.load(open(ML_MODELS_FILE, 'rb'))
+
+        
 #%%
 ### Use Model to classify test colors into color categories
         

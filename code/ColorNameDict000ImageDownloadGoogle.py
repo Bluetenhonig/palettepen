@@ -15,7 +15,7 @@ SEARCHKEY = 'ultramarine color'
 MAXLINKS = 100 
 MARGIN = 10 # margin for corrupt images
 TOFETCH = MAXLINKS + MARGIN 
-FOLDER_PATH = r'D:\thesis\images\google'
+FOLDER_PATH = r'D:\thesis\input_images\google'
 
 
 #%%
@@ -89,7 +89,7 @@ def fetch_image_urls(query, max_links_to_fetch, wd, results_start=0, sleep_betwe
     return image_urls
 
 
-urls = fetch_image_urls(SEARCHKEY, MAXLINKS2FETCH, DRIVER,1)
+urls = fetch_image_urls(SEARCHKEY, TOFETCH, DRIVER,1)
 
 #%% 
 

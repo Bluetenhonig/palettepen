@@ -22,18 +22,18 @@ import numpy as np
 import cv2
 import pandas as pd
 
-# to specify: USER SPECIFICATION (VIAN)
+# to specify: USER SPECIFICATION 
 # filters
-SEARCH_VIAN_COLOR = 'lavender' # basic color (desired format: lab)
+SEARCH_COLOR_CAT = 'mustard' # basic color (desired format: lab)
 PALETTE_DEPTH = 'row 20' # ['row 1','row 20'] (top-to-bottom hierarchy)
 THRESHOLD_RATIO = 0 # [0,100], %color pixel, a threshold of 5 means that lavender must take up at least 5% of the image for a given depth
 COLORBAR_COUNT = 10
 
 #%%
-# load color palettes
+# load color palettes dataframe 
 # palette/s
-PALETTE_PATH = r'D:\thesis\videos\frames'
-EXTENSION = '.csv'
+PALETTE_PATH = r'D:\thesis\film_colors_project\sample-dataset\screenshots\7'
+EXTENSION = 'bgr_palette.csv'
 PALETTE_FILE = 'frame125_bgr_palette.csv'
 #FILES = ['frame250.jpg', 'frame375.jpg']     # for a list of images to process 
 # load files from directory 
@@ -44,6 +44,52 @@ for r, d, f in os.walk(PALETTE_PATH): # r=root, d=directories, f = files
         if EXTENSION in file:
             FILES.append(file) 
             
+
+#%%
+# load color name dictionary 
+from sklearn import preprocessing
+            
+### Color-Thesaurus EPFL ###
+SEARCH_COLORS_PATH = r'D:\thesis\input_color_name_dictionaries\thesaurus\datasets'
+SEARCH_COLORS_FILE = 'effcnd_thesaurus_vian.xlsx'
+
+# set directory 
+os.chdir(SEARCH_COLORS_PATH)
+
+# load data 
+data = pd.read_excel(SEARCH_COLORS_FILE, sep=" ", index_col=0)
+data.head()
+data.info()
+
+lab2pt = data['cat1'].tolist() #list(df.index)
+le = preprocessing.LabelEncoder()
+le.fit(lab2pt) # fit all cat1 colors 
+
+#%%
+from sklearn.neighbors import KNeighborsClassifier
+# to specify
+ML_MODELS_PATH = r'D:\thesis\machine_learning\models'
+
+names = [
+        "Nearest Neighbors"
+         , "Linear SVM"
+         ]
+ML_MODELS_FILE = f'model_THESAURUS_VIAN_K-Nearest Neighbors_KNN23_p2_train721_cat28_testacc0.712.sav'
+
+# load the model from disk
+import os
+import pickle
+os.chdir(ML_MODELS_PATH)
+clf = pickle.load(open(ML_MODELS_FILE, 'rb'))
+
+# use machine learning classifier for color prediction
+def categorize_color(color_lab, clf): 
+    # lab to color category
+    label = clf.predict([color_lab]) #lab: why? The CIE L*a*b* color space is used for computation, since it fits human perception
+    label = le.inverse_transform(label)
+    label = label.tolist()[0]         
+    #print('Label: ', label) 
+    return label 
 
 
 #%%
@@ -74,6 +120,28 @@ def convert_array(nparray, origin, target='RGB'):
         converted_colors.append(converted_color)
     return converted_colors
 
+#display_color_grid(palette['lab_colors'], 'LAB', COLORBAR_COUNT)
+
+def sort_color_grid(palette): 
+    palette = palette.sort_values(by=['ratio_width'], ascending=False)
+    return palette 
+        # sort by hue, sat, value 
+#        hsvcolors = convert_array(rgbcolors, 'RGB', 'HSV')
+#        hsvs = [list(l) for l in hsvcolors]
+#        # post hsv
+#        palette['hsv'] = hsvs
+#        # extract hue
+#        palette['hue'] = palette.hsv.map(lambda x: int(round(x[0])))
+#        # extract saturation
+#        palette['sat'] = palette.hsv.map(lambda x: int(round(x[1])))
+#        # extract value
+#        palette['val'] = palette.hsv.map(lambda x: int(round(x[2])))
+#        #sort by one column only: hue
+#        #palette = palette.sort_values(by=['hue'])
+#        # sort by multiple columns
+#        palette = palette.sort_values(by=['hue', 'sat', 'val'])  
+#        rgbcolors = convert_array(palette, 'HSV', 'RGB')
+     
 # display color palette as bar 
 def display_color_grid(palette, origin='RGB', colorbar_count=10):
     """helper function: convert_array, convert_color """ 
@@ -84,6 +152,7 @@ def display_color_grid(palette, origin='RGB', colorbar_count=10):
     if origin == 'HSV': 
         rgbcolors = convert_array(palette, 'HSV')
     x= 0
+    
     for r in rgbcolors: 
         if len(rgbcolors[x:x+colorbar_count]) == colorbar_count:
             palette = np.array(rgbcolors[x:x+colorbar_count])[np.newaxis, :, :]
@@ -145,8 +214,9 @@ for FILE in FILES:
 # pool of color palettes 
 # remove extension in file names 
 palet_names = [f[:-4] for f in FILES]  
-print(f"Number of palettes: {len(palet_names)}")
-print("Names of palettes: \n", ', '.join(palet_names), '.')
+print(f"Searching a total of {len(palet_names)} palettes. ")
+#Searching a total of 569 palettes.
+print("Searching your chosen color in palettes: \n", ', '.join(palet_names[:5]), '.')
 
 
 
@@ -191,7 +261,6 @@ def add_cs2palett(cs_list, cs='hsv'):
     palettini[f'{cs}'] = palettini[[f'{cs[0]}', f'{cs[1]}', f'{cs[2]}']].apply(lambda row: ','.join(row.values.astype(str)), axis=1)
     return palettini
 
-
 #%%
 # add ratio width info to palette data
 
@@ -216,173 +285,94 @@ for i, palette in enumerate(cp_pool):
     palettini = add_cs2palett(lab_list, 'lab')
     try: 
         palettini = add_ratio2palett(palettini, ratio_list)
-        
     except ValueError:
         print("Oops! Cases reported where the number of ratio_width values are unequal to number of bgr_colors: for these colors no ratio width can be analyzed.")        
-    # sort values  by ratio width 
-    try: 
-        palettini = palettini.sort_values(by='ratio_width', ascending=False)
-    except:
-        pass
     palettinis.append(palettini)
     
+#%%
+# for palette colors predict colors cats 
+
+palette_colors_cats = []
+for palid, palette in enumerate(palettinis):
+    # sort palette color patches
+    palette = sort_color_grid(palette)
+    # predict color category for colors in palette
+    col_pred = []   
+    for colid, color in enumerate(palette['lab_colors']):         
+        colpred = categorize_color(color, clf)
+        col_pred.append(colpred)
+    palette_colors_cats.append(col_pred)
+    palette['color_cat_prediction'] = col_pred
 
 #%%
-from scipy.spatial import distance
-from statistics import mean
-
-labcols = []
-for i in range(len(palettinis)): 
-    labs = palettinis[i]['lab_colors'].tolist()
-    labcols.append(labs)
-
-cps = pd.DataFrame({'palette_name': palet_names
-                        , 'lab': labcols})
-x = []
-for i in range(len(cps)): 
-    el = cps.iloc[i][0], cps.iloc[i][1]
-    x.append(el)
-
-# possible long exec time     
-import itertools
-paircombi = list(itertools.combinations(x, 2))
-print(f"Number of pairwise combinations: {len(paircombi)}.")
-
-# calculate minimum euclidean of pair 
-def mindist_pairpoint(A,B,dist = 'euclidean'):
-    min_dist = []
-    min_pair =  []
-    for a in A:
-        dist = []
-        pair = []
-        for b in B:
-            dist.append(distance.euclidean(a,b))
-            pair.append((a,b))
-        min_dist.append(min(dist))
-        min_id = dist.index(min(dist)) 
-        min_pair.append(pair[min_id])
-    return min_pair, min_dist
-
-def get_pbond(min_dist):
-    avg = round(mean(min_dist),4)
-    return avg 
-
-
-def pairwise_dist(pair, i): 
-    pair_name = pair[0][0], pair[1][0]
-    min_pair, min_dist = mindist_pairpoint(paircombi[i][0][1], paircombi[i][1][1])
-    pbond = get_pbond(min_dist)
-    print(f"Number of matched pair minimums:{len(min_pair)}")
-    return pair_name, pbond
-
-
-
-pair_names = []
-pbonds = []
-for i, pair in enumerate(paircombi):
-    print(i)
-    pair_name, pbond = pairwise_dist(paircombi[i],i)
-    pair_names.append(pair_name)
-    pbonds.append(pbond)
     
- 
-cp_pairs = pd.DataFrame({ 'pair1': [i[0] for i in pair_names],
-                         'pair2': [i[1] for i in pair_names],
-                        'pair': pair_names, 
-                         'pbond': pbonds})
- 
-# save pair bonds dataframe
-os.chdir(r'D:\thesis\code\pd4cpbonds')
-cp_pairs.to_csv("palette_pair_pbonds", index=False)    
+# match color categories to palette colors 
+
+def filter_palette(index, cp, palett_name, searchkey, threshold= None):
+    # filter by threshold floor 
+    if threshold: 
+      try:
+          cp = cp[cp['ratio_width'] >= threshold]
+      except: 
+          pass
+    # filter by search key 
+    if cp['color_cat_prediction'][cp['color_cat_prediction'].str.match(searchkey)].any():
+#        print('Match')
+        match = (index, cp, palett_name) 
+        return match
+    else:
+        pass
+#        print('No match')
 
 #%%
-# get n-closest possible palette-pair from a pool of palettes  
 
-# load pair bonds dataframe
-os.chdir(r'D:\thesis\code\pd4cpbonds')
-cp_pairs = pd.read_csv("palette_pair_pbonds")    
-
-# find minimum pbond 
-def min_pbond(pbonds, number = 0):
-    # set base 
-    minimum = min(pbonds)
-    while number > 0: 
-        new_pbonds = list(filter(lambda a: a != minimum, pbonds))
-        # use recursion  
-        minimum = min_pbond(new_pbonds, number-1)
-        return minimum
-    return minimum 
-
-pbonds = sorted(cp_pairs['pbond'].tolist())
-pbonds[:3] #[0.4764, 0.7084, 0.7225]
-cp_min_pbonds = min_pbond(pbonds)
-gold_pair = list(eval(cp_pairs['pair'][cp_pairs['pbond'] == cp_min_pbonds].iloc[0]))
-golden_pair = ', '.join(list(eval(cp_pairs['pair'][cp_pairs['pbond'] == cp_min_pbonds].iloc[0])))
-print(f"Palettes {golden_pair} are the closest to each other.")
-NUMBER = 1 
-cp_2min_pbonds = min_pbond(pbonds, number = NUMBER)
-silver_pair = ', '.join(list(eval(cp_pairs['pair'][cp_pairs['pbond'] == cp_2min_pbonds].iloc[0])))
-print(f"Palettes {silver_pair} are {NUMBER + 1}. closest to each other.")
-NUMBER = 2
-cp_3min_pbonds = min_pbond(pbonds, number = NUMBER)
-bronze_pair = ', '.join(list(eval(cp_pairs['pair'][cp_pairs['pbond'] == cp_3min_pbonds].iloc[0])))
-print(f"Palettes {bronze_pair} are {NUMBER + 1}. closest to each other.")
-
-# display palette 
-rgbs = display_color_grid(cps['lab'][cps['palette_name']==gold_pair[0]].iloc[0], 'LAB')
-rgbs = display_color_grid(cps['lab'][cps['palette_name']==gold_pair[1]].iloc[0], 'LAB')
-
-
-#%%
-# get top-n closest palettes for given palette
-
-# Search request - Finding result 
-SEARCHKEY_PALETTE = "frame3500_bgr_palette"
-TOPN = 10 
-# get pair-partner for given palette and sort pbonds 
-cp_pairs['pair1'] = [eval(i)[0] for i in cp_pairs['pair']]
-cp_pairs['pair2'] = [eval(i)[1] for i in cp_pairs['pair']]
-# get symmetrical values too 
-gold_pbonds1 = cp_pairs[cp_pairs['pair1']== SEARCHKEY_PALETTE]
-gold_pbonds2 = cp_pairs[cp_pairs['pair2']== SEARCHKEY_PALETTE]
-gold_pbonds = gold_pbonds1.append(gold_pbonds2)
-gold_pbonds = gold_pbonds.sort_values(by='pbond')
-gold_pbonds = gold_pbonds.reset_index(drop=True)
-
-def get_sym_goldpal(df, SEARCHKEY_PALETTE): 
-    pair1 = gold_pbonds[['pbond','pair2']][gold_pbonds['pair1']==SEARCHKEY_PALETTE]
-    pair1['alt_pair'] = pair1['pair2']
-    pair2 = df[['pbond','pair1']][df['pair2']==SEARCHKEY_PALETTE]
-    pair2['alt_pair'] = pair2['pair1']
-    pair = pair1.append(pair2)
-    pair = pair.sort_values(by='pbond')
-    return pair 
+# Search request - Finding the result 
         
-# show top-n closest pbonds for a given palette 
-gold_palettes = get_sym_goldpal(gold_pbonds, SEARCHKEY_PALETTE)['alt_pair'][:TOPN].reset_index(drop=True)
-print("-------------------------")
-print(f"Task: Find most similar color palettes")
-print(f"Searching color palette: {SEARCHKEY_PALETTE}")
-print(f"Total number of gold palettes: {len(gold_pbonds)}")
-print(f"Top-{TOPN} gold palettes: \n{gold_palettes}")
-print("-------------------------")
+# find same color across color palettes    
+print(f"Number of palettes to search: {len(palettinis)}")
+print(f"Color category to search: {SEARCH_COLOR_CAT}")
+# show color
+search_color_cat_rgb = eval(data['srgb'][data['name']== SEARCH_COLOR_CAT].iloc[0])
+a = np.full((5, 5, 3), search_color_cat_rgb, dtype=np.uint8)
+plt.imshow(a) #now it is in RGB 
+plt.axis('off')
+plt.show()
+print(f"Threshold floor set to: {THRESHOLD_RATIO}")
 
+# filtered color palettes 
+gold_palettes = []
+for i, palette in enumerate(palettinis):     
+    gold = filter_palette(i, palette, palet_names[i][:-12], SEARCH_COLOR_CAT, THRESHOLD_RATIO)
+    gold_palettes.append(gold)
 
-# TODO: give weights to each lab color val  
+gold_palettes = [i for i in gold_palettes if i]
+print(f"Number of palettes found: {len(gold_palettes)}")
+
 #%%
 # golden waterfall 
 # show all found palettes
-    
+print("-------------------------")
+print(f"Number of palettes to search: {len(palettinis)}")
+print(f"Color category to search: {SEARCH_COLOR_CAT}")
+print(f"Threshold floor set to: {THRESHOLD_RATIO}")
+print(f"Number of palettes found: {len(gold_palettes)}")
+print("-------------------------")
+# no filtered color palettes    
 if not any(gold_palettes): 
-    print(f"No palettes found.")
+    print(f"No palettes contain searchkey color '{SEARCH_COLOR_CAT}'.")
 else: 
-    print("-------------------------")
-    print(f"Display palettes most similar to {SEARCHKEY_PALETTE}:")
-    display_color_grid(cps['lab'][cps['palette_name']==SEARCHKEY_PALETTE].iloc[0], 'LAB')
-    print("-------------------------")
-    for gold in gold_palettes:
-        print(f"Palette: {gold}")
-        display_color_grid(cps['lab'][cps['palette_name']==gold].iloc[0], 'LAB')
-
+    print(f"Following palettes contain color '{SEARCH_COLOR_CAT}':")
+    for i, palette in enumerate(gold_palettes):
+        colors_count = len(palette[1])
+        # read names of gold color palettes
+        print(f"{i+1}. {palet_names[i]}")
+#        print(f"{i+1}. {palet_names[i]} - {COLORBAR_COUNT} out of {colors_count} colors")
+        # display gold color palettes where colorbar_count=10
+        display_color_grid(palette[1]['lab_colors'], 'LAB', COLORBAR_COUNT)
+        # read number of gold colors
+        gold_colors = palette[1][palette[1]['color_cat_prediction'].str.match(SEARCH_COLOR_CAT)]
+        gold_colors_count = len(gold_colors)
+#        print(f"Number of gold colors for palette: {gold_colors_count} out of {len(palette[1])}")
+        # display gold colors 
+#        display_color_grid(gold_colors['lab_colors'], 'LAB')
     
- 

@@ -98,51 +98,49 @@ data['LCH_H'].iloc[-1] = eval(data['LCH'].iloc[-1])[2]
 # color conversion from rgb to all other color spaces
 import sys 
 sys.path.append(r'D:\thesis\code')
-import ColorConversion 
-from ColorConversion import convert_color
+import ColorConversion00000 
+from ColorConversion00000 import convert_color
+from ColorConversion00000 import *
+
+# load color name dictionary 
+PATH = r'D:\thesis\input_color_name_dictionaries\thesaurus\datasets'
+FILE = 'eeffcnd_thesaurus_search.xlsx'
+OUTPUT_FILE = 'eeffcnd_thesaurus_search.xlsx'
+os.chdir(PATH)
+data = pd.read_excel(FILE, sep=" ", index_col=0)
 
 # convert rgb into all other cs 
 data_small = data[['srgb_R', 'srgb_G', 'srgb_B']]
 basic_colors_rgb = data_small.values.tolist()
-
+basic_colors_lab  = []
 basic_colors_hsv  = []
 basic_colors_hsl  = []
 basic_colors_lch  = []
 basic_colors_hex  = []
 
 for i in basic_colors_rgb:
-    rgb = np.array(i)
-    rgbi = np.array([[rgb/ 255]], dtype=np.float32)
-    hsv = cv2.cvtColor(rgbi, cv2.COLOR_RGB2HSV)
-    hsv = hsv[0, 0]
-    hsv = hsv.tolist()
-    basic_colors_hsv.append(hsv)
-    
-for i in basic_colors_rgb:
-    rgb = np.array(i)
-    rgbi = np.array([[rgb/ 255]], dtype=np.float32)
-    hsl = cv2.cvtColor(rgbi, cv2.COLOR_RGB2HLS) 
-    hsl = hsl[0, 0]
-    hsl = hsl.tolist()
-    basic_colors_hsl.append(hsl)
-    
-for i in basic_colors_rgb:
-    rgb = np.array(i)
-    rgbi = np.array([[rgb/ 255]], dtype=np.float32)
-    lab = cv2.cvtColor(rgbi, cv2.COLOR_RGB2Lab)
-    lch = convert_color(lab, "LAB", "LCH")[0, 0]
-    lch = lch.tolist()
-    basic_colors_lch.append(lch)
-    
-for i in basic_colors_rgb:
+    lab = convert_color(i, "RGB", "LAB", rgb2lab) 
+    hsv = convert_color(i, "RGB", "HSV", rgb2hsv) 
+    hsl = convert_color(i, "RGB", "HSL", rgb2hsl) 
+    lch = convert_color(lab, "LAB", "LCH")
     r,g,b = np.array(i)
-    hex_val = convert_color((int(r),int(g),int(b)), "RGB", "HEX")
+    hex_val = convert_color((int(r),int(g),int(b)), "RGB", "HEX") 
+
+    basic_colors_lab.append(lab)
+    basic_colors_hsv.append(hsv)
+    basic_colors_hsl.append(hsl)
+    basic_colors_lch.append(lch)  
     basic_colors_hex.append(hex_val)
+    
     
 data['hsv'] = basic_colors_hsv
 data['hsv_H'] = [i[0] for i in basic_colors_hsv]
 data['hsv_S'] = [i[1] for i in basic_colors_hsv]
 data['hsv_V'] = [i[2] for i in basic_colors_hsv]
+data['cielab'] = basic_colors_lab
+data['cielab_L'] = [i[0] for i in basic_colors_lab]
+data['cielab_a'] = [i[1] for i in basic_colors_lab]
+data['cielab_b'] = [i[2] for i in basic_colors_lab]
 data['hsl'] = basic_colors_hsl
 data['hsl_H'] = [i[0] for i in basic_colors_hsl]
 data['hsl_S'] = [i[1] for i in basic_colors_hsl]
@@ -151,7 +149,7 @@ data['LCH'] = basic_colors_lch
 data['LCH_L'] = [i[0] for i in basic_colors_lch]
 data['LCH_C'] = [i[1] for i in basic_colors_lch]
 data['LCH_H'] = [i[2] for i in basic_colors_lch]
-data['HEX'] = basic_colors_hex
+data['hex'] = basic_colors_hex
 
 
 #%% 

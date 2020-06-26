@@ -26,6 +26,7 @@ import pandas as pd
 
 #%%
 # load color palettes 
+# to specify 
 # images
 PALETTE_PATH = r'D:\thesis\film_colors_project\sample-dataset\screenshots\7'
 EXTENSION = '_lab_palette.jpg' #  load lab_palette = a rgb image where calc was done in lab
@@ -43,7 +44,7 @@ print(f"Number of files: {len(FILES)}")
 print(f"First five files in FILES: {FILES[:5]}")
 
 # subset (out of memory error)
-FILES = FILES[:50]
+FILES = FILES[:60]
 performance = {}
 
 # set directory 
@@ -81,23 +82,50 @@ plt.show()
 # show image 
 plt.imshow(cp_palettes[0]) #now it is in RGB 
 plt.show() 
-   
+
 #%%            
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
+import sys
+sys.path.append(r"D:\thesis\code")
+from ColorConversion00000 import convert_color
 
 
-def show_hist(file): 
-    pass 
-    
+def show_hist(file, color_space): 
+    os.chdir(PALETTE_PATH)
+    img = cv2.imread(file) #1st color: [61, 75, 87]
+    if color_space == "lab": 
+        img = cv2.cvtColor(img.astype(np.float32) / 255, cv2.COLOR_BGR2LAB) # in lab 
+#        l = [j[0] for i in img for j in i]
+#        plt.plot(range(len(l)), sorted(l))
+        hist = cv2.calcHist([img],[0],None,[100],[0, 100]) # function signature: images, channels, mask, number of bins, array of the dims arrays of the histogram bin boundaries in each dimension.       
+        plt.plot(hist,color = 'k', label='l: luminance 0-100') # luminance l
+        hist = cv2.calcHist([img],[1],None,[128],[-128, 127]) # function signature: images, channels, mask, number of bins, array of the dims arrays of the histogram bin boundaries in each dimension.       
+        plt.plot(hist,color = 'g', label='a: green-,red+') # green-red a
+        hist = cv2.calcHist([img],[2],None,[128],[-128, 127]) # function signature: images, channels, mask, number of bins, array of the dims arrays of the histogram bin boundaries in each dimension.       
+        plt.plot(hist,color = 'b', label='b: blue-,yellow+') # blue-yellow b 
+#        plt.xlim([-128,127])
+        plt.axvline(x=128/2, label='0 for a,b axis -128,127', c='r')
+        plt.legend()
+        plt.show()
+    if color_space == "rgb": 
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB) # in rgb 
+        color = ('r','g','b')
+        for i,col in enumerate(color):
+            hist = cv2.calcHist([img],[i],None,[256],[0,256])
+            plt.plot(hist,color = col)
+            plt.xlim([0,256])
+        plt.show()
+        
 def get_hist(file, color_space): 
+    os.chdir(PALETTE_PATH)
     img = cv2.imread(file) # in bgr
     # function signature: images, channels, mask, number of bins, array of the dims arrays of the histogram bin boundaries in each dimension.
     if color_space == "bgr": 
         hist = cv2.calcHist([img],[0, 1, 2],None,[256, 256, 256],[0, 255, 0, 255, 0, 255]) # in bgr 
     if color_space == "lab": 
-        img = cv2.cvtColor(img, cv2.COLOR_BGR2LAB) # in lab 
+        img = cv2.cvtColor(img.astype(np.float32) / 255 , cv2.COLOR_BGR2LAB) # in lab 
         hist = cv2.calcHist([img],[0, 1, 2],None,[100, 2*128, 2*128],[0, 100, -128, 127, -128, 127]) # function signature: images, channels, mask, number of bins, array of the dims arrays of the histogram bin boundaries in each dimension.
         # normalize 
 #    hist = cv2.normalize(hist,hist,0,255,cv2.NORM_MINMAX)
@@ -106,40 +134,74 @@ def get_hist(file, color_space):
         hist = cv2.calcHist([img],[0, 1, 2],None,[256, 256, 256],[0, 255, 0, 255, 0, 255]) # in rgb 
 
     return hist 
-    
-def save_hist(file): 
-    img = cv2.imread(file)
-    img = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
-    hist = cv2.calcHist([img],[0],None,[256],[0,256])
-    # TODO convert back LAB2BGR for display
-    plt.plot(hist)
-    color = ('b','g','r')
-    for i,col in enumerate(color):
-        histr = cv2.calcHist([img],[i],None,[256],[0,256])
-        plt.plot(histr,color = col)
-        plt.xlim([0,256])
-    plt.savefig(f"{file[:-4]}_histogram.jpg")
-    plt.show()
+
+def make_folder(folder): 
+    cwd = os.getcwd()
+    try: 
+        os.mkdir(folder)
+        new_path = os.path.join(cwd, folder)
+        os.chdir(new_path)
+    except: 
+        new_path = os.path.join(cwd, folder)
+        os.chdir(new_path)
+        
+def save_hist(file, color_space, cwd=None, folder=None): 
+    if color_space == "lab": 
+        os.chdir(cwd)
+        img = cv2.imread(file)
+        img = cv2.cvtColor(img.astype(np.float32) / 255, cv2.COLOR_BGR2LAB) # in lab 
+        hist = cv2.calcHist([img],[0],None,[100],[0, 100]) # function signature: images, channels, mask, number of bins, array of the dims arrays of the histogram bin boundaries in each dimension.       
+        plt.plot(hist,color = 'k', label='l: luminance 0-100') # luminance l
+        hist = cv2.calcHist([img],[1],None,[128],[-128, 127]) # function signature: images, channels, mask, number of bins, array of the dims arrays of the histogram bin boundaries in each dimension.       
+        plt.plot(hist,color = 'g', label='a: green-,red+') # green-red a
+        hist = cv2.calcHist([img],[2],None,[128],[-128, 127]) # function signature: images, channels, mask, number of bins, array of the dims arrays of the histogram bin boundaries in each dimension.       
+        plt.plot(hist,color = 'b', label='b: blue-,yellow+') # blue-yellow b 
+#        plt.xlim([-128,127])
+        plt.axvline(x=128/2, label='0 for a,b axis -128,127', c='r')
+        plt.legend()
+        #save hist 
+        new_path = os.path.join(cwd, folder)
+        os.chdir(new_path)
+        plt.savefig(f"{file[:-4]}_histogram_{color_space}.jpg")
+        plt.show()
+    if color_space == "rgb": 
+        os.chdir(cwd)
+        img = cv2.imread(file)
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB) # in rgb 
+        color = ('r','g','b')
+        for i,col in enumerate(color):
+            hist = cv2.calcHist([img],[i],None,[256],[0,256])
+            plt.plot(hist,color = col)
+            plt.xlim([0,256])
+        new_path = os.path.join(cwd, folder)
+        os.chdir(new_path)
+        plt.savefig(f"{file[:-4]}_histogram_{color_space}.jpg")
+        plt.show()
+        
 
 
 
 #%%
-# all color palettes    
+# all color palettes  
 cp_hists = []
 
+# to specify
+CS = "rgb"
+
 # show histogram of color palettes of images
-#for FILE in FILES: 
-#    show_hist(FILE)
+for FILE in FILES: 
+    show_hist(FILE, CS)
 # 
 # get histogram of color palettes of images  
-CS = "lab"
 for FILE in FILES: # out-of-memory error    
     hist = get_hist(FILE, CS)
     cp_hists.append(hist)
     
 # save histogram of color palettes of images to directory
-#for FILE in FILES: 
-#    save_hist(FILE)
+FOLDER_NAME = f'histogram_{CS}'
+make_folder(FOLDER_NAME)
+for FILE in FILES: 
+    save_hist(FILE, CS, PALETTE_PATH, FOLDER_NAME)
 
 print(f"Total of {len(cp_hists)} color palettes processed.")
 
@@ -156,9 +218,9 @@ bhattacharyya = cv2.HISTCMP_BHATTACHARYYA
 # single images
 
 # images
-image1 = FILES.index('frame2125_lab_palette.jpg') #why corr=1?
-image2 = FILES.index('frame500_lab_palette.jpg')
-image3 = FILES.index('frame1625_lab_palette.jpg')
+image1 = FILES.index('45442_D100_lab_palette.jpg') #why corr=1?
+image2 = FILES.index('45479_D100_lab_palette.jpg')
+image3 = FILES.index('45472_D100_lab_palette.jpg')
 
 # compareHist: how well two histograms match with each other.
 corr1 = cv2.compareHist(cp_hists[image1], cp_hists[image1], correlation)
@@ -185,7 +247,7 @@ print(f"Bhacha1: {bhacha1}, Bhacha2: {bhacha2}, Bhacha3: {bhacha3}")
 
 
 #%%
-# all image combinations
+# all files image combinations
 
 # all pairwise pairs (cartesian product) 
 import time 
@@ -274,9 +336,9 @@ performance[WAY] = duration
 
 # Search request - Finding result 
 # to specify - USER SPECIFICATION (VIAN)
-SEARCHKEY_PALETTE = "45443" #choose from: cp_names
+SEARCHKEY_PALETTE = "45442" #choose from: cp_names
 
-TOPN = 20 
+TOPN = 60 
 # search only in lowest row, thus cannot filter by palette depth, threshold ratio and colorbar count because of ratio width information only there in whole palette image filters
 assert TOPN <= len(FILES), "Not as many files to evaluate."
 
@@ -297,7 +359,7 @@ print("-------------------------")
 
  
 #%%
-
+# single file
 # show search results (golden waterfalls): single file 
 name2palette= dict(zip(cp_names, cp_palettes))
 name2img = dict(zip(cp_names, cp_images))
@@ -353,6 +415,7 @@ else:
         plt.show() 
 
 #%%
+# all files
 # search query: for all loaded files = search files
 # get top-n closest palettes for given palette and save it to folder of file
 
@@ -365,6 +428,7 @@ for i, filename in enumerate(cp_names):
     SEARCHKEY_PALETTE = filename
     print(f"{i} processed.")
     
+    # to specify
     TOPN = 10 
     # search only in lowest row, thus cannot filter by palette depth, threshold ratio and colorbar count because of ratio width information only there in whole palette image filters
     assert TOPN <= len(FILES), "Not as many files to evaluate."
