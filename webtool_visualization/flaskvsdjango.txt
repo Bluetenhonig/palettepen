@@ -13,6 +13,11 @@ python beginner
 no web experience 
 freedom over what you do in your code 
 simple webapps 
+server
+also available for databanks: sqlalchemy
+s.flask alchemy plugin for databanks 
+https://flask-sqlalchemy.palletsprojects.com/en/2.x/quickstart/#a-minimal-application
+https://pythonprogramming.net/jquery-flask-tutorial/
 
 django: much more boiler plate code around it 
 complicated
@@ -20,6 +25,7 @@ can do more
 user admin panels, user permission, authentication
 database connectivity 
 python experience 
-web dev experience 
+web dev experience
+front-end  
 
  
