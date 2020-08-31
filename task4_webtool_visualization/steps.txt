@@ -1,0 +1,35 @@
+
+Setup Virtualenv
+
+based on : https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
+
+1. open visual studio code
+2. open folder 'webtool_visualization' in VS
+3. open terminal
+4. pip3 install virtualenv (imports virutalenv into project folder) 
+5. py -m pip install --user virtualenv (install virtualenv) 
+6. py -m venv env (creates a virtualenv called env)
+7.  .\env\Scripts\activate (activates env) 
+
+As long as your virtual environment is activated pip will install packages into that specific environment and you’ll be able to import and use packages in your Python application.
+
+8. deactivate (deactivate env)
+
+9. pip install flask, flask_sqlalchemy (install packages) 
+
+10. pip freeze (export all installed packages) > requirements.txt
+
+Installation guide: 
+pip install -r requirements.txt
+python app.py
+
+
+Setup Database
+
+based on: https://flask-sqlalchemy.palletsprojects.com/en/2.x/quickstart/
+ 
+after sqlalchemy db is coded in app.py go to Terminal
+1. log into virtualenv
+2. python (open interactive shell in python)
+3. from app import db 
+db.create_all()

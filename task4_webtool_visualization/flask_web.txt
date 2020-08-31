@@ -1,0 +1,7 @@
+https://www.tutorialspoint.com/flask/flask_environment.html
+C:\Users\Anonym\Documents\flask\newproj\venv
+https://pythonprogramming.net/jquery-flask-tutorial/
+https://docs.bokeh.org/en/latest/docs/user_guide/embed.html
+
+https://flask-sqlalchemy.palletsprojects.com/en/2.x/quickstart/#a-minimal-application
+https://pythonprogramming.net/jquery-flask-tutorial/
