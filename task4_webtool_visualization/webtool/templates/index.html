@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Image Master</title>
+{{ dropzone.load() }}
+{{ dropzone.style('border: 2px dashed #0087F7; margin: 10%; min-height: 10px;') }}
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center;">Image Master</h1>
+    {% if file_urls|length < 1 %}
+    <h4 style="text-align: center;">There are no images. Upload one below!</h4>
+    
+    {% else %}
+        {% for file_url in file_urls %}
+            <li><img style="height: 150px" src="{{ file_url }}"></li>
+        {% endfor %}
+    <!-- <table>
+        <tr>
+            <th>Task</th>
+            <th>Added</th>
+            <th>Actions</th>
+        </tr>
+        {% for task in tasks %}
+        <tr>
+            <td>{{task.content}}</td>
+            <td>{{task.date_created.date()}}</td>
+            <td>
+                <a href="/delete/{{task.id}}">Delete</a>
+                <br>
+                <a href="/update/{{task.id}}">Update</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>-->
+    {% endif %} 
+
+    <hr>
+    <form style="text-align: center;" action="{{url_for('upload')}}" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label style="font-size: large;">Select images</label><br>     
+            <input type="file" name="photo" value="Select Images" multiple>              
+        </div>
+        <button type="submit" id="photo" class="btn btn-primary">Upload image </button>
+    </form>
+    {{ dropzone.create(action_view='index') }}
+
+</div>
+{% endblock %}
