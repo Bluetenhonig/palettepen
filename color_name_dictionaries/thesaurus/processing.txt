@@ -1,0 +1,14 @@
+Processing steps 
+#########################
+
+raw CND: ColorThesaurus.csv
++ xlsx + English only 
+
+original CND: ColorThesaurus.xlsx
++ ColorConversion.py 
+
+FFCND: ffcnd_thesaurus.xlsx 
++ last-word classification
++ manual classification (ColorNameDictClassification.py) 
+
+EFFCND: effcnd_thesaurus_vian.xlsx 
