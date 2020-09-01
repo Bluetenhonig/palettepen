@@ -4,49 +4,49 @@ Created on Sun Jul 19 09:07:43 2020
 
 @author: lsamsi
 """
+
+# import modules 
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import cm
-from matplotlib.colors import ListedColormap # discrete 
-from matplotlib.colors import LinearSegmentedColormap # gradient (by interpolation)
+from matplotlib.colors import ListedColormap
+from matplotlib.colors import LinearSegmentedColormap
+import numpy as np
+import matplotlib.pyplot as plt
 
 
+# declare variables
 tab20b = cm.get_cmap('tab20b', 8)
-# print(tab20b)
 
-# print('tab20b(range(8))', tab20b(range(8)))
-# print('tab20b(np.linspace(0, 1, 8))', tab20b(np.linspace(0, 1, 8)))
-
-
-# create Custom Qualitative Colormaps
-contrastofhue = [[1,0,0, 1], # R, G, B, A (0-1)
+# make contrasts as RGBA
+contrastofhue = [[1,0,0, 1],
 [0,1,0, 1], 
 [0,0,1, 1]
 ]
 
-contrastofhue2 = [[1,0,0, 1], # R, G, B, A (0-1)
+contrastofhue2 = [[1,0,0, 1],
 [1, 1, 0, 1],
 [0,0,1, 1]
 ]
 
-contrastofhue3 = [[1,0,0, 1], # R, G, B, A (0-1)
+contrastofhue3 = [[1,0,0, 1], 
 [1, 1, 0, 1], 
 [0,1,0, 1], 
 [0,0,1, 1], 
 [.5, 0, .5, 1]
 ]
 
-lightdarkcontrast = [ # R, G, B, A (0-1)
+lightdarkcontrast = [
 [1,1,1, 1],
 [0,0,0, 1]
 ]
 lightdarkcontrast2 = [
 [.8, .8, .8, 1],
 [1, 1, 1, 1],
-[0, 0, 0, 1], # R, G, B, A (0-1)
+[0, 0, 0, 1],
 [.2, .2, .2, 1]
 ]
-lightdarkcontrast3 = [ # R, G, B, A (0-1)
+lightdarkcontrast3 = [
 [1, 1, 0, 1],
 [.5, 0, .5, 1]
 ]
@@ -105,6 +105,7 @@ contrastofext3 = [
 [.66, 0.2, .2, 1], 
 [1, 1, 0, 1]
 ]
+
 # register qualitative colormap 
 contrastofhue = ListedColormap(contrastofhue)
 plt.register_cmap(name='Contrast of Hue', cmap=contrastofhue)
@@ -148,28 +149,7 @@ plt.register_cmap(name='Contrast of Extension 2', cmap=contrastofext2)
 contrastofext3 = ListedColormap(contrastofext3)
 plt.register_cmap(name='Contrast of Extension 3', cmap=contrastofext3)
 
-# contrast of hue
-# light-dark contrast
-# cold-warm contrast
-# complementary contrast
-# contrast of saturation
-# contrast of extension 
 
-#BLACK: [0,0,0, 1]
-#WHITE: [1,1,1, 1]
-#RED: [1,0,0, 1]
-#ORANGE: [1, 0.647, 0, 1]
-#YELLOW: [1, 1, 0, 1]
-#GREEN: [0,1,0, 1]
-#BLUE: [0,0,1, 1]
-#VIOLET: [.5, 0, .5, 1]
-
-import numpy as np
-import matplotlib.pyplot as plt
-
-
-# Have colormaps separated into categories:
-# http://matplotlib.org/examples/color/colormaps_reference.html
 cmaps = [
          ('Color Contrast', [
             'Contrast of Hue', 'Contrast of Hue 2', 'Contrast of Hue 3', 'Light-dark Contrast', 'Light-dark Contrast 2', 'Light-dark Contrast 3',
@@ -183,6 +163,7 @@ nrows = max(len(cmap_list) for cmap_category, cmap_list in cmaps)
 gradient = np.linspace(0, 1, 256)
 gradient = np.vstack((gradient, gradient))
 
+#%%
 
 def plot_color_gradients(cmap_category, cmap_list, nrows):
     fig, axes = plt.subplots(nrows=nrows)
@@ -196,16 +177,16 @@ def plot_color_gradients(cmap_category, cmap_list, nrows):
         x_text = pos[0] - 0.01
         y_text = pos[1] + pos[3]/2.
         fig.text(x_text, y_text, name, va='center', ha='right', fontsize=10)
-
-    # Turn off *all* ticks & spines, not just the ones with colormaps.
     for ax in axes:
         ax.set_axis_off()
 
 
-for cmap_category, cmap_list in cmaps:
-    plot_color_gradients(cmap_category, cmap_list, nrows)
-
-plt.show()
+#%%
+if __name__ == '__main__': 
+    
+    for cmap_category, cmap_list in cmaps:
+        plot_color_gradients(cmap_category, cmap_list, nrows)   
+    plt.show()
 
 
 

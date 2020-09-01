@@ -86,7 +86,7 @@ def process_images(data, images):
     return images, data, imagespersegment 
 
 
-def show_all_contrast_annotated_images(data, images, topn): 
+def show_all_contrast_annotated_images(data, images, cols, topn): 
     """" annotations are at segment-level
     warning: annotations displayed here ate image-level are not correct"""
     print('------------------------') 
@@ -216,7 +216,7 @@ class PDF(FPDF):
         self.cell(0, 10, 'Page %s' % self.page_no(), 0, 0, 'C')
     
    
-def make_multipage_pdf_images_with_contrast_annotation(data, images, path):  
+def make_multipage_pdf_images_with_contrast_annotation(data, images, segments, groups, path):  
     """ save images to multiple-pages pdf with contrast classification"""   
     os.chdir(path)
     pdf = PDF(format='A4')
@@ -243,8 +243,8 @@ def make_multipage_pdf_images_with_contrast_annotation(data, images, path):
     pdf.multi_cell(0, 10, 'Number of screenshots: '+ str(no_of_scrn) + ', screenshots = ' + str(range_of_scrn), align = 'L')
     pdf.set_font("Arial", size=12)
     i = 0  
-    print('Total: ', len(SEGMENTS))
-    for idx, seg in enumerate(SEGMENTS):
+    print('Total: ', len(segments))
+    for idx, seg in enumerate(segments):
         print(idx, ':', seg, 'processed.')
         pdf.add_page()
         range_scrns = [data['screenshot_id'][data['segment_id'] == seg].min(), data['screenshot_id'][data['segment_id'] == seg].max()] 
@@ -326,7 +326,7 @@ if __name__ == '__main__':
     show_contrast_annotation_single_image(IMG_NUMBER)
     
     # all images
-    show_all_contrast_annotated_images(data, images, 5)
+    show_all_contrast_annotated_images(data, images, cols, 5)
     show_contrast_annotated_images(data, images, 5)
 
 
@@ -334,7 +334,7 @@ if __name__ == '__main__':
 
     # make pdf with contrast annotation: single and multi-pages
     make_pdf_images_with_contrast_annotation(data, images, OUTPUT_PATH)
-    make_multipage_pdf_images_with_contrast_annotation(data, images, OUTPUT_PATH)
+    make_multipage_pdf_images_with_contrast_annotation(data, images, segments, groups, OUTPUT_PATH)
     
 
 

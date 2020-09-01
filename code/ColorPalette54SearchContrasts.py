@@ -60,6 +60,7 @@ def load_all_palettes_in_folder(path, file_extension):
         for file in f:
             if file_extension in file:
                 files.append(file) 
+    files = sorted(files)
     return files
 
 def load_palette(path, file):     
@@ -77,7 +78,7 @@ def show_palette(palette, depth):
     return CP_subset
 
 def get_palettes_pool(palette_path, palette_files): 
-    """ loads all palettes from a path"""   
+    """ loads all palettes as csv from a path"""   
     cp_pool = []
     for file in palette_files: 
         palette = load_palette(palette_path, file) 
@@ -433,6 +434,8 @@ def show_search_results_palettes_with_color_contrast(palette_names, palettes, re
         print("-------------------------")        
                     
 #%%
+        
+        
 if __name__ == '__main__':
       
     start = timer()

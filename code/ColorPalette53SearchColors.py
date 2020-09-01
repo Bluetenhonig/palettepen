@@ -29,7 +29,7 @@ from sklearn import preprocessing
 from sklearn.neighbors import KNeighborsClassifier
 
 # USER SPECIFICATION 
-SEARCH_COLOR_CAT = 'macaroni and cheese'
+SEARCH_COLOR_CAT = 'lavender'
 PALETTE_DEPTH = 'row 20' 
 THRESHOLD_RATIO = 0 
 COLORBAR_COUNT = 10
@@ -41,15 +41,15 @@ PALETTE_EXTENSION = 'bgr_palette.csv'
      
 DICT_PATH = r'D:\thesis\input_color_name_dictionaries\thesaurus\datasets'
 # basic colors 
-#DICT_FILE = 'eeffcnd_thesaurus_basicvian_upinterval.xlsx'
-#SOURCE = 'THESAURUS'
-#SYSTEM = 'VIAN'
+DICT_FILE = 'eeffcnd_thesaurus_basicvian_upinterval.xlsx'
+SOURCE = 'THESAURUS'
+SYSTEM = 'VIAN'
 # dictionary colors 
-DICT_FILE = 'eeffcnd_thesaurus_dictinterval.xlsx'
-METHOD = 'INTERVAL' 
+#DICT_FILE = 'eeffcnd_thesaurus_dictinterval.xlsx'
+#METHOD = 'INTERVAL' 
 
 MODEL_PATH = r'D:\thesis\machine_learning\models'
-MODEL_FILE = f'model_THESAURUS_INTERVAL_K-Nearest Neighbors_KNN1_p2_train4847_cat712_testacc0.878.sav'
+MODEL_FILE = f'model_THESAURUS_VIAN_GaussianNB_cat28_testacc0.75.sav'
 
 assert SYSTEM.lower() in DICT_FILE and SYSTEM in MODEL_FILE or METHOD.lower() in DICT_FILE and METHOD in MODEL_FILE 
 
